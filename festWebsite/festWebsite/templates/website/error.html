@@ -1,0 +1,16 @@
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title %}Oops!{% endblock %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/error.css' %}" >{% endblock %}
+{% block image %}{% static  'images/error.jpg' %}{% endblock %}
+{% block heading %}Oops!{% endblock %}
+{% block content %}
+<div class="row">
+	<h6>What in the world are you trying to do? Error!</h6>
+	<h6>Possible reasons:</h6>
+	<ul>
+		<li>{{ error }}</li>
+		<li><a href="\contact">Contact us</a> </li>
+	</ul>
+</div>
+{% endblock %}

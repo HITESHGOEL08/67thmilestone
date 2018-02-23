@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load static %}
+<html>
+
+<head>
+    <!-- Site made with Mobirise Website Builder v4.6.5, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.6.5, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{% static 'assets/images/icon-128x128.png' %} " type="image/x-icon">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons/mobirise-icons.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/tether/tether.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/gallery/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %} " type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <script src="{% static 'assets/web/assets/jquery/jquery.min.js' %} "></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+    <link href="{% static 'flipclock.css' %} " rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js "></script>
+    <!-- Sanjeev -->
+    <!-- META -->
+    <meta name="description"
+          content="67th Milestone’18 is the second edition of annual techno-cultural-management fest of the university that will be held from *April 5, 2018 to April 7, 2018* at BML Munjal University Campus located in Gurgaon. It is a multi-faceted event which will be a host to broad spectrum of activities. Throughout the three days, it will offer a platform for artists to perform, techies to scratch their head, speed enthusiasts to get behind the wheel and fashion freaks to walk the ramp."/>
+    <meta name="keywords"
+          content="techfest, fest, bml fest, 67thmilestone, cultural fest, campus ambassador, sponsors, past sponsors, bmu, bmu fest"/>
+    <meta name="author" content="67th Milestone"/>
+
+    <!-- Facebook and Twitter integration-->
+    <meta property="og:title" content="67th Milestone'18 - The Journey Continues"/>
+    <meta property="og:image" content="{% static 'images/Logo 67th Milestone-Black.png' %} ' %}"/>
+    <meta property="og:url" content="http://www.67thmilestone.com"/>
+    <meta property="og:type" content="Website"/>
+    <meta property="og:description"
+          content="67th Milestone’18 is the second edition of annual techno-cultural-management fest of the university that will be held from *April 5, 2018 to April 7, 2018* at BML Munjal University Campus located in Gurgaon. It is a multi-faceted event which will be a host to broad spectrum of activities. Throughout the three days, it will offer a platform for artists to perform, techies to scratch their head, speed enthusiasts to get behind the wheel and fashion freaks to walk the ramp."/>
+    <!-- META ends -->
+    <!-- Ends -->
+</head>
+<style media="screen">
+
+.loader {
+  margin: 0 auto;
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+.loader > div {
+  height: 100%;
+  width: 8px;
+  display: inline-block;
+  float: left;
+  margin-left: 2px;
+  -webkit-animation: delay 0.8s infinite ease-in-out;
+  animation: delay 0.8s infinite ease-in-out;
+}
+.loader .bar1 {
+  background-color: #754fa0;
+}
+.loader .bar2 {
+  background-color: #09b7bf;
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+.loader .bar3 {
+  background-color: #90d36b;
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.loader .bar4 {
+  background-color: #f2d40d;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.loader .bar5 {
+  background-color: #fcb12b;
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+.loader .bar6 {
+  background-color: #ed1b72;
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+@-webkit-keyframes delay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.05);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes delay {
+  0%, 40%, 100% {
+    transform: scaleY(0.05);
+    -webkit-transform: scaleY(0.05);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+#overlay{
+  height: 100%;
+  width:100%;
+  background: rgba(0, 0, 0,1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 5px;
+    top: 15px;
+    right: 35px;
+  }
+  .overlay .burger{
+    top:65%;
+    left:5%;
+  }
+}
+.burger{
+position: fixed;
+z-index: 1;
+margin-top:1%;
+margin-left:1%;
+
+}
+.social li{
+  display: inline-block;
+}
+.logo-both li{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+</style>
+
+<body>
+
+
+<div id="overlay">
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+    </div>
+</div>
+
+<script>
+  function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+  }
+
+  function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+  }
+
+</script>
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+    <div class="overlay-content">
+        <a href="\campusambassador">Campus Ambassador</a>
+        <a href="\sponsor">Past Sponsors</a>
+        <a href="\contact">Contact Us</a>
+
+        <ul class="social">
+            <li><a href="https://www.facebook.com/67milestone/?ref=br_rs" target="_blank"><i class="fab fa-facebook-f fa-1x"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/67thmilestone/?hl=en" target="_blank"><i class="fab fa-instagram fa-1x"></i></a></li>
+            <li><a href="https://twitter.com/67th_milestone" target="_blank"><i class="fab fa-twitter fa-1x"></i></a></li>
+             <li><a href="https://www.youtube.com/watch?v=CJ1RXABb4Fw" target="_blank"><i class="fab fa-youtube fa-1x"></i></a></li>
+            </ul>
+        <ul class="logo-both">
+            <li><a href="https://bml.edu.in" target="_blank"><img src="{% static 'images/BMU.png' %}" height="120vh" width="130vw" alt="BML Munjal University Logo"></a></li>
+            <li><a href="/"><img src="{% static 'Logo 67th Milestone-White.svg' %}" height="120vh" width="120vw" alt="67th Milestone Logo"></a></li>
+        </ul>
+
+
+    </div>
+</div>
+<div class="burger" style="font-size:20px;color:#fff" onclick="openNav()"><i class="fas fa-bars"></i></div>
+
+
+<div class="middle">
+
+    <img src="{% static 'Logo 67th Milestone-White.svg' %}" height="300vh" width="300vw">
+    <h1>APRIL 5-7 </h1>
+
+    <div class="clock">
+        <div class="time"></div>
+        <div class="message"></div>
+    </div>
+</div>
+<script src="{% static 'scrip.js' %} "></script>
+<section class="mbr-gallery mbr-slider-carousel cid-qKslaCxWsV" id="gallery3-o">
+
+  <div>
+    <div>
+      <!-- Filter -->
+      <!-- Gallery -->
+      <div class="mbr-gallery-row">
+        <div class="mbr-gallery-layout-default">
+          <div>
+            <div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="0" data-toggle="modal"><img src="{% static 'assets/images/dsc-207-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="1" data-toggle="modal"><img src="{% static 'assets/images/screenshot-1326-1366x768-800x449.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="2" data-toggle="modal"><img src="{% static 'assets/images/csc-204-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Animated">
+                <div href="#lb-gallery3-o" data-slide-to="3" data-toggle="modal"><img src="{% static 'assets/images/csc-198-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="4" data-toggle="modal"><img src="{% static 'assets/images/img-4478-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="5" data-toggle="modal"><img src="{% static 'assets/images/csc-212-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="6" data-toggle="modal"><img src="{% static 'assets/images/dsc-154-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Animated">
+                <div href="#lb-gallery3-o" data-slide-to="7" data-toggle="modal"><img src="{% static 'assets/images/csc-193-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="8" data-toggle="modal"><img src="{% static 'assets/images/mg-9483-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="9" data-toggle="modal"><img src="{% static 'assets/images/csc-216-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="10" data-toggle="modal"><img src="{% static 'assets/images/csc-221-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="11" data-toggle="modal"><img src="{% static 'assets/images/dji-5-2000x1125-800x450.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="12" data-toggle="modal"><img src="{% static 'assets/images/dsc-27-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="13" data-toggle="modal"><img src="{% static 'assets/images/dsc-27-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="14" data-toggle="modal"><img src="{% static 'assets/images/dsc-31-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="15" data-toggle="modal"><img src="{% static 'assets/images/dsc-37-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="16" data-toggle="modal"><img src="{% static 'assets/images/dsc-0044-2-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="17" data-toggle="modal"><img src="{% static 'assets/images/dsc-45-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="18" data-toggle="modal"><img src="{% static 'assets/images/dsc-57-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="19" data-toggle="modal"><img src="{% static 'assets/images/dsc-0089-2-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="20" data-toggle="modal"><img src="{% static 'assets/images/dsc-96-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="21" data-toggle="modal"><img src="{% static 'assets/images/dsc-0107-2-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Responsive">
+                <div href="#lb-gallery3-o" data-slide-to="22" data-toggle="modal"><img src="{% static 'assets/images/dsc-120-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="23" data-toggle="modal"><img src="{% static 'assets/images/dsc-121-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="24" data-toggle="modal"><img src="{% static 'assets/images/dsc-126-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="25" data-toggle="modal"><img src="{% static 'assets/images/dsc-173-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="26" data-toggle="modal"><img src="{% static 'assets/images/dsc-200-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="27" data-toggle="modal"><img src="{% static 'assets/images/dsc-207-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="28" data-toggle="modal"><img src="{% static 'assets/images/dsc-248-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="29" data-toggle="modal"><img src="{% static 'assets/images/dsc-272-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="30" data-toggle="modal"><img src="{% static 'assets/images/dsc-280-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="31" data-toggle="modal"><img src="{% static 'assets/images/img-4300-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Creative">
+                <div href="#lb-gallery3-o" data-slide-to="32" data-toggle="modal"><img src="{% static 'assets/images/img-4314-1728x2592-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="33" data-toggle="modal"><img src="{% static 'assets/images/csc-168-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="34" data-toggle="modal"><img src="{% static 'assets/images/img-4386-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="35" data-toggle="modal"><img src="{% static 'assets/images/img-4389-1728x2592-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="36" data-toggle="modal"><img src="{% static 'assets/images/img-4437-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="37" data-toggle="modal"><img src="{% static 'assets/images/img-4465-2000x3000-800x1200.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="38" data-toggle="modal"><img src="{% static 'assets/images/img-4517-2000x1123-800x449.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="39" data-toggle="modal"><img src="{% static 'assets/images/img-4540-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="40" data-toggle="modal"><img src="{% static 'assets/images/img-4660-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="41" data-toggle="modal"><img src="{% static 'assets/images/img-4670-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="42" data-toggle="modal"><img src="{% static 'assets/images/img-4696-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="43" data-toggle="modal"><img src="{% static 'assets/images/img-5182-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="44" data-toggle="modal"><img src="{% static 'assets/images/img-5353-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="45" data-toggle="modal"><img src="{% static 'assets/images/img-5415-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="46" data-toggle="modal"><img src="{% static 'assets/images/img-5617-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="47" data-toggle="modal"><img src="{% static 'assets/images/img-5828-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="48" data-toggle="modal"><img src="{% static 'assets/images/dsc-79-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="49" data-toggle="modal"><img src="{% static 'assets/images/img-5534-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+              <div class="mbr-gallery-item mbr-gallery-item--pNaN" data-video-url="false" data-tags="Awesome">
+                <div href="#lb-gallery3-o" data-slide-to="50" data-toggle="modal"><img src="{% static 'assets/images/img-5623-2000x1333-800x533.jpg'  %}" alt=""><span class="icon-focus"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<script src="{% static 'assets/popper/popper.min.js' %} "></script>
+<script src="{% static 'assets/tether/tether.min.js' %} "></script>
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %} "></script>
+<script src="{% static 'assets/smoothscroll/smooth-scroll.js' %} "></script>
+<script src="{% static 'assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js' %} "></script>
+<script src="{% static 'assets/vimeoplayer/jquery.mb.vimeo_player.js' %} "></script>
+<script src="{% static 'assets/masonry/masonry.pkgd.min.js' %} "></script>
+<script src="{% static 'assets/imagesloaded/imagesloaded.pkgd.min.js' %} "></script>
+<script src="{% static 'assets/theme/js/script.js' %} "></script>
+<script src="{% static 'assets/gallery/player.min.js' %} "></script>
+<script src="{% static 'assets/gallery/script.js' %} "></script>
+<script src="{% static 'assets/slidervideo/script.js' %} "></script>
+<script src="{% static 'js/script.js' %} "></script>
+<script src="{% static 'js/preloader.js' %} "></script>
+<script src="{% static 'flipclock.js' %} "></script>
+
+
+</body>
+
+</html>
+
+

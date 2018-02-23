@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <!-- META -->
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="" />
+    <meta name="keywords" content="techfest, fest, bml fest, 67thmilestone, cultural fest, campus ambassador, sponsors, past sponsors, bmu, bmu fest" />
+    <meta name="author" content="67th Milestone"/>
+
+    <!-- Facebook and Twitter integration-->
+    <meta property="og:title" content="67th Milestone'18 - The Journey Continues" />
+    <meta property="og:image" content="{% static 'images/Logo 67th Milestone-Black.png' %}" />
+    <meta property="og:url" content="http://www.67thmilestone.com" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:description" content="" />
+    <!-- META ends -->
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'images/Logo 67th Milestone-Black.png' %}" type="image/png" sizes="16x16">
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Importing base css -->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Import personal css -->
+    {% block css %}{% endblock %}
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  </head>
+  <body>
+ <div id="overlay">
+    <div id="loader-container"></div>
+ </div>
+  <section class="header" style="background: url({% block image %}{% endblock %}); background-size: cover; background-position: bottom; background-attachment: fixed;">
+    <div class="container">
+      <nav id="navbar">
+        <div class="nav-wrapper">
+          <a href="\" class="brand-logo"><img src="{% static 'images/Logo 67th Milestone-White.svg' %}" alt="67th Milestone Logo" width="80px" alt="67th Milestone Logo" class="responsive-img"></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="\">Home</a></li>
+            <li><a href="\sponsors">Past Sponsors</a></li>
+            <li><a href="\campusambassador">Campus Ambassador</a></li>
+            <li><a href="\contact">Contact Us</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="\">Home</a></li>
+            <li><a href="\sponsor">Past Sponsors</a></li>
+            <li><a href="\campusambassador">Campus Ambassador</a></li>
+            <li><a href="\contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="heading col s12">
+        <h2>{% block heading%}{% endblock %}</h2>
+      </div>
+    </div>
+  </section>
+<div class="container">
+  <section class="content">
+  {% block content %}
+
+  {% endblock %}
+  </section>
+</div>
+  <section class="footer">
+  <div class="row">
+    <div class="col s6 m4 push-m1">
+      <address>
+        67th Milestone<br>
+        BML Munjal University<br>
+        NH 8, Gurugram(HR)<br>
+        <i class="fas fa-phone"></i> 1800 103 6888<br>
+        122413<br>
+        <a href="http://bml.edu.in" target="_blank">www.bml.edu.in</a>
+      </address>
+    </div>
+    <div class="col s5 push-s1 m4 boom">
+      <p>Made with skill, not love!</p>
+      <p>&copy; 67th Milestone 2018</p>
+    </div>
+    <div class="col s12 m3 social-media">
+      <a href="https://fb.com/67milestone" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+        <a href="https://twitter.com/67th_milestone" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://instagram.com/67thmilestone" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.youtube.com/watch?v=CJ1RXABb4Fw" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+    </div>
+  </div>
+  </section>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+  var overlay = document.getElementById("overlay");
+  window.addEventListener('load',function(){
+    overlay.style.display = "none";
+  })
+  $( document ).ready(function(){
+    $(".button-collapse").sideNav();
+    $('.modal').modal();
+  })
+  </script>
+  </body>
+  </html>

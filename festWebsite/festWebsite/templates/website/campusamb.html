@@ -1,0 +1,74 @@
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title %}Campus Ambassador Program{% endblock %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/campusamb.css' %}" >{% endblock %}
+{% block image %}{% static  'images/campusamb.jpg' %}{% endblock %}
+{% block heading %}Campus Ambassador Program{% endblock %}
+{% block content %}
+<div class="row">
+      <h6>"It is your turn to be the Evangelist of your college and bring out a marketing ninja!"</h6>
+    </div>
+    <div class="row">
+      <strong>Introduction</strong>
+      <p>Campus Ambassador is responsible for publicity and marketing for 67th Milestone’18,and is responsible for introducing and encouraging student participation in the fest, in his/her college/university. He/She is the chief student representative of the college and is the coordinator for any relevant activity conducted in his/her college for publicity through social media, college notice boards, root-mails etc.</p>
+    </div>
+    <div class="row">
+      <strong>Details</strong>
+      <ul>
+        <li>The program will last till the end of 67th Milestone’18.</li>
+        <li>Deadline for Applications : March 25, 2018.</li>
+        <li>Eligibility Criteria - Must be a college student (of any year)</li>
+        <li>Responsibility of CA : To create awareness about 67th Milestone'18 through social media marketing, word of mouth, offline marketing and bringing maximum participation from his/her college/university.</li>
+        <li>The partners will be rewarded with exciting prizes and recommendations.</li>
+        <li>Only active partners who meet the required target will be considered for any kind of reward.</li>
+      </ul>
+    </div>
+    <div class="row">
+      <strong>Benefits</strong>
+      <ul>
+        <li>Certificate of Appreciation</li>
+        <li>Letter of Recommendation</li>
+        <li>Exemption from Registration Fee and Star Night Passes. (for Top Performers)</li>
+        <li>Learn Marketing Skills</li>
+        <li>Enhance your convincing power</li>
+        <li>Best Campus Partner Award</li>
+        <li>Exciting Prizes and goodies (for Top Performers)</li>
+        <li>Exclusive Merchandise (67th Milestone T-Shirts)</li>
+      </ul>
+    </div>
+    <div class="row btn-display">
+      <a href="#modalReg" class="btn light-blue darken-1 waves-effect modal-trigger">Apply Now</a>
+    </div>
+
+
+  <!-- Modal for editing profile -->
+  <div id="modalReg" class="modal modal-fixed-footer">
+   <div class="modal-content">
+      <h4>Registration</h4>
+
+
+      <form id="category_form" class="col s12" method="post" action="\campusambassador">
+      {% csrf_token %}
+          {% for hidden in form.hidden_fields %}
+              {{ hidden }}
+              {% endfor %}
+          {% for field in form.visible_fields %}
+              {{ field.errors }}
+              {{ field.help_text }}
+              {{ field }}
+              <br>
+              {% endfor %}
+          <br>
+    <button class="btn waves-effect light-blue darken-1" type="submit" name="submit" value="SUBMIT">
+SUBMIT
+        </button>
+    </form>
+
+          <!--<a href="\67milestone" class="modal-action modal-close waves-effect waves-blue btn-flat ">Submit</a>-->
+
+     </div>
+   </div>
+   <!-- Modal ends -->
+{% endblock %}
+
+

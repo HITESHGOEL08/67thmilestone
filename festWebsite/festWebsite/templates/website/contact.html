@@ -1,0 +1,35 @@
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title %}Contact Us{% endblock %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/contact.css' %}" >{% endblock %}
+{% block image %}{% static  'images/contact.jpg' %}{% endblock %}
+{% block heading %}Contact Us{% endblock %}
+{% block content %}
+	<div class="row">
+		<h6>"Unity is strength. . . when there is teamwork and collaboration, wonderful things can be achieved."</h6>
+	</div>
+	<div class="row">
+		<h5 class="designation">General Secretary</h5>
+	</div>
+	<div class="row">
+		<img src="{% static 'images/danish.jpg' %}" alt="Gen Sec" class="responsive-img circle">
+	</div>
+	<div class="row">
+		<h5>Danish Jameel</h5>
+	</div>
+	<div class="row">
+		<h6>Hi There!</h6>
+		<p>You can reach out to me on social media.</p>
+	</div>
+	<div class="row">
+		<div class="social-media">
+			<p>
+				<a href="https://www.facebook.com/danish.jameel.180" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+				<a href="https://www.instagram.com/danish_jameel/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<p>Or shoot me an <a href="mailto:danish.jameel.15csc@bml.edu.in">email</a>.</p>
+	</div>
+{% endblock %}
