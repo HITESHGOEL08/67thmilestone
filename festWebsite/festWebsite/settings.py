@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(__file__)
-TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -26,7 +26,6 @@ SECRET_KEY = '12!hq_-1ivucrim@+emw2_q+udvh+bhpbhwe!vd&^m9+k5lw)d'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -71,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'festWebsite.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -79,13 +77,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bmldb',
-        'USER':'u_bml',
-        'PASSWORD':'Nishit@30',
-        'HOST':'localhost',
-        'PORT':'',
+        'USER': 'u_bml',
+        'PASSWORD': 'Nishit@30',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -104,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # EMAIL_USE_TLS = True
 EMAIL_USE_SSL = True
 EMAIL_HOST = 'smtp.zoho.com'
@@ -126,17 +123,16 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_DIR = os.path.join(BASE_DIR,'static')
-STATICFILES_DIRS = [STATIC_DIR,]
-MEDIA_DIR = os.path.join(BASE_DIR,'media')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [STATIC_DIR, ]
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
-STATIC_DIR = os.path.join(BASE_DIR,'staticfiles')
+STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles')
 
 #
 # """
