@@ -23,7 +23,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = '12!hq_-1ivucrim@+emw2_q+udvh+bhpbhwe!vd&^m9+k5lw)d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -132,7 +132,7 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
-STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #
 # """
@@ -269,4 +269,4 @@ STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles')
 # MEDIA_DIR = os.path.join(BASE_DIR,'media')
 # MEDIA_ROOT = MEDIA_DIR
 # MEDIA_URL = '/media/'
-# STATIC_DIR = os.path.join(BASE_DIR,'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')

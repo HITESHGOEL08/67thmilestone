@@ -1,0 +1,245 @@
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title %}Our Team{% endblock %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ourTeam.css' %}"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600'
+          rel='stylesheet' type='text/css'>
+{% endblock %}
+{% block image %}{% static  'images/success.jpg' %}{% endblock %}
+{% block heading %}Our Team{% endblock %}
+{% block content %}
+
+
+        <div class="row">
+            <div class="heading-title text-center">
+                <font color="black">
+                    <p class="p-top-30 half-txt">" Unity is strength. . . when there is teamwork and collaboration,
+                        wonderful things can be achieved. "</p>
+                </font>
+            </div>
+            {% for i,j,k in zipped %}
+            {% if i %}
+            <div style="text-align: center; margin-top: -50px; cursor: pointer;">
+                <font color="black">
+                    <h3 class="text-uppercase" id="Overly" class="overlay">{{ k }}</h3>
+                </font>
+            </div>
+            {% for l in i %}
+            {% if l %}
+            <div class="part" align="center">
+                {% for m in l %}
+                {% if l|length == 1 %}
+                <div class="col-md-12 col-sm-12" align="center">
+                    {% endif %}
+                    {% if l|length == 2 %}
+                    <div class="col-md-6 col-sm-6" align="center">
+                        {% endif %}
+                        {% if l|length == 3 %}
+                        <div class="col-md-4 col-sm-4" align="center">
+                            {% endif %}
+
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="{{ MEDIA_URL }}{{m.image}}" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>Hi There !</h4>
+                                        <p>{{m.tag_line}}</p>
+                                    </div>
+                                    <div class="s-link">
+
+                                        <a href="{{m.facebook}}"><img src="{% static 'images/facebook.png' %}"></img></a>
+                                        <a href="{{m.instagram}}"><img src="{% static 'images/instagram.png' %}"></img></a>
+                                        <a href="{{m.linkedin}}"><img src="{% static 'images/linked.png' %}"></img></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-title" align="center">
+                                <h5>{{ m.name }}</h5>
+                                <h5>{{ m.position }}</h5>
+                                <span>{{ m.email }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+{% endblock %}
+
+
+
+<!--<!doctype html>-->
+<!--{% load staticfiles %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<title></title>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" media="all">-->
+    <!--<link href="{% static 'css/themify-icons.css' %}" rel="stylesheet" type="text/css" media="all"/>-->
+    <!--<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all"/>-->
+    <!--<link href="{% static 'css/theme.css' %}" rel="stylesheet" type="text/css" media="all"/>-->
+    <!--<link href="{% static 'css/custom.css' %}" rel="stylesheet" type="text/css" media="all"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'css/ourTeam.css' %}"/>-->
+
+    <!--<link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600'-->
+          <!--rel='stylesheet' type='text/css'>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="nav-container">-->
+
+
+    <!--<nav>-->
+
+        <!--<div class="nav-bar text-center">-->
+            <!--<div class="col-md-2 col-md-push-5 col-sm-12 text-center">-->
+                <!--<a href="#">-->
+                    <!--<img alt="logo" class="image-xxs" src="{% static 'images/logo-dark.png' %}">-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <!--<div class="col-sm-12 col-md-5 col-md-pull-2 overflow-hidden-xs">-->
+                <!--<ul class="menu inline-block pull-right">-->
+                    <!--<li><a href="#">Events</a></li>-->
+                    <!--<li><a href="#">Sponsors</a>-->
+                        <!--<ul>-->
+                            <!--<li><a href="#">Single</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+            <!--<div class="col-sm-12 col-md-5 pb-xs-24">-->
+                <!--<ul class="menu">-->
+                    <!--<li><a href="#">Previous fest</a></li>-->
+                    <!--<li><a href="#">Contact us</a>-->
+                        <!--<ul>-->
+                            <!--<li><a href="#">Single</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="module widget-handle mobile-toggle right visible-sm visible-xs absolute-xs">-->
+            <!--<i class="ti-menu"></i>-->
+        <!--</div>-->
+    <!--</nav>-->
+<!--</div>-->
+
+<!--<div class="main-container">-->
+
+
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="heading-title text-center">-->
+                <!--<font color="black">-->
+                    <!--<h3 class="text-uppercase">Our Team </h3>-->
+                    <!--<p class="p-top-30 half-txt">" Unity is strength. . . when there is teamwork and collaboration,-->
+                        <!--wonderful things can be achieved. "</p>-->
+                <!--</font>-->
+            <!--</div>-->
+<!--{% for i,j,k in zipped %}-->
+            <!--{% if i %}-->
+            <!--<div style="text-align: center; margin-top: -50px; cursor: pointer;">-->
+                <!--<font color="black">-->
+                    <!--<h3 class="text-uppercase" id="Overly" class="overlay">{{ k }}</h3>-->
+                <!--</font>-->
+            <!--</div>-->
+<!--{% for l in i %}-->
+            <!--{% if l %}-->
+            <!--<div class="part" align="center">-->
+                <!--{% for m in l %}-->
+                <!--{% if l|length == 1 %}-->
+                <!--<div class="col-md-12 col-sm-12" align="center">-->
+                    <!--{% endif %}-->
+                    <!--{% if l|length == 2 %}-->
+                <!--<div class="col-md-6 col-sm-6" align="center">-->
+                    <!--{% endif %}-->
+                    <!--{% if l|length == 3 %}-->
+                <!--<div class="col-md-4 col-sm-4" align="center">-->
+                    <!--{% endif %}-->
+
+                    <!--<div class="team-member">-->
+                        <!--<div class="team-img">-->
+                            <!--<img src="{{ MEDIA_URL }}{{m.image}}" alt="team member" class="img-responsive">-->
+                        <!--</div>-->
+                        <!--<div class="team-hover">-->
+                            <!--<div class="desk">-->
+                                <!--<h4>Hi There !</h4>-->
+                                <!--<p>{{m.tag_line}}</p>-->
+                            <!--</div>-->
+                            <!--<div class="s-link">-->
+
+                                <!--<a href="{{m.facebook}}"><img src="{% static 'images/facebook.png' %}"></img></a>-->
+                                <!--<a href="{{m.instagram}}"><img src="{% static 'images/instagram.png' %}"></img></a>-->
+                                <!--<a href="{{m.linkedin}}"><img src="{% static 'images/linked.png' %}"></img></a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="team-title" align="center">-->
+                        <!--<h5>{{ m.name }}</h5>-->
+                        <!--<h5>{{ m.position }}</h5>-->
+                        <!--<span>{{ m.email }}</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                    <!--{% endfor %}-->
+            <!--</div>-->
+            <!--{% endif %}-->
+            <!--{% endfor %}-->
+<!--{% endif %}-->
+<!--{% endfor %}-->
+
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--</section>-->
+    <!--<footer class="footer-2 bg-dark text-center-xs">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-sm-4">-->
+                    <!--<a href="#"><img class="image-xxs fade-half" alt="Pic"-->
+                                     <!--src="{% static 'images/logo-light.png' %}"></a>-->
+                <!--</div>-->
+
+                <!--<div class="col-sm-4 text-center">-->
+							<!--<span class="fade-half">-->
+								<!--© Copyright 2018 67th Milestone - All Rights Reserved-->
+							<!--</span>-->
+                <!--</div>-->
+
+                <!--<div class="col-sm-4 text-right text-center-xs" style="font-size: x-large;">-->
+                    <!--<ul class="list-inline social-list">-->
+                        <!--<li><a href="#"><i class="ti-twitter-alt"></i></a></li>-->
+                        <!--<li><a href="#"><i class="ti-facebook"></i></a></li>-->
+                        <!--<li><a href="#"><i class="ti-instagram"></i></a></li>-->
+                        <!--<li><a href="#"><i class="ti-youtube"></i></a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</footer>-->
+<!--</div>-->
+
+
+<!--<script src="{% static 'js/jquery.min.js' %}"></script>-->
+<!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+<!--<script src="{% static 'js/parallax.js' %}"></script>-->
+<!--<script src="{% static 'js/scripts.js' %}"></script>-->
+<!--<script src="{% static 'js/ourTeam.js' %}"></script>-->
+
+<!--</body>-->
+<!--</html>-->

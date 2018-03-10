@@ -23,8 +23,11 @@ def create():
     df.to_csv("Campus_Ambassadors.csv")
     subject = "Responses for Campus Ambassador Form(67th Milestone'18)"
     body = u"Find the attached CSV File for registered campus ambassadors."
-    emailsend = EmailMessage(subject, body, to=['hiteshgoel426@gmail.com'])
-    path = os.path.dirname(__file__)
+    emailsend = EmailMessage(subject, body, to=['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
+                                                'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
+                                                'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
+                                                'shreya.mathur.15bk@bml.edu.in'])
+    path = os.getcwd()
     path += "/Campus_Ambassadors.csv"
     print(path)
     emailsend.attach_file(path)

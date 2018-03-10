@@ -1,0 +1,52 @@
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title %}Current Sponsors{% endblock %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/sponsors.css' %}" >{% endblock %}
+{% block image %}{% static  'images/sponsors.jpg' %}{% endblock %}
+{% block heading %}Current Sponsors{% endblock %}
+{% block content %}
+{% for i in ts %}
+<div class="row title-sponsor">
+	<h5>Title Sponsor</h5>
+	<a href="{{ i.url }}">
+		<img src="{{ MEDIA_URL }}{{i.image}}" alt="{{ j.name }}" class="responsive-img">
+	</a>
+</div>
+{% endfor %}
+{% for i in ns %}
+<div class="row sponsor-row">
+	{% for j in i %}
+	<div class="col s4">
+		<h6>{{ j.name_shown }}</h6>
+		<a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
+	</div>
+    {% endfor %}
+</div>
+{% endfor %}
+
+{% if ms %}
+<h5>online media partners</h5>
+{% for i in ms %}
+<div class="row sponsor-row">
+	{% for j in i %}
+    <div class="col s4">
+        <a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
+	</div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endif %}
+
+{% if es %}
+<h5>event partners</h5>
+{% for i in es %}
+<div class="row sponsor-row">
+	{% for j in i %}
+    <div class="col m2 s4">
+		<a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
+	</div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

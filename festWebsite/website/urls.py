@@ -26,4 +26,7 @@ urlpatterns = [
     url(r'^error',views.error,name='error'),
     url(r'^contact', views.contact, name='contact'),
     url(r'^sponsor', views.sponsor, name='sponsor'),
+    url(r'^current_sponsor',views.current_sponsor,name='current_sponsor'),
+    url(r'^team' ,views.team,name='team'),
+    url(r'^gallery' ,views.gallery,name='gallery'),
 ]

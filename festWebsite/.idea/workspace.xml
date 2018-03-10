@@ -1,8 +1,404 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f807d3a-ea89-4cd9-9e89-c44e0bb5dfe3" name="Default" comment="">
+    <list default="true" id="4f807d3a-ea89-4cd9-9e89-c44e0bb5dfe3" name="Default" comment="additional bugs fixed&#10;new files added&#10;gallery&#10;current sponsors&#10;team&#10;and others">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/-mg-9484-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-169-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-169-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-194-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-194-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-195-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-195-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-199-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-199-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-204-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-204-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-209-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-209-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-217-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-217-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-222-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/csc-222-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dji-6-2000x1125-800x450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dji-6-2000x1125.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-0107-2-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-0107-2-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-103-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-103-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-104-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-104-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-109-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-109-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-117-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-117-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-122-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-122-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-123-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-123-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-129-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-129-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-130-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-130-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-154-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-154-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-158-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-158-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-186-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-186-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-196-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-196-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-201-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-201-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-208-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-208-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-212-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-212-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-241-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-241-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-249-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-249-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-251-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-251-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-257-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-257-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-265-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-265-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-28-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-28-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-281-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-281-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-32-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-32-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-38-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-38-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-46-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-46-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-58-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-58-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-68-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-68-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-69-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-69-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-81-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-81-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-86-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-86-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-87-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-87-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-88-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-88-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-97-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-97-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-98-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-98-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-99-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/dsc-99-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/icon-128x128.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4301-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4301-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4304-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4304-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4328-1728x2592-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4328-1728x2592.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4434-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4434-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4438-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4438-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4466-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4466-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4479-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4479-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4518-2000x1123-800x449.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4518-2000x1123.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4541-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4541-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4543-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4543-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4551-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4551-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4564-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4564-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4576-1728x2592-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4576-1728x2592.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4662-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4662-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4679-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4679-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4711-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4711-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4740-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4740-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4952-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-4952-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5177-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5177-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5183-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5183-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5229-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5229-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5238-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5238-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5253-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5253-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5268-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5268-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5272-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5272-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5274-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5274-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5354-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5354-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5359-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5359-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5361-1000x1500-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5361-1000x1500.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5420-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5420-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5554-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5554-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5559-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5559-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5599-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5599-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5612-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5612-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5615-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5615-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5624-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5624-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5636-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5636-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5784-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5784-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5800-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/img-5800-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/mg-9484-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/screenshot-1326-1366x768 copy.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/screenshot-1326-1366x768-800x449 copy.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/screenshot-1326-1366x768-800x449.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/screenshot-1326-1366x768.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/-mg-9484-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-169-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-169-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-194-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-194-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-195-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-195-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-199-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-199-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-204-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-204-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-209-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-209-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-217-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-217-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-222-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/csc-222-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dji-6-2000x1125-800x450.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dji-6-2000x1125.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-0107-2-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-0107-2-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-103-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-103-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-104-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-104-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-109-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-109-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-117-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-117-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-122-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-122-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-123-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-123-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-129-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-129-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-130-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-130-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-154-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-154-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-158-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-158-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-186-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-186-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-196-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-196-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-201-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-201-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-208-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-208-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-212-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-212-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-241-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-241-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-249-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-249-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-251-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-251-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-257-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-257-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-265-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-265-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-28-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-28-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-281-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-281-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-32-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-32-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-38-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-38-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-46-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-46-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-58-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-58-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-68-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-68-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-69-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-69-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-81-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-81-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-86-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-86-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-87-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-87-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-88-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-88-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-97-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-97-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-98-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-98-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-99-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/dsc-99-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/icon-128x128.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4301-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4301-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4304-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4304-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4328-1728x2592-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4328-1728x2592.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4434-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4434-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4438-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4438-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4466-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4466-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4479-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4479-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4518-2000x1123-800x449.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4518-2000x1123.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4541-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4541-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4543-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4543-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4551-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4551-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4564-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4564-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4576-1728x2592-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4576-1728x2592.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4662-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4662-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4679-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4679-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4711-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4711-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4740-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4740-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4952-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-4952-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5177-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5177-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5183-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5183-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5229-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5229-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5238-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5238-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5253-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5253-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5268-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5268-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5272-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5272-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5274-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5274-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5354-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5354-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5359-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5359-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5361-1000x1500-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5361-1000x1500.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5420-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5420-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5554-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5554-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5559-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5559-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5599-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5599-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5612-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5612-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5615-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5615-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5624-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5624-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5636-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5636-2000x1333.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5784-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5784-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5800-2000x3000-800x1200.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/img-5800-2000x3000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/mg-9484-2000x1333-800x533.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/screenshot-1326-1366x768-800x449.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/screenshot-1326-1366x768.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/web/assets/mobirise-icons/mobirise-icons.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/web/assets/mobirise-icons/mobirise-icons.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/web/assets/mobirise-icons/mobirise-icons.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Qrcode.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/bootstrap/css/bootstrap-grid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/bootstrap/css/bootstrap-reboot.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/bootstrapcarouselswipe/bootstrap-carousel-swipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/gallery/player.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/gallery/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/gallery/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images/hashes.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/images1/hashes.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/imagesloaded/imagesloaded.pkgd.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/masonry/masonry.pkgd.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/mobirise/css/mbr-additional.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/popper/popper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/slidervideo/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/smoothscroll/smooth-scroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/tether/tether.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/tether/tether.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/theme/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/theme/js/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/vimeoplayer/jquery.mb.vimeo_player.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/web/assets/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/web/assets/mobirise-icons/mobirise-icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/static/assets1/web/assets/mobirise-icons/mobirise-icons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/templates/website/current_sponsors.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/templates/website/gallery.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/festWebsite/templates/website/team.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/migrations/0004_sponsors_team.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/festWebsite/db.sqlite3" afterPath="$PROJECT_DIR$/festWebsite/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/festWebsite/static/images/BMU.png" afterPath="$PROJECT_DIR$/festWebsite/static/images/BMU.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/festWebsite.iml" afterPath="$PROJECT_DIR$/.idea/festWebsite.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/campus_ambassador.py" afterPath="$PROJECT_DIR$/campus_ambassador.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/festWebsite/settings.py" afterPath="$PROJECT_DIR$/festWebsite/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/festWebsite/templates/website/base.html" afterPath="$PROJECT_DIR$/festWebsite/templates/website/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/festWebsite/templates/website/campusamb.html" afterPath="$PROJECT_DIR$/festWebsite/templates/website/campusamb.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/festWebsite/templates/website/index.html" afterPath="$PROJECT_DIR$/festWebsite/templates/website/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/festWebsite/templates/website/sponsors.html" afterPath="$PROJECT_DIR$/festWebsite/templates/website/sponsors.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/admin.py" afterPath="$PROJECT_DIR$/website/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/urls.py" afterPath="$PROJECT_DIR$/website/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,26 +407,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/forms.py">
+      <file leaf-file-name="Qrcode.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Qrcode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/festWebsite/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,85 +422,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/festWebsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="159" column="56" lean-forward="false" selection-start-line="159" selection-start-column="56" selection-end-line="159" selection-end-column="56" />
-              <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="e#4049#4362#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/festWebsite/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/error.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/contact.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="27" column="125" lean-forward="true" selection-start-line="27" selection-start-column="125" selection-end-line="27" selection-end-column="125" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Success.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/Success.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="69" column="62" lean-forward="true" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
-              <folding>
-                <element signature="e#24#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2056">
-              <caret line="240" column="89" lean-forward="true" selection-start-line="240" selection-start-column="89" selection-end-line="240" selection-end-column="89" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="campus_ambassador.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/campus_ambassador.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+            <state relative-caret-position="2190">
+              <caret line="261" column="1" lean-forward="true" selection-start-line="261" selection-start-column="1" selection-end-line="261" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -139,7 +445,6 @@
       <find>{% static</find>
       <find>%}</find>
       <find>img</find>
-      <find>.js</find>
       <find>images</find>
       <find>.png</find>
       <find>jpg</find>
@@ -148,10 +453,15 @@
       <find>js</find>
       <find>css</find>
       <find>&quot;css</find>
-      <find>.css</find>
-      <find>.jpg</find>
       <find>&quot;scrip</find>
       <find>f</find>
+      <find>core team</find>
+      <find>assets1</find>
+      <find>.css</find>
+      <find>.jpg</find>
+      <find>.jpg' %}</find>
+      <find>.js</find>
+      <find>screenshot-1326-1366x768</find>
     </findStrings>
     <replaceStrings>
       <replace>forms</replace>
@@ -171,51 +481,55 @@
       <replace>{% static 'js</replace>
       <replace>&quot;{% static 'css</replace>
       <replace>&quot;{% static 'flip</replace>
-      <replace>.js' %}</replace>
+      <replace>&quot;{% static 'scrip</replace>
+      <replace>{% static 'assets1</replace>
       <replace>.css' %}</replace>
       <replace>.jpg' %}</replace>
-      <replace>&quot;{% static 'scrip</replace>
+      <replace>.js' %}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/festWebsite/templates/website/Campus_Ambassdor_htmlform.html" />
         <option value="$PROJECT_DIR$/festWebsite/templates/website/Ourteam.html" />
-        <option value="$PROJECT_DIR$/festWebsite/templates/website/sponsors.html" />
-        <option value="$PROJECT_DIR$/website/urls.py" />
         <option value="$PROJECT_DIR$/festWebsite/urls.py" />
         <option value="$PROJECT_DIR$/festWebsite/static/css/campusamb.css" />
-        <option value="$PROJECT_DIR$/festWebsite/templates/website/campusamb.html" />
         <option value="$PROJECT_DIR$/festWebsite/static/css/sponsors.css" />
         <option value="$PROJECT_DIR$/festWebsite/static/css/contact.css" />
         <option value="$PROJECT_DIR$/festWebsite/static/css/base.css" />
         <option value="$PROJECT_DIR$/festWebsite/static/js/script.js" />
-        <option value="$PROJECT_DIR$/website/models.py" />
-        <option value="$PROJECT_DIR$/website/admin.py" />
         <option value="$PROJECT_DIR$/website/templatetags/ca_automatic.py" />
         <option value="$PROJECT_DIR$/website/timer_script.py" />
-        <option value="$PROJECT_DIR$/festWebsite/templates/website/index.html" />
         <option value="$PROJECT_DIR$/festWebsite/templates/website/error.html" />
-        <option value="$PROJECT_DIR$/festWebsite/templates/website/base.html" />
         <option value="$PROJECT_DIR$/website/forms.py" />
-        <option value="$PROJECT_DIR$/campus_ambassador.py" />
         <option value="$PROJECT_DIR$/festWebsite/static/css/style.css" />
         <option value="$PROJECT_DIR$/festWebsite/templates/website/Success.html" />
         <option value="$PROJECT_DIR$/festWebsite/templates/website/contact.html" />
+        <option value="$PROJECT_DIR$/campus_ambassador.py" />
+        <option value="$PROJECT_DIR$/festWebsite/templates/website/sponsors.html" />
+        <option value="$PROJECT_DIR$/festWebsite/templates/website/campusamb.html" />
+        <option value="$PROJECT_DIR$/website/Qrcode.py" />
+        <option value="$PROJECT_DIR$/website/admin.py" />
+        <option value="$PROJECT_DIR$/website/models.py" />
+        <option value="$PROJECT_DIR$/festWebsite/templates/website/team.html" />
+        <option value="$PROJECT_DIR$/festWebsite/templates/website/base.html" />
         <option value="$PROJECT_DIR$/website/views.py" />
+        <option value="$PROJECT_DIR$/website/urls.py" />
+        <option value="$PROJECT_DIR$/festWebsite/templates/website/gallery.html" />
+        <option value="$PROJECT_DIR$/festWebsite/templates/website/index.html" />
         <option value="$PROJECT_DIR$/festWebsite/settings.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="75" />
+    <option name="y" value="6" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -237,150 +551,52 @@
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="festWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="festWebsite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="festWebsite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="festWebsite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="festWebsite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="festWebsite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="festWebsite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="festWebsite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="festWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="festWebsite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
     </panes>
@@ -402,42 +618,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.campus_ambassador">
-    <configuration default="false" name="ca_automatic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Qrcode">
+    <configuration name="Qrcode" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/website/templatetags" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/website" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="festWebsite" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/website/templatetags/ca_automatic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/website/Qrcode.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="campus_ambassador" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="festWebsite" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/campus_ambassador.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -503,14 +700,50 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="2">
+    <configuration name="ca_automatic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/website/templatetags" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="festWebsite" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/website/templatetags/ca_automatic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="campus_ambassador" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="festWebsite" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/campus_ambassador.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.ca_automatic" />
       <item index="1" class="java.lang.String" itemvalue="Python.campus_ambassador" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Qrcode" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.campus_ambassador" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ca_automatic" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.Qrcode" />
+        <item index="1" class="java.lang.String" itemvalue="Python.campus_ambassador" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ca_automatic" />
       </list>
     </recent_temporary>
   </component>
@@ -567,7 +800,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519405421342</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&#10;additional bugs fixed">
+      <created>1519467550344</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1519467550344</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -580,25 +820,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="75" y="6" width="1303" height="780" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19364598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21593626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47135842" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47122863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -626,12 +866,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
     <MESSAGE value="Campuss Ambassdor form page added" />
     <MESSAGE value="Home added&#10;contact us added" />
     <MESSAGE value="Final changes done" />
     <MESSAGE value="Final changes done&#10;&#10;bugs fixed" />
     <MESSAGE value="&#10;additional bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;additional bugs fixed" />
+    <MESSAGE value="additional bugs fixed&#10;new files added&#10;gallery&#10;current sponsors&#10;team&#10;and others" />
+    <option name="LAST_COMMIT_MESSAGE" value="additional bugs fixed&#10;new files added&#10;gallery&#10;current sponsors&#10;team&#10;and others" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -640,58 +884,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/festWebsite/static/css/campusamb.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/Success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/festWebsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -739,9 +931,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -797,13 +987,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/Ourteam.html" />
-    <entry file="file://$PROJECT_DIR$/website/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/festWebsite/static/css/contact.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -832,20 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/sponsors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="67" lean-forward="false" selection-start-line="71" selection-start-column="67" selection-end-line="71" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/campusamb.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="54" lean-forward="false" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/form_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -862,20 +1031,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/timer_script.py" />
-    <entry file="file://$PROJECT_DIR$/festWebsite/static/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="89" column="112" lean-forward="false" selection-start-line="89" selection-start-column="112" selection-end-line="89" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/festWebsite/static/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -883,109 +1038,174 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="252">
           <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="125" lean-forward="false" selection-start-line="27" selection-start-column="125" selection-end-line="27" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/media/qrcode/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/website/Qrcode.py" />
+    <entry file="file://$PROJECT_DIR$/website/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/urls.py">
+    <entry file="file://$PROJECT_DIR$/website/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="1116">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/campus_ambassador.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+        <state relative-caret-position="576">
+          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/sponsors.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="1080">
+          <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/Success.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="43" />
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/static/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2466">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/team.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="68" lean-forward="false" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/contact.html">
+    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/campusamb.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="27" column="125" lean-forward="true" selection-start-line="27" selection-start-column="125" selection-end-line="27" selection-end-column="125" />
+        <state relative-caret-position="144">
+          <caret line="8" column="102" lean-forward="false" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/error.html">
+    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="41" />
+        <state relative-caret-position="1242">
+          <caret line="102" column="35" lean-forward="false" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/static/Logo 67th Milestone-White.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/static/images/BMU.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1692">
+          <caret line="247" column="75" lean-forward="false" selection-start-line="247" selection-start-column="75" selection-end-line="247" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="62" lean-forward="true" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
+        <state relative-caret-position="2716">
+          <caret line="158" column="62" lean-forward="false" selection-start-line="158" selection-start-column="62" selection-end-line="158" selection-end-column="62" />
           <folding>
             <element signature="e#24#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/index.html">
+    <entry file="file://$PROJECT_DIR$/festWebsite/templates/website/gallery.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2056">
-          <caret line="240" column="89" lean-forward="true" selection-start-line="240" selection-start-column="89" selection-end-line="240" selection-end-column="89" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="8100">
+          <caret line="450" column="112" lean-forward="false" selection-start-line="450" selection-start-column="112" selection-end-line="450" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Qrcode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/festWebsite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="159" column="56" lean-forward="false" selection-start-line="159" selection-start-column="56" selection-end-line="159" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#4049#4362#1" expanded="false" />
-          </folding>
+        <state relative-caret-position="2190">
+          <caret line="261" column="1" lean-forward="true" selection-start-line="261" selection-start-column="1" selection-end-line="261" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
