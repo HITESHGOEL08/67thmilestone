@@ -298,9 +298,13 @@ def profile(request):
     if request.method == "POST":
         if form.is_valid():
             obj = form.save(commit=False)
+            print (obj.picture)
+            if 'picture' in request.FILES:
+                obj.picture = request.FILES['picture']
+                print (request.FILES['picture'])
             obj.save()
             context_dict['form'] = form
-            return render(request, 'website/profile.html', context_dict)
+            return HttpResponseRedirect('/profile')
         else:
             context_dict['form'] = form
             context_dict['error'] = 'The form was not updated successfully.'
@@ -331,7 +335,7 @@ def register(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
     context_dict={'user_form':user_form, 'profile_form':profile_form, 'registered':registered}
-    return render(request,'website/register.html', context_dict)
+    return render(request,'website/login.html', context_dict)
 
 @csrf_protect
 @csrf_exempt

@@ -35,9 +35,14 @@
         <div id="modalEdit" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <h4>Edit Profile</h4>
-                <form class="col s12" method="post" action="\profile">
+                <form class="col s12" method="post" enctype="multipart/form-data" action="/profile/">
                     {% csrf_token %}
-                    {{ form.as_p }}
+                    {% for field in form.visible_fields %}
+                    {{ field.errors }}
+                    {{ field.help_text }}
+                    {{ field }}
+                    <br>
+                    {% endfor %}
                     <input type="submit" value="Update"/>
                 </form>
             </div>
