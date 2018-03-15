@@ -5,7 +5,7 @@ from datetime import datetime
 from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
     choice = (('0', 'Female'), ('1', 'Male'), ('2', 'Other'))
     college = models.CharField(max_length=100)
     picture = models.ImageField(upload_to='profile_images', blank=True)
