@@ -1,18 +1,25 @@
-{% extends 'website/base.html' %}
+{% extends 'website/base1.html' %}
 {% load staticfiles %}
 {% block title %}Campus Ambassador Program{% endblock %}
-{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/campusamb.css' %}" >{% endblock %}
-{% block image %}{% static  'images/campusamb.jpg' %}{% endblock %}
+{% block css %}
+ <link type="text/css" rel="stylesheet" href="{% static 'css/main3.css' %}">
+ <link type="text/css" rel="stylesheet" href="{% static 'css/campusamb.css' %}" >
+{% endblock %}
+{% block silho %}{% static  'images/campusambss.png' %}{% endblock %}
 {% block heading %}Campus Ambassador Program{% endblock %}
 {% block content %}
-<div class="row">
-      <h6>"It is your turn to be the Evangelist of your college and bring out a marketing ninja!"</h6>
-    </div>
-    <div class="row">
-      <strong>Introduction</strong>
-      <p>Campus Ambassador is responsible for the publicity and marketing of 67th Milestone’18 and is responsible for introducing, briefing and encouraging student participation in the fest, in his/her college/university. He/She is the chief student representative of their college and will be the coordinator for any relevant activity conducted in their respective college for publicity through social media, college notice boards, root-mails etc.</p>
-    </div>
-    <div class="row">
+<section class="skewedBox">
+  <div class="box">
+  <h1>Campus Ambassador Program</h1>
+  <h6>"It is your turn to be the Evangelist of your college and bring out a marketing ninja!"</h6>
+  </div>
+</section>
+<section class="details container">
+  <div class="row details-intro">
+    <strong>Introduction</strong>
+    <p>Campus Ambassador is responsible for the publicity and marketing of 67th Milestone’18 and is responsible for introducing, briefing and encouraging student participation in the fest, in his/her college/university. He/She is the chief student representative of their college and will be the coordinator for any relevant activity conducted in their respective college for publicity through social media, college notice boards, root-mails etc.</p>
+  </div>
+  <div class="row details-details">
       <strong>Details</strong>
       <ul>
         <li>The program will last until the end of 67th Milestone’18.</li>
@@ -22,8 +29,8 @@
         <li>The partners will be rewarded with exciting prizes and recommendations.</li>
         <li>Only active partners who meet the required target will be considered for any kind of reward.</li>
       </ul>
-    </div>
-    <div class="row">
+  </div>
+  <div class="row details-benefits">
       <strong>Benefits</strong>
       <ul>
         <li>Certificate of Appreciation</li>
@@ -35,10 +42,12 @@
         <li>Exciting Prizes and goodies (for Top Performers)</li>
         <li>Exclusive Merchandise (67th Milestone T-Shirts)</li>
       </ul>
-    </div>
-    <div class="row btn-display">
-      <a href="#modalReg" class="btn light-blue darken-1 waves-effect modal-trigger">Apply Now</a>
-    </div>
+  </div>
+  <div class="row details-apply" style="text-align: center;">
+      <a href="#modalReg" class="btn modal-trigger btn-login">Apply Now</a>
+  </div>
+</section>
+
 
 
   <!-- Modal for editing profile -->
@@ -71,4 +80,25 @@ SUBMIT
    <!-- Modal ends -->
 {% endblock %}
 
-
+{% block js %}
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- Scroll -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.modal').modal();
+        $(".button-collapse").sideNav();
+        window.sr = ScrollReveal({ reset: true });
+        sr.reveal('.details-intro', { duration: 800 });
+        sr.reveal('.details-details', { duration: 800 });
+        sr.reveal('.details-benefits', { duration: 800 });
+        sr.reveal('.details-apply', { duration: 800 });
+    // $('ul.tabs').tabs({
+    //   swipeable : true,
+    //   responsiveThreshold : 1920
+    });
+  </script>
+{% endblock %}

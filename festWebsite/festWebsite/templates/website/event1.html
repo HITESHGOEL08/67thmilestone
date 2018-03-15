@@ -1,0 +1,106 @@
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}Event Detail{% endblock %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/main3.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/style1.css' %}">
+{% endblock %}
+{% block silho %}{% static  'images/events.png' %}{% endblock %}
+{% block heading %}Campus Ambassador Program{% endblock %}
+{% block content %}
+
+<!-- Content -->
+{% for i in event_details %}
+<section class="skew1">
+    <div class="event-heading">
+        <h4>{{ i.name }}</h4>
+    </div>
+</section>
+<section class="skew2">
+    <div class="tagline">
+        <p>{{ i.one_liner }}</p>
+    </div>
+</section>
+<section class="row picture-desc">
+    <div class="col s12 m3 event-picture">
+        <img src="{{ MEDIA_URL }}{{ i.image }}" class="responsive-img">
+    </div>
+    <div class="col s12 m6 event-desc">
+        <h4>{{ i.type }}</h4>
+        <p>{{ i.description }}</p>
+    </div>
+    <div class="col s12 m3 event-list">
+        <ul>
+            <li>Fee: <span class="highlight">{{ i.fee }}</span></li>
+            {% if single %}
+            <li>Participants: <span class="highlight">{{ i.min_participants }}</span></li>
+            {% else %}
+            <li>Participants: <span class="highlight">{{ i.min_participants }} - {{ i.max_participants }}</span></li>
+            {% endif %}
+            <li>Date & Time: <span class="highlight">{{ i.date }} {{ i.time }}</span></li>
+            <li>Venue: <span class="highlight">{{ i.venue }}</span></li>
+            <li>Prize: <span class="highlight">{{ i.prize }}</span></li>
+            {% if rules %}
+            <li><a href="/download/{{ file_name }}">Download Rules File</a></li>
+            {% endif %}
+        </ul>
+        <div class="btn-reg">
+            {% if single %}
+            <a href="\{{ slug }}/register" class="btn btn-login">Register</a>
+            {% else %}
+            <a href="#" class="btn btn-login">Register</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<section class="row poc container">
+    <div class="col s12 m12 highlight">
+        <h3>Event Organizers</h3>
+    </div>
+    <div class="col s12 m6">
+        <img src="{{ MEDIA_URL }}{{ i.contact_image1 }}" class="responsive-img circle">
+        <p>{{ i.contact_name1 }}</p>
+        <p>{{ i.contact_phone1 }}</p>
+        <p>{{ i.contact_email1 }}</p>
+    </div>
+    <div class="col s12 m6">
+        <img src="{{ MEDIA_URL }}{{ i.contact_image2 }}" class="responsive-img circle">
+        <p>{{ i.contact_name2 }}</p>
+        <p>{{ i.contact_phone2 }}</p>
+        <p>{{ i.contact_email2 }}</p>
+    </div>
+</section>
+<section class="sponsors">
+    <div class="col s12 m12 highlight">
+        <h3>Sponsors</h3>
+    </div>
+    <div class="col s12 m12">
+        {% for j in sponsors %}
+        <img src="{{ MEDIA_URL }}{{ j }}">
+        {% endfor %}
+    </div>
+</section>
+{% endfor %}
+<!-- Content ends -->
+
+{% endblock %}
+
+{% block js %}
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $(".button-collapse").sideNav();
+      window.sr = ScrollReveal({ reset: true });
+        sr.reveal('.picture-desc', { duration: 800 });
+        sr.reveal('.event-list', { duration: 800 });
+        sr.reveal('.poc', { duration: 800 });
+        sr.reveal('.sponsors', { duration: 800 });
+    });
+
+
+</script>
+{% endblock %}

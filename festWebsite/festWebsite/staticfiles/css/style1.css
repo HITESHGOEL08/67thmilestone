@@ -1,0 +1,211 @@
+body {
+	background-color: #000;
+	background-size: 100vw 100vh;
+	font-family: "Open Sans", sans-serif;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	padding-bottom: 10vh;
+  }
+  a.nostyle {
+	color: inherit;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+  }
+  div.portfoliocard {
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	position: relative;
+	height: auto;
+	width: 90vw;
+	background: rgba(255, 255, 255, 1);
+	overflow: hidden;
+	z-index: 100;
+	margin-left: auto;
+  margin-right: auto;
+  }
+  div.portfoliocard div.coverphoto {
+	width: 100%;
+	height: 120px;
+	background-color: #000;
+	background-position: center center;
+	z-index: 99;
+	/*padding-top: 2vh;*/
+  }
+  div.portfoliocard div.coverphoto p{
+	background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); 
+    background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00);
+    background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00);
+    background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00);
+    background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+	margin: 0px;
+	font-size: 5em;
+	font-family: 'Oswald', sans-serif;
+  }
+  div.portfoliocard div.left_col {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0px 3px 20px rgba(255, 255, 255, 0.3),
+	1px 0px 2px rgba(255, 255, 255, 0.7);
+	padding-top: 85px;
+	box-sizing: border-box;
+	margin-bottom: 3vh;
+  }
+  div.portfoliocard div.mid_col {
+	margin-bottom: 3vh;
+	background: rgba(245, 245, 245, 1);
+	border-left: 1px solid rgba(230, 230, 230, 1);
+	box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.7);
+	margin-left: -1px;
+	
+	border-bottom-right-radius: 5px;
+  }
+  div.portfoliocard div.event_picture {
+	width: 150px;
+	height: 150px;
+	background: rgba(255, 255, 255, 1);
+	position: absolute;
+	top: 45px;
+	left: 40px;
+	border-radius: 100%;
+	background-size: 100% 100%;
+	padding: 0;
+	border: 4px solid rgba(255, 255, 255, 1);
+	border-radius: 50%;
+	}
+	div.portfoliocard div.event_picture img{
+		border-radius: 50%;
+		width: 100%;
+		margin: 0;
+	}
+  div.portfoliocard div.mid_col h2.EventName {
+	font-size: 30px;
+	font-weight: 300;
+	color: rgba(30, 30, 30, 1);
+	padding: 0;
+	margin: 20px 10px 0px 30px;
+  }
+  div.portfoliocard div.mid_col h3.type {
+	font-size: 15px;
+	font-weight: 300;
+	color: rgba(170, 170, 170, 1);
+	padding: 0;
+	margin: -5px 10px 10px 30px;
+  }
+  div.portfoliocard ul.contact_information {
+	margin-top: 20px;
+	list-style-type: none;
+  }
+  div.portfoliocard ul.contact_information li {
+	line-height: 25px;
+	font-weight: 300;
+	font-size: 15px;
+	color: rgba(140, 140, 140, 1);
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+	padding: 5px 0px;
+	cursor: default;
+	margin-right: 15px;
+	text-align: left;
+  }
+  div.portfoliocard ul.contact_information li:before {
+	content: "";
+	width: 25px;
+	height: 25px;
+	display: block;
+	float: left;
+	background-position: center;
+	background-size: 18px 18px;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+  }
+  div.portfoliocard p.desc
+{
+	margin: 0px 0px 0px 0px;
+	font-weight: 300;
+	font-size: 16px;
+	color: rgba(30, 30, 30, 1);
+	width: 90%;
+	height: 100%;
+	text-align: justify;
+  }
+  div.portfoliocard div.follow_count {
+	font-weight: 400;
+	font-size: 25px;
+	color: rgba(140, 140, 140, 1);
+  }
+
+  .sponsors-align{
+  	text-align: center;
+  }
+
+  .sponsors-align img{
+  	max-width: 150px;
+  	height: auto;
+  }
+
+  @media (max-width: 767px) {
+	div.portfoliocard div.left_col,
+	div.portfoliocard div.mid_col,
+	div.portfoliocard div.right_col {
+	  width: 100%;
+		display: block;
+		margin: 2px;
+		border: 1px solid #333;
+	}
+	div.portfoliocard div.coverphoto p{
+		text-align: right;
+		font-size: 4em;
+		padding-right: 5vw;
+	}
+  }
+  @media (min-width: 767px) {
+	div.portfoliocard div.left_col
+	{
+	  width: 70%;
+	  float: left;
+	  height: 340px;
+	}
+	div.portfoliocard div.mid_col
+	{
+	  width: 30%;
+	  float: left;
+	  height: 340px;
+	}
+	div.portfoliocard div.right_col {
+	  width: 50%;
+	  float: left;
+	  height: 340px;
+	}
+  }
+  .desc{
+	overflow: auto;
+  }
+  div.right_col img{
+	  border-radius: 50%;
+	  margin-top: 2vh;
+  }
+  h3{
+		background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); 
+    background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00);
+    background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00);
+    background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00);
+    background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+	margin: 0px;
+	font-size: 5em;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	}
+	.col{
+		padding:2vw;
+	}
+	.col img{
+		width: 100%;
+        height: 30vh;
+		margin: 0px;
+	}

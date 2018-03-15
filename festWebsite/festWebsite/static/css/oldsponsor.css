@@ -1,0 +1,49 @@
+.sponsor-row, .title-sponsor{
+	text-align: center;
+}
+
+.sponsor-row{
+	margin-top: 3rem!important;
+}
+
+h5{
+	text-align: center;
+	margin: 3rem;
+	text-transform: uppercase!important;
+}
+
+h6{
+	font-size: 1.2rem!important;
+	font-weight: 400!important;
+	text-transform: uppercase!important;
+}
+
+@media only screen and (max-width: 500px) {
+h6{
+	font-size: 0.8rem!important;
+	font-weight: 400!important;
+	text-transform: uppercase!important;
+}
+}
+
+#loader-container {
+  width: 150px;
+  height: 150px;
+  color: white;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #3498db;
+  border-radius: 50%;
+  -webkit-animation: borderScale 1s infinite ease-in-out;
+  animation: borderScale 1s infinite ease-in-out;
+}
+
+.content{
+  background: rgba(255,255,255,0.9);
+  padding: 3rem;
+  border-radius: 1rem;
+}

@@ -1,0 +1,170 @@
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}Home{% endblock %}
+{% block css %}
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Import personal CSS -->
+<link type="text/css" rel="stylesheet" href="{% static 'css/home.css' %}">
+<!-- Importing Font Awesome Icons -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+{% endblock %}
+{% block silho %}{% static 'images/stranger.png' %}{% endblock %}
+{% block heading %}{% endblock %}
+{% block content %}
+<!-- Content -->
+<div class="overlay" id="preloader" >
+    <div>
+        <img src="{% static 'images/logo.png' %}"/>
+        <p style="color:white">The Journey Continues<span class="dot1">.</span><span class="dot2">.</span><span
+                class="dot3">.</span></p>
+    </div>
+</div>
+
+<div id="particles-js" >
+    <div class="mobdiv" style="text-align:center;">
+        <p class="festname">BML<br>PRESENTS</p>
+
+        <img class="mob_logo" src="{% static 'images/Logo 67th Milestone-White.svg' %}" width="250px" height="250px">
+
+    </div>
+    <div id="container" style="overflow-x:hidden;">
+
+        <img class="festlogo" src="{% static 'images/Logo 67th Milestone-White.svg' %}" alt="Fest Logo">
+
+
+        <ul class="social">
+            <li><a href="https://instagram.com/67thmilestone" target="_blank"><img
+                    src="{% static 'images/if_1-04_2299378.png' %}" alt="instagram"></a></li>
+            <li><a href="https://fb.com/67milestone" target="_blank"><img
+                    src="{% static 'images/if_1-03_2270784.png' %}" alt="facebook"></a></li>
+            <li><a href="https://twitter.com/67th_milestone" target="_blank"><img
+                    src="{% static 'images/if_1-12_2270775.png' %}" alt="twitter"></a></li>
+            <li><a href="https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw" target="_blank"><img
+                    src="{% static 'images/if_1-02_2270783.png' %}" alt="youtube"></a></li>
+        </ul>
+
+        <img class="tvim" src="{% static 'images/mr robot copy.png' %}" alt="MrRobot">
+
+        <p class="tvim_text" style="text-align: center;">Our Democracy<br> is<br>hacked</p>
+        <img class="tvimsec" src="{% static 'images/sherlock.png' %}" alt="Sherlock">
+        <p class="tvimsec_text" style="text-align: center;">The<br>Game<br> is <br>on</p>
+    </div>
+
+</div>
+
+<div class="yt-video" >
+    <div class="sanjeev-heading">
+        <h2 class="highlight4">
+            Aftermovie'17
+        </h2>
+    </div>
+    <iframe src="https://www.youtube.com/embed/VG47-yBbebE" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+</div>
+<div class="big-div" style="background: url(' {% static 'images/ST.png' %}');">
+    <h1 class="fest-tag">The <br/><span class="journey">Journey</span> Continues...</h1>
+</div>
+
+<div class="pronites scrollspy" id="pronites" style="overflow-x:hidden;overflow-y:hidden;">
+    <div class="sanjeev-heading">
+        <h2 class="highlight4">Pronites</h2>
+    </div>
+    <!-- <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-item white-text" href="#one!">
+        <h2>First Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#two!">
+        <h2>Second Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#three!">
+        <h2>Third Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#four!">
+        <h2>Fourth Panel</h2>
+      </div>
+    </div> -->
+    <div class="coming-soon">
+        <h1>Coming Soon</h1>
+    </div>
+</div>
+
+
+<div class="events scrollspy" id="events" style="overflow-x:hidden;">
+    <div class="sanjeev-heading">
+        <h2 class="highlight2"> Events </h2>
+    </div>
+    <div class="carousel events-slider">
+        {% for i in home_details %}
+        <a class="carousel-item" href="/event/{{ i.slug }}"><img src="{{ MEDIA_URL }}{{ i.image }}"></a>
+        {% endfor %}
+    </div>
+    <div class="all-events">
+        <a href="/event" class="btn btn-login">View all events</a>
+    </div>
+</div>
+
+
+<div class="schedule" style="overflow-x:hidden;overflow-y:hidden;">
+    <div class="sanjeev-heading">
+        <h2 class="highlight3">Schedule</h2>
+    </div>
+    <div class="schedule-pic">
+        <!-- <img src="https://source.unsplash.com/600x400" class="responsive-img"> -->
+        <div class="coming-soon">
+            <h1>Coming Soon</h1>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- <script src="three.js"></script>
+<script src="OrbitControls.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="{% static 'js/particles.js' %}"></script>
+<script>
+    var overlay = document.getElementById("preloader");
+    window.addEventListener('load', function(){
+      $('.overlay').fadeOut();
+    })
+    particlesJS.load('particles-js', "{% static 'js/particles.json' %}", function() {
+      console.log('callback - particles.js config loaded');
+    });
+    $(document).ready(function(){
+      $(".button-collapse").sideNav();
+      $('.scrollspy').scrollSpy();
+      $('.events-slider').carousel();
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
+      setInterval(function(){
+        $('.pronites .carousel').carousel('next');
+      } , 3000);
+      window.sr = ScrollReveal({reset: true});
+      sr.reveal('.fest-tag', {origin : 'left'});
+      sr.reveal('.bar');
+    });
+
+</script>
+<script type="text/javascript">
+   $('.tvim_text').addClass('animated slideInRight');
+   $('.tvimsec_text').addClass('animated slideInLeft');
+   $('.aft').addClass('animated slideInLeft');
+
+</script>
+{% endblock %}

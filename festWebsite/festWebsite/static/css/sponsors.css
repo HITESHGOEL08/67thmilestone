@@ -1,27 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+
+body{
+	background: #fff!important;
+
+}
 .sponsor-row, .title-sponsor{
 	text-align: center;
+
+}
+.tilt{
+padding: 20px 0;
+background: #00F260;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+	transform: skew(0deg,-8deg)translateY(-155px);
 }
 
-.sponsor-row{
-	margin-top: 3rem!important;
+.heading{
+	padding: 50px;
+	padding-top: 150px;
+	color: #fff;
+	font-family: 'Abril Fatface', sans-serif;
+	transform: skew(0deg, 8deg);
 }
-
+.clear{
+	clear: both;
+}
 h5{
-	text-align: center;
-	margin: 3rem;
-	text-transform: uppercase!important;
+	font-weight: 600;
+	background-image: -webkit-linear-gradient(to bottom right, #0575E6, #00F260); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #0575E6, #00F260); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #0575E6, #00F260); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #0575E6, #00F260); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #0575E6, #00F260); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
-
-h6{
-	font-size: 1.2rem!important;
-	font-weight: 400!important;
-	text-transform: uppercase!important;
-}
-
-@media only screen and (max-width: 500px) {
-h6{
-	font-size: 0.8rem!important;
-	font-weight: 400!important;
-	text-transform: uppercase!important;
-}
+@media only screen and (max-width: 600px) {
+	h1{
+		font-size: 30px;
+		text-align: center;
+	}
 }

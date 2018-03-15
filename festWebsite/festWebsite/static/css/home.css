@@ -1,0 +1,682 @@
+@import "https://fonts.googleapis.com/css?family=Abril+Fatface|Permanent+Marker|Roboto|Roboto+Slab";
+
+body{
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.overlay {
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+  padding: 0px;
+  position: fixed;
+  top: 0px;
+}
+.overlay div{
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vh;
+  width: auto;
+}
+.overlay div img{
+  width: 17vw;
+  -webkit-animation: mymove 3s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 3s infinite;
+}
+.dot1{-webkit-animation: dot1 4s infinite; /* Safari 4.0 - 8.0 */
+  animation: dot1 4s infinite;}
+  .dot2{-webkit-animation: dot2 4s infinite; /* Safari 4.0 - 8.0 */
+    animation: dot2 4s infinite;}
+    .dot3{-webkit-animation: dot3 4s infinite; /* Safari 4.0 - 8.0 */
+      animation: dot3 4s infinite;}
+      .overlay div p{font-size: 2em;text-align: center;margin: 0;font-family: 'Mina', sans-serif;}
+      /* Safari 4.0 - 8.0 */
+      @-webkit-keyframes mymove {
+        0%{opacity: 0.2;}
+        50%{opacity: 1;}
+        100%{opacity: 0.2;}
+      }
+
+      /* Standard syntax */
+      @keyframes mymove {
+        0%{opacity: 0.2;}
+        50%{opacity: 1;}
+        100%{opacity: 0.2;}
+      }
+      @-webkit-keyframes dot1 {
+        0%{opacity: 0;}
+        24%{opacity: 0;}
+        25%{opacity: 1;}
+        100%{opacity: 1;}
+      }
+
+      /* Standard syntax */
+      @keyframes dot1 {
+        0%{opacity: 0;}
+        24%{opacity: 0;}
+        25%{opacity: 1;}
+        100%{opacity: 1;}
+      }
+      @-webkit-keyframes dot2 {
+        0%{opacity: 0;}
+        50%{opacity: 0;}
+        51%{opacity: 1;}
+        100%{opacity: 1;}
+      }
+
+      /* Standard syntax */
+      @keyframes dot2 {
+        0%{opacity: 0;}
+        50%{opacity: 0;}
+        51%{opacity: 1;}
+        100%{opacity: 1;}
+      }
+      @-webkit-keyframes dot3 {
+        0%{opacity: 0;}
+        74%{opacity: 0;}
+        75%{opacity: 1;}
+        100%{opacity: 1;}
+      }
+
+      /* Standard syntax */
+      @keyframes dot3 {
+        0%{opacity: 0;}
+        74%{opacity: 0;}
+        75%{opacity: 1;}
+        100%{opacity: 1;}
+      }
+
+      .highlight1{
+        background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+        background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+        background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+        background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+        background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .highlight2{
+        background-image: -webkit-linear-gradient(to bottom right,  #bc4e9c, #f80759); /* For Chrome and Safari */
+        background-image:    -moz-linear-gradient(to bottom right,  #bc4e9c, #f80759); /* For old Fx (3.6 to 15) */
+        background-image:     -ms-linear-gradient(to bottom right,  #bc4e9c, #f80759); /* For pre-releases of IE 10*/
+        background-image:      -o-linear-gradient(to bottom right,  #bc4e9c, #f80759); /* For old Opera (11.1 to 12.0) */
+        background-image:         linear-gradient(to bottom right,  #bc4e9c, #f80759); /* Standard syntax; must be last */
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .highlight3{
+        background-image: -webkit-linear-gradient(to bottom right, #fc00ff, #00dbde); /* For Chrome and Safari */
+        background-image:    -moz-linear-gradient(to bottom right, #fc00ff, #00dbde); /* For old Fx (3.6 to 15) */
+        background-image:     -ms-linear-gradient(to bottom right, #fc00ff, #00dbde); /* For pre-releases of IE 10*/
+        background-image:      -o-linear-gradient(to bottom right, #fc00ff, #00dbde); /* For old Opera (11.1 to 12.0) */
+        background-image:         linear-gradient(to bottom right, #fc00ff, #00dbde); /* Standard syntax; must be last */
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .highlight4{
+        background-image: -webkit-linear-gradient(to right, #ff512f, #dd2476); /* For Chrome and Safari */
+        background-image:    -moz-linear-gradient(to right, #ff512f, #dd2476); /* For old Fx (3.6 to 15) */
+        background-image:     -ms-linear-gradient(to right, #ff512f, #dd2476); /* For pre-releases of IE 10*/
+        background-image:      -o-linear-gradient(to right, #ff512f, #dd2476); /* For old Opera (11.1 to 12.0) */
+        background-image:         linear-gradient(to right, #ff512f, #dd2476); /* Standard syntax; must be last */
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #333;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #111;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom right, #ee0979, #ff6a00);;
+      }
+
+      nav{
+        position: relative;
+        background: transparent;
+        z-index: 1000!important;
+        position: relative;
+        border-bottom: none;
+        box-shadow: none;
+      }
+
+      nav a:active{
+        border-bottom: 2px solid #fff;
+      }
+
+      nav a:not(:last-child):hover{
+        border-bottom: 2px solid #fff;
+        transition: 0.2s ease-in-out;
+      }
+
+      .side-nav{
+        background: rgba(1,1,1,0.8);
+      }
+
+      .side-nav li > a{
+        color: #fff;
+      }
+
+      .side-nav li:hover {
+        background-color: linear-gradient(to bottom right, #ee0979, #ff6a00)!important;
+      }
+
+      .btn-login{
+        background: transparent!important;
+        border: 1px solid white;
+        border-radius: 1px;
+        transition: 0.2s ease-in-out!important;
+      }
+
+      .btn-login:hover{
+        color: #fff;
+        /*background: linear-gradient(to bottom right, #ee0979, #ff6a00)!important;*/
+        background: crimson!important;
+        transition: 0.2s ease-in-out;
+        box-shadow: 1px 1px 15px 5px crimson;
+      }
+
+      .btn-gallery{
+        position: fixed;
+        z-index: 10000;
+        bottom: 20px;
+        right: 20px;
+        background: transparent!important;
+        border: 1px solid #fff;
+      }
+
+      .btn-gallery:hover{
+        background: linear-gradient(to bottom right, #ee0979, #ff6a00)!important;
+      }
+
+      .material-tooltip > .backdrop {
+        background-color: transparent;
+      }
+
+      .yt-video{
+        height: 100vh;
+      }
+
+      .yt-video iframe{
+        width: 70%;
+        height: 600px;
+        margin: 0 15%;
+        border: none;
+        box-shadow: 1px 1px 15px 5px crimson;
+      }
+
+      .big-div{
+        height: 100vh;
+        background: url("images/ST.png");
+        background-size: contain;
+        background-attachment: fixed;
+        color: #fff;
+        padding: 100px 100px;
+        font-family: 'Abril Fatface', sans-serif;
+      }
+      .fest-tag{
+        font-size: 5rem;
+      }
+      .journey{
+        font-size: 10rem;
+      }
+      .journey:after{
+        content: "Journey";
+        position: relative;
+        left: -560px; bottom: -5px;
+        background-image: -webkit-linear-gradient(to bottom right, #061161, #780206); /* For Chrome and Safari */
+        background-image:    -moz-linear-gradient(to bottom right, #061161, #780206); /* For old Fx (3.6 to 15) */
+        background-image:     -ms-linear-gradient(to bottom right, #061161, #780206); /* For pre-releases of IE 10*/
+        background-image:      -o-linear-gradient(to bottom right, #061161, #780206); /* For old Opera (11.1 to 12.0) */
+        background-image:         linear-gradient(to bottom right, #061161, #780206); /* Standard syntax; must be last */
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+      }
+
+      .events{
+        height: 100vh;
+      }
+
+      .events-slider .carousel-item {
+        display: none;
+        width: 400px!important;
+        height: 400px!important;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .pronites{
+        height: 100vh;
+      }
+
+      .pronites .carousel.carousel-slider .carousel-item {
+        width: 100%;
+        height: 100%;
+        min-height: 550px!important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("https://source.unsplash.com/1920x1080");
+        background-size: cover;
+      }
+
+
+      .all-events{
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .schedule{
+        height: 100vh;
+      }
+      .schedule-pic{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+      }
+
+      footer{
+        position: relative;
+        bottom: 0;
+        color: #fff;
+        background: #1F211E;
+        width: 100%;
+        padding: 20px 0px;
+      }
+
+      footer .row{
+        margin-bottom: 0;
+      }
+
+      .sanjeev-heading{
+       text-align: center;
+       font-size: 40px;
+       color: #fff;
+       font-family: 'Abril Fatface', cursive;
+       /*font-family: 'Permanent Marker', cursive;*/
+     }
+
+     .tabs{
+       background: transparent;
+       overflow-x: hidden;
+     }
+
+     .tabs .tab a{
+       font-family: 'Roboto', sans-serif;
+       color:#fff;
+     }
+     .tabs .tab a:hover,.tabs .tab a.active {
+       background-color:transparent;
+       color:linear-gradient(to bottom right, #ee0979, #ff6a00);
+     }
+     .tabs .tab.disabled a,.tabs .tab.disabled a:hover {
+       color:rgba(102,147,153,0.7);
+     }
+     .tabs .indicator {
+       background: linear-gradient(to bottom right, #ee0979, #ff6a00);
+     }
+
+     .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background: linear-gradient(to bottom right, #ee0979, #ff6a00);
+    }
+
+    .card:hover .overlay {
+      opacity: 0.5;
+    }
+
+    .card .card-image img{
+     transition: .5s ease;
+   }
+
+   .card:hover .card-image img{
+     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+     filter: grayscale(100%);
+   }
+
+
+   .text{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: 0.2s ease;
+    text-align: center;
+    opacity: 0;
+    font-family: 'Abril Fatface', cursive;
+  }
+
+  .card:hover .text {
+    opacity: 1;
+  }
+
+  .silho img{
+    margin-bottom: -7px;
+    width: 100%;
+  }
+
+  address{
+    line-height: 1.75rem;
+  }
+
+  address a{
+    color: #fff;
+  }
+
+  address a:hover{
+   color: crimson;
+ }
+
+ .dank-footer{
+  text-align: center!important;
+  padding-top: 50px!important;
+}
+
+.dank-line-sanjeev{
+  color: crimson;
+}
+
+.social-media{
+  text-align: right;
+  padding-top: 70px!important;
+}
+
+.social-media .fa-2x{
+  margin-right: 10px!important;
+  color:#fff;
+  transition: 0.2s ease-in-out;
+}
+
+.social-media .fa-2x:hover{
+  transform: translateY(-5px);
+  color: crimson;
+}
+
+.coming-soon{
+  text-align: center;
+  margin: 200px 0;
+  transform: rotate(-15deg);
+}
+.coming-soon h1{
+  font-size: 8rem;
+  color: #fff;
+  font-family: 'Permanent Marker', sans-serif;
+}
+
+#particles-js{
+  background: transparent;
+}
+
+@media only screen and (max-width: 500px) {
+  .text{
+   font-size: 16px;
+ }
+ address{
+  line-height: 1.4rem;
+  font-size: 1rem;
+}
+.dank-footer{
+  padding-top: 10px!important;
+}
+.social-media{
+  text-align: center;
+  padding-top: 10px!important;
+}
+.pronites .carousel.carousel-slider .carousel-item {
+  min-height: 400px!important;
+}
+.events-slider .carousel-item {
+  width: 300px!important;
+  height: 300px!important;
+}
+.all-events{
+  text-align: center;
+  margin-top: 10px;
+}
+.yt-video{
+  height: auto;
+  padding: 100px 0px;
+}
+.yt-video iframe{
+  width: 95%;
+  height: 200px;
+  margin: 0 2.5%;
+  box-shadow: none;
+}
+.big-div{
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+
+}
+.fest-tag{
+  font-size: 3rem;
+}
+.journey{
+  font-size: 5rem;
+}
+.journey:after{
+  content: "Journey";
+  position: relative;
+  left: -260px; bottom: -3px;
+  background-image: -webkit-linear-gradient(to bottom right, #061161, #780206); /* For Chrome and Safari */
+  background-image:    -moz-linear-gradient(to bottom right, #061161, #780206); /* For old Fx (3.6 to 15) */
+  background-image:     -ms-linear-gradient(to bottom right, #061161, #780206); /* For pre-releases of IE 10*/
+  background-image:      -o-linear-gradient(to bottom right, #061161, #780206); /* For old Opera (11.1 to 12.0) */
+  background-image:         linear-gradient(to bottom right, #061161, #780206); /* Standard syntax; must be last */
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.pronites{
+  height: auto:
+  padding 5px 0px;
+}
+}
+
+/* Vidhu ka code */
+.festlogo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+
+}
+.festlogo{
+
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 400px;
+
+}
+.log_reg{
+  position: absolute;
+  top:10px;
+  left:10px;
+  z-index: 10;
+  padding:16px 24px;
+  cursor: pointer;
+  border: 3px solid #E80057;
+  box-shadow:5px 5px 0 0 #E80057;
+  -webkit-box-shadow:5px 5px 0 0 #E80057;
+  -webkit-transition:all .2s ease-out;
+  transition:all .2s ease-out;
+  font-weight:bold;
+  color:#ffffff !important;
+  text-decoration: none !important;
+  font-family: 'Roboto', sans-serif;
+  left: 42.5%;
+  top: 88.5%;
+
+
+
+
+}
+
+.log_reg:hover {
+ -webkit-box-shadow:0 0 0 0 #E80057;
+ box-shadow:0 0 0 0 #E80057;
+ -webkit-transform:translate(2px,2px);
+ -ms-transform:translate(2px,2px);
+ transform:translate(2px,2px)
+ background: #ee0979;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.main{
+  height: 100vh;
+}
+
+.social{
+  position: fixed;
+  z-index: 15;
+  margin-top: 180px;
+  margin-left: 10px;
+  transition: all .2s ease-in-out;
+  list-style-type: none;
+  cursor: pointer;
+}
+.social img{
+  margin-bottom: 10px;
+}
+.social img:hover{
+  transform: scale(1.1);
+}
+
+.tvim{
+  position: absolute;
+  z-index: 10;
+  height: 400px;
+  width: 300px;
+  top:26%;
+  right: 5%;
+  opacity: 0.7;
+}
+.tvim_text{
+  color: #fff;
+  position: absolute;
+  z-index: 11;
+  right: 6%;
+  top:35%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  font:#B2B2B2;
+
+}
+.tvimsec{
+  position: absolute;
+  z-index: 10;
+  top:13.5%;
+  height: 500px;
+  width: 350px;
+  left:7%;
+  opacity: 0.7;
+}
+.tvimsec_text{
+  color: #fff;
+  position: absolute;
+  z-index: 11;
+  top:30%;
+  left:16%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  font:#B2B2B2;
+}
+
+.after_movie{
+  position: absolute;
+  margin-top: -6px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 40px;
+
+}
+.video{
+  padding-left:180px;
+  padding-top: 75px;
+
+
+}
+@media (min-width: 720px) {
+  .mobdiv {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  #container,.after_movie {
+   display: none;
+ }
+ .mobdiv{
+  background-image: url("mob_back.png");
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mob_logo{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate(0%,3%);
+}
+.festname{
+  font-size: 40px;
+  padding-top: 50px;
+  font-weight: bold;
+  background:   linear-gradient(to left, #cc2b5e, #753a88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Merriweather',serif;
+}
+}

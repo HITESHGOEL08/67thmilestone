@@ -1,0 +1,95 @@
+@import "https://fonts.googleapis.com/css?family=Abril+Fatface|Permanent+Marker|Roboto";
+
+
+.wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.event-heading{
+	text-align: center;
+	font-size: 40px;
+	color: #fff;
+	 font-family: 'Abril Fatface', cursive;
+	/*font-family: 'Permanent Marker', cursive;*/
+	margin: 20px 0;
+	background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.tabs{
+	background: transparent!important;
+	overflow-x: hidden!important;
+}
+
+.tabs .tab a{
+	font-family: 'Roboto', sans-serif;
+    color:#fff;
+}
+.tabs .tab a:hover,.tabs .tab a.active {
+	background-color:transparent;
+	color:linear-gradient(to bottom right, #ee0979, #ff6a00);
+}
+.tabs .tab.disabled a,.tabs .tab.disabled a:hover {
+	color:rgba(102,147,153,0.7);	
+}
+.tabs .indicator {
+	background: linear-gradient(to bottom right, #ee0979, #ff6a00);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: linear-gradient(to bottom right, #ee0979, #ff6a00);
+}
+
+.card:hover .overlay {
+  opacity: 0.5;
+}
+
+.card .card-image img{
+	transition: .5s ease;
+}
+
+.card:hover .card-image img{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
+.text {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transition: 0.2s ease;
+  text-align: center;
+  opacity: 0;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.card:hover .text {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 500px) {
+    .text{
+    	font-size: 16px;
+    }
+}

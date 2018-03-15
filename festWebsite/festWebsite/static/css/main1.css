@@ -1,0 +1,106 @@
+@import "https://fonts.googleapis.com/css?family=Abril+Fatface|Permanent+Marker|Roboto";
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background: #000;
+}
+nav{
+  background: #222;;
+}
+
+nav a:active{
+  background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+  background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+  background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+  background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+  background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+nav a:hover{
+  background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  transition: 0.2s ease-in-out;
+}
+
+.side-nav{
+  background: rgba(1,1,1,0.8);
+}
+
+.side-nav{
+  color: #fff!important;
+}
+
+.btn{
+  background: transparent!important;
+  border: 1px solid white;
+  border-radius: 1px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover{
+  color: #fff;
+  background: linear-gradient(to bottom right, #ee0979, #ff6a00)!important;
+  transition: 0.2s ease-in-out;
+  border: 1px solid white;
+}
+.card{
+  background: rgba(255, 255, 255, 0.9)!important;
+}
+
+#card-image{
+  max-width: 200px!important;
+}
+
+.profile, .events{
+  margin-top: 50px;
+}
+
+.input-field input[type=text]:focus + label, .input-field input[type=tel]:focus + label,
+.input-field input[type=email]:focus + label {
+     color: #039be5!important;
+}
+
+.input-field input[type=text]:focus, .input-field input[type=tel]:focus,
+.input-field input[type=email]:focus {
+     border-bottom: 1px solid #039be5!important;
+     box-shadow: 0 1px 0 0 #039be5!important;
+}
+footer{
+  position: relative;
+  bottom: 0;
+  color: #fff;
+  background: #1F211E;
+  width: 100%;
+  padding: 50px 20px;
+}
+
+footer .row{
+  margin-bottom: 0;
+}
+h3, h4{
+  margin: 20px 0;
+	background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: Abril fatface;
+}
+.btn-edit{
+  color: #000;
+  background: transparent;
+  border: 1px solid #000;
+}

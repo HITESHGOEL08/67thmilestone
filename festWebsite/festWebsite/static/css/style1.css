@@ -1,0 +1,102 @@
+.skew1{
+	transform: skew(0deg, -7deg) translateY(-147px);
+	padding: 50px 20px;
+	background: #7b4397;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #dc2430, #7b4397);
+	z-index: 10!important;
+	position: relative; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.event-heading{
+text-align: left;
+	transform: skew(0deg, 7deg);
+	padding: 50px 50px;
+	padding-top: 150px;
+	color: #fff;
+	font-family: 'Abril Fatface', sans-serif;
+}
+.skew2{
+	transform: skew(0deg, 7deg) translateY(-380px);
+	position: relative;
+	padding: 50px 20px;
+	z-index: 1!important;
+	background: #222; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.tagline{
+	transform: skew(0deg, -7deg);
+	padding: 50px 50px;
+	padding-top: 100px;
+	margin-top: 150px;
+	text-align: right;
+	color: #fff;
+}
+.picture-desc{
+	position: relative;
+	margin-top: -250px;
+	color: #fff;
+}
+.event-desc h4{
+	background-image: -webkit-linear-gradient(to bottom right, #dc2430, #7b4397); /* For Chrome and Safari */
+  	background-image:    -moz-linear-gradient(to bottom right, #dc2430, #7b4397); /* For old Fx (3.6 to 15) */
+  	background-image:     -ms-linear-gradient(to bottom right, #dc2430, #7b4397); /* For pre-releases of IE 10*/
+  	background-image:      -o-linear-gradient(to bottom right, #dc2430, #7b4397); /* For old Opera (11.1 to 12.0) */
+  	background-image:         linear-gradient(to bottom right, #dc2430, #7b4397); /* Standard syntax; must be last */
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+  	text-align: justify-all;
+}
+.event-list li{
+	margin-bottom: 15px;
+}
+.event-list li>a{
+	color: #fff;
+}
+.event-list li>a:hover{
+	background-image: -webkit-linear-gradient(to bottom right, #dc2430, #7b4397); /* For Chrome and Safari */
+  	background-image:    -moz-linear-gradient(to bottom right, #dc2430, #7b4397); /* For old Fx (3.6 to 15) */
+  	background-image:     -ms-linear-gradient(to bottom right, #dc2430, #7b4397); /* For pre-releases of IE 10*/
+  	background-image:      -o-linear-gradient(to bottom right, #dc2430, #7b4397); /* For old Opera (11.1 to 12.0) */
+  	background-image:         linear-gradient(to bottom right, #dc2430, #7b4397); /* Standard syntax; must be last */
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+}
+.highlight{
+	background-image: -webkit-linear-gradient(to bottom right, #dc2430, #7b4397); /* For Chrome and Safari */
+  	background-image:    -moz-linear-gradient(to bottom right, #dc2430, #7b4397); /* For old Fx (3.6 to 15) */
+  	background-image:     -ms-linear-gradient(to bottom right, #dc2430, #7b4397); /* For pre-releases of IE 10*/
+  	background-image:      -o-linear-gradient(to bottom right, #dc2430, #7b4397); /* For old Opera (11.1 to 12.0) */
+  	background-image:         linear-gradient(to bottom right, #dc2430, #7b4397); /* Standard syntax; must be last */
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+}
+.poc, .sponsors{
+	margin-top: 100px;
+	margin-bottom: 50px;
+	text-align: center;
+	color: #fff;
+}
+.poc img{
+    max-width: 180px!important;
+    height: auto;
+}
+.sponsors img{
+    max-width: 170px;
+    height: auto;
+}
+@media only screen and (max-width: 500px) {
+    .event-heading h2{
+    	font-size: 2rem;
+    }
+    .skew1{
+    	padding: 20px 10px;
+    }
+    .skew2{
+    	padding: 10px;
+    }
+    .event-list .btn-reg{
+    	text-align: center;
+    }
+}

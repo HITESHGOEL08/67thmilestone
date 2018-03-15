@@ -1,14 +1,33 @@
-{% extends 'website/base.html' %}
+{% extends 'website/base1.html' %}
 {% load staticfiles %}
 {% block title %}Past Sponsors{% endblock %}
-{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/sponsors.css' %}" >{% endblock %}
-{% block image %}{% static  'images/sponsors.jpg' %}{% endblock %}
-{% block heading %}Past Sponsors{% endblock %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/oldsponsor.css' %}" >{% endblock %}
+{% block silho %}{% endblock %}
+<!--{% block heading %}Past Sponsors{% endblock %}-->
 {% block content %}
+<div style="text-align: center;
+	font-size: 40px;
+	color: #fff;
+	 font-family: 'Abril Fatface', cursive;
+	/*font-family: 'Permanent Marker', cursive;*/
+	margin: 20px 0;
+	background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;">
+    <h1>Past Sponsors</h1>
+</div>
+<div class="container">
+  <section class="content">
+
 <div class="row title-sponsor">
 	<h5>Title Sponsor</h5>
 	<img src="{% static 'images/hero.png' %}" alt="hero" class="responsive-img">
-	
+
 </div>
 <div class="row sponsor-row">
 	<div class="col s4">
@@ -129,29 +148,29 @@
 
 <div class="row sponsor-row">
 	<div class="col s4">
-		
+
 		<a href="#"><img src="{% static 'images/Allevents.png' %}" alt="allevents" class="responsive-img"></a>
 	</div>
 	<div class="col s4">
-		
+
 		<a href="#"><img src="{% static 'images/BrainBuxa.png' %}" alt="brainbuxa" class="responsive-img"></a>
 	</div>
 	<div class="col s4">
-		
+
 		<a href="#"><img src="{% static 'images/BuddyBits.png' %}" alt="buddybits" class="responsive-img"></a>
 	</div>
 </div>
 <div class="row sponsor-row">
 	<div class="col s4">
-		
+
 		<a href="#"><img src="{% static 'images/CampusDrift.png' %}" alt="campusdrift" class="responsive-img"></a>
 	</div>
 	<div class="col s4">
-		
+
 		<a href="#"><img src="{% static 'images/CollegeDunia.png' %}" alt="colllegedunia" class="responsive-img"></a>
 	</div>
 	<div class="col s4">
-		
+
 		<a href="#"><img src="{% static 'images/Fuccha.png' %}" alt="fuccha" class="responsive-img"></a>
 	</div>
 </div>
@@ -180,7 +199,7 @@
 	<div class="col m2 s4">
 		<a href="#"><img src="{% static 'images/future.png' %}" alt="team member" class="responsive-img"></a>
 	</div>
-		
+
 </div>
 
 <div class="row sponsor-row">
@@ -202,7 +221,7 @@
 	<div class="col m2 s4">
 		<a href="#"><img src="{% static 'images/sk.png' %}" alt="team member" class="responsive-img"></a>
 	</div>
-		
+
 </div>
 
 <div class="row sponsor-row">
@@ -224,7 +243,7 @@
 	<div class="col m2 s4">
 		<a href="#"><img src="{% static 'images/hollister.png' %}" alt="team member" class="responsive-img"></a>
 	</div>
-		
+
 </div>
 
 <div class="row sponsor-row">
@@ -237,5 +256,7 @@
 	<div class="col m2 s4">
 		<a href="#"><img src="{% static 'images/AbraxasNU.png' %}" alt="team member" class="responsive-img"></a>
 	</div>
+</div>
+  </section>
 </div>
 {% endblock %}

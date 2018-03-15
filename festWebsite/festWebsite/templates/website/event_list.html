@@ -1,0 +1,82 @@
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}Event{% endblock %}
+<!-- Import personal CSS -->
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+{% block silho %}{% static 'images/eventmainpage.png' %}{% endblock %}
+<!--{% block heading %}Event{% endblock %}-->
+{% block content %}
+<div class="wrapper">
+    <div class="event-heading">
+        <h1>Events</h1>
+    </div>
+    <div class="row">
+        <ul class="tabs tabs-fixed-width">
+            <li class="tab col s3"><a class="active" href="#flagship">Flagship</a></li>
+            <li class="tab col s3"><a href="#major">Major</a></li>
+            <li class="tab col s3"><a href="#minor">Minor</a></li>
+        </ul>
+        <div id="flagship" class="col s12">
+            <div class="row">
+                {% for i in flagship %}
+                <a href="/event/{{ i.slug }}">
+                    <div class="col s6 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{{ MEDIA_URL }}{{ i.image }}">
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="text">{{ i.name }}</div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="major" class="col s12">
+            <div class="row">
+                {% for i in major %}
+                <a href="/event/{{ i.slug }}">
+                    <div class="col s6 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{{ MEDIA_URL }}{{ i.image }}">
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="text">{{ i.name }}</div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="minor" class="col s12">
+            <div class="row">
+                {% for i in minor %}
+                <a href="/event/{{ i.slug }}">
+                    <div class="col s6 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{{ MEDIA_URL }}{{ i.image }}">
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="text">{{ i.name }}</div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block js %}
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+{% endblock %}

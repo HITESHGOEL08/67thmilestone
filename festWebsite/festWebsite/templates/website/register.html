@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rango</title>
+</head>
+<body>
+<h1>Register with Rango</h1>
+{% if registered %}
+Rango says: <strong>thank you for registering!</strong>
+<a href="/home/">Return to the homepage.</a><br/>
+{% else %}
+Rango says: <strong>register here!</strong><br/>
+<form id="user_form" class="col s12" method="post" action="/register/" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in user_form.visible_fields %}
+    {{ field.errors }}
+    {{ field.help_text }}
+    {{ field }}
+    <br>
+    {% endfor %}
+    {% for field in profile_form.visible_fields %}
+    {{ field.errors }}
+    {{ field.help_text }}
+    {{ field }}
+    <br>
+    {% endfor %}
+    <input type="submit" name="submit" value="Register"/>
+</form>
+{% endif %}
+</body>
+</html>

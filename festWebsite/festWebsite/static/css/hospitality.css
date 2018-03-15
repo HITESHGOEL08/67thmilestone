@@ -1,0 +1,97 @@
+.tablinks
+{
+	width: 17em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.containr
+{
+	width: 100%;
+	height: 100%;
+}
+
+.containrb
+{
+	width: 25%;
+	padding-top: 3em;
+	float: left; 
+}
+
+.containrt
+{
+	float: right;
+	width: 75%;
+	padding: 1em 2vw 0px 0px;
+
+}
+
+.tabcontent {
+    display: none;
+    padding: 0 1vw;
+    border-right: none;
+    overflow-y: auto;
+    color: white;
+} 
+
+.reg
+{
+    margin-bottom: 2em;
+}
+
+#myHeader{
+    font-family: roboto;
+    color: #343434;
+    display: none;
+    width: 100%
+}
+.sticky
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+@media only screen and (max-width: 840px) {
+    .tablinks{
+    	display: none;
+    }
+
+    .containrt{
+    	width: 100%;
+    	height: 100%;
+    }
+
+    .containrb
+    {
+    	display: none;
+    }
+    img
+    {
+        visibility: none;
+        display: none;
+    }
+    .tabcontent
+    {
+        display: block;
+    }
+    #myHeader
+    {
+        display: block;
+        padding: 6px 10px;
+        color: #fff;
+        background: #00C9FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #780206, #061161) !important; /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #780206, #061161) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        margin-top: 0px;
+    }
+
+    .sticky + .containrt {
+  padding-top: 102px;
+  }
+  h3{height: auto !important; font-size: 2em;}
+}
+#Fest
+{
+    display: block;
+}

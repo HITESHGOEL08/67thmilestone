@@ -1,0 +1,212 @@
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}Hospitality{% endblock %}
+{% block css %}
+ <link type="text/css" rel="stylesheet" href="{% static 'css/hospitalitymain.css' %}">
+ <link type="text/css" rel="stylesheet" href="{% static 'css/hospitality.css' %}" >
+
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+{% endblock %}
+{% block silho %}{% static  'images/campusambss.png' %}{% endblock %}
+{% block heading %}Hospitality{% endblock %}
+{% block content %}
+<h4 id="myHeader">About Fest</h4>
+<div class="containr">
+  
+  <div class="containrb">
+    
+    <div class="row">
+      <div class="col">
+          <button class=" btn tablinks" onclick="openCity(event, 'Fest')">About Fest</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="btn tablinks"  onclick="openCity(event, 'University')">About University</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="btn tablinks" onclick="openCity(event, 'Instructions')">Instructions</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="btn tablinks" onclick="openCity(event, 'Accomodation')">Accomodation</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="btn tablinks" onclick="openCity(event, 'RTC')">Reaching the college</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="btn tablinks" onclick="openCity(event, 'FAQs')">F.A.Q</button>
+      </div>
+    </div>
+
+  </div>
+
+  
+
+  <div class="containrt">
+    <div id="Fest" class="tabcontent w3-container w3-center w3-animate-right">
+      <h3>What is Lorem Ipsum?</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+      </p>
+    </div>
+
+    <div id="University" class="tabcontent w3-container w3-center w3-animate-right">
+      <h3>About University</h3>
+      <p>        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p> 
+    </div>
+
+    <div id="Instructions" class="tabcontent w3-container w3-center w3-animate-right">
+      <h3>Instructions</h3>
+      <p>        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+
+    <div id="Accomodation" class="tabcontent w3-container w3-center w3-animate-right">
+      <h3>Accomodation</h3>
+      <p>Tokyo is the capital of Japan.</p>
+      <button class="btn reg">Register</btn>
+    </div>
+
+    <div id="RTC" class="tabcontent w3-container w3-center w3-animate-right">
+      <h3>Reaching The College</h3>
+      <div id="map"></div>
+    </div>
+
+    <div id="FAQs" class="tabcontent w3-container w3-center w3-animate-right">
+      <h3>F.A.Q</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+
+  </div>
+
+  <br style="clear: both;"/>
+
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $(".button-collapse").sideNav();
+    // $('ul.tabs').tabs({
+    //   swipeable : true,
+    //   responsiveThreshold : 1920
+    });
+  </script>
+
+  <script>
+    var p=0;
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    document.getElementById(cityName).style.color = "white";
+    //document.getElementById("Fest").style.display = "block";
+    evt.currentTarget.className += " active";
+
+}
+  
+  
+</script>
+<script>
+  window.onscroll = function() {myFunction()};
+  var Fest, University, Instructions, RTC, FAQs, Accomodation
+  
+  Fest = document.getElementById("Fest");
+  Fest = Fest.offsetTop;
+  
+  University = document.getElementById("University");
+  University = University.offsetTop;
+  
+  Instructions = document.getElementById("Instructions");
+  Instructions = Instructions.offsetTop;
+  
+  Accomodation = document.getElementById("Accomodation");
+  Accomodation = Accomodation.offsetTop;
+  
+  RTC = document.getElementById("RTC");
+  RTC = RTC.offsetTop;
+  
+  FAQs = document.getElementById("FAQs");
+  FAQs = FAQs.offsetTop;
+  
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  
+    if(window.pageYOffset <= Fest)
+    {  
+      document.getElementById("myHeader").innerHTML = "About Fest";
+    }
+  
+    if(window.pageYOffset >= University && window.pageYOffset <= Instructions)
+    {
+      document.getElementById("myHeader").innerHTML = "About University";
+    }
+  
+    if(window.pageYOffset >= Instructions && window.pageYOffset <= Accomodation)
+    {
+      document.getElementById("myHeader").innerHTML = "Instructions";
+    }
+      
+    if(window.pageYOffset >= Accomodation && window.pageYOffset <= RTC)
+    {
+      document.getElementById("myHeader").innerHTML = "Accomodation";
+    }
+  
+    if(window.pageYOffset >= RTC && window.pageYOffset <= FAQs)
+    {
+      document.getElementById("myHeader").innerHTML = "Reaching The College";
+    }
+  
+    if(window.pageYOffset >= FAQs)
+    {
+      document.getElementById("myHeader").innerHTML = "FAQs";
+    }
+  
+  }
+  </script>
+<script>
+$(window).scroll(function() {    
+var scroll = $(window).scrollTop();
+});
+</script>
+
+
+{% endblock %}

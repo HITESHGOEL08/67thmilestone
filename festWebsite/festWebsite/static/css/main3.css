@@ -1,0 +1,245 @@
+@import "https://fonts.googleapis.com/css?family=Abril+Fatface|Permanent+Marker|Roboto|Roboto+Slab";
+
+body{
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #111; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom right, #ee0979, #ff6a00);; 
+}
+
+nav{
+  background: transparent;
+  z-index: 1000!important;
+  position: relative;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+nav a:active{
+  border-bottom: 2px solid #fff;
+}
+
+nav a:not(:last-child):hover{
+  border-bottom: 2px solid #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.side-nav{
+  background: rgba(1,1,1,0.8);
+}
+
+.side-nav li > a{
+  color: #fff;
+}
+
+.side-nav li:hover {
+  background-color: linear-gradient(to bottom right, #ee0979, #ff6a00)!important;
+}
+
+.btn-login{
+  background: transparent!important;
+  border: 1px solid white;
+  border-radius: 1px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-login:hover{
+  color: #fff;
+  background: linear-gradient(to bottom right, #ee0979, #ff6a00)!important;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-gallery{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: transparent!important;
+  border: 1px solid #fff;
+}
+
+.btn-gallery:hover{
+  background: linear-gradient(to bottom right, #ee0979, #ff6a00)!important;
+}
+
+.material-tooltip > .backdrop {
+    background-color: transparent;
+}
+
+.wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+
+footer{
+  position: relative;
+  bottom: 0;
+  color: #fff;
+  background: #1F211E;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+footer .row{
+  margin-bottom: 0;
+}
+
+.event-heading{
+	text-align: left;
+	font-size: 40px;
+	color: #fff;
+	 font-family: 'Abril Fatface', cursive;
+	/*font-family: 'Permanent Marker', cursive;*/
+	margin: 20px 0;
+	background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.tabs{
+	background: transparent;
+	overflow-x: hidden;
+}
+
+.tabs .tab a{
+	font-family: 'Roboto', sans-serif;
+    color:#fff;
+}
+.tabs .tab a:hover,.tabs .tab a.active {
+	background-color:transparent;
+	color:linear-gradient(to bottom right, #ee0979, #ff6a00);
+}
+.tabs .tab.disabled a,.tabs .tab.disabled a:hover {
+	color:rgba(102,147,153,0.7);	
+}
+.tabs .indicator {
+	background: linear-gradient(to bottom right, #ee0979, #ff6a00);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: linear-gradient(to bottom right, #ee0979, #ff6a00);
+}
+
+.card:hover .overlay {
+  opacity: 0.5;
+}
+
+.card .card-image img{
+	transition: .5s ease;
+}
+
+.card:hover .card-image img{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
+.text {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transition: 0.2s ease;
+  text-align: center;
+  opacity: 0;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.card:hover .text {
+  opacity: 1;
+}
+
+.silho img{
+  margin-bottom: -7px; 
+  width: 100%;
+}
+
+address{
+  line-height: 1.75rem;
+}
+
+address a{
+  color: #fff;
+}
+
+address a:hover{
+   color: crimson;
+}
+
+.dank-footer{
+  text-align: center!important;
+  padding-top: 50px!important;
+}
+
+.dank-line-sanjeev{
+  color: crimson;
+}
+
+.social-media{
+  text-align: right;
+  padding-top: 70px!important;
+}
+
+.social-media .fa-2x{
+  margin-right: 10px!important; 
+  color:#fff;
+  transition: 0.2s ease-in-out; 
+}
+
+.social-media .fa-2x:hover{
+  transform: translateY(-5px);
+  color: crimson;
+}
+
+@media only screen and (max-width: 500px) {
+    .text{
+    	font-size: 16px;
+    }
+    address{
+      line-height: 1.4rem;
+      font-size: 1rem;
+    }
+    .dank-footer{
+      padding-top: 10px!important;
+    }
+    .social-media{
+      text-align: center;
+    padding-top: 10px!important;
+    }
+}

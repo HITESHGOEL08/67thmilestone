@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Posts</title>
+</head>
+
+<body>
+<h1>Edit Post</h1>
+
+{% if error %}
+{{ error }}
+{% endif %}
+
+<form action="" method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Edit Post"/>
+</form>
+
+<br/><br/>
+
+
+</body>
+
+</html>

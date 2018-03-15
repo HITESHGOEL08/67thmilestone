@@ -1,0 +1,86 @@
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}Profile{% endblock %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/main1.css' %}">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+{% endblock %}
+
+{% block heading %}Profile{% endblock %}
+{% block content %}
+<div class="container">
+    <section class="profile">
+        <h3>Profile</h3>
+        <div class="col s12">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="{{ MEDIA_URL }}{{ picture }}" id="card-image">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>{{ name }}</h5>
+                        <small>{{ college }}</small>
+                        <h5>{{ contact }}</h5>
+                        <h6>{{ email }}</h6>
+                    </div>
+                    <div class="card-action">
+                        <a href="#modalEdit" class="btn modal-trigger btn-edit">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for editing profile -->
+        <div id="modalEdit" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Edit Profile</h4>
+                <form class="col s12" method="post" action="\profile">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Update"/>
+                </form>
+            </div>
+        </div>
+        <!-- Modal ends -->
+
+    </section>
+    <section class="events">
+        <h4>My Events</h4>
+        <div class="row">
+            {% for i in registered_events %}
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <a href="/event/{{ i.slug }}"><img class="activator" src="{{ MEDIA_URL }}{{ i.image }}" class="responsive-img"></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ i.name }}<i
+                                class="material-icons right">more_vert</i></span></div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ i.name }}<i class="material-icons right">close</i></span>
+                        <p>{{ i.one_liner }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}
+
+{% block js %}
+<!-- container ends-->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+			$( document ).ready(function(){
+				$(".button-collapse").sideNav();
+        $('.modal').modal();
+			})
+
+</script>
+{% endblock %}
