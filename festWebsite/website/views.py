@@ -106,7 +106,7 @@ def team(request):
     for i in core:
         if i.position == "General Secretary":
             core1.append(i)
-        elif i.position == "Fest Coordinator":
+        elif i.position == "Overall Fest Coordinator":
             core2.append(i)
         elif i.position == "Deputy General Secretary":
             core3.append(i)
@@ -170,7 +170,9 @@ def team(request):
     sp_main.append(sp)
     data.append(sp_main)
     types=[[1,3,3],[3],[2],[2],[2],[2],[2],[2],[3],[2]]
-    headings=["Core Team","Sponsorship","Design","Public Relations","Talent Management","Technical","","Decoration","Social Media Marketing","Content Writing"]
+    # headings=["Core Team","Sponsorship","Design","Public Relations","Talent Management","Technical","    ","Decoration","Social Media Marketing","Content Writing"]
+    headings = ["Core Team", "Sponsorship", "Design", "Public Relations", "Talent Management", "Technical",
+                "Decoration", "Social Media Marketing", "Content Writing", "    "]
     zipped = zip(data,types,headings)
     context_dict['zipped']=zipped
     return render(request,'website/team.html',context_dict)
