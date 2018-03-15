@@ -33,23 +33,35 @@
 <!--<div class="main-team">-->
 <div class="row">
     <div class="heading-title text-center">
-        <p class="p-top-30 half-txt">Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. Nam pulvinar
-            vitae neque et porttitor. Praesent sed nisi eleifend. </p>
+        <p class="p-top-30 half-txt">Unity is strength...When there is team work and collaboration, wonderful things can be achieved!! </p>
     </div>
     {% for i,j,k in zipped %}
     {% if i %}
-    <h3 align="center" style="color: #F0F0F0; font-size:35px;"> {{ k }} </h3>
+    <h3 align="center" style="text-align: center;
+	font-size: 40px;
+	color: #fff;
+	 font-family: 'Source Sans Pro';
+	/*font-family: 'Source Sans Pro', cursive;*/
+	margin: 20px 0;
+	background-image: -webkit-linear-gradient(to bottom right, #ffffff, #283048); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #ffffff, #283048); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #ffffff, #283048); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #ffffff, #283048); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #ffffff, #283048); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;"> {{ k }} </h3>
     {% for l in i %}
     {% if l %}
     {% for m in l %}
     {% ifequal l|length 1 %}
-    <div class="col-md-12 col-sm-12" align="center" style="margin-bottom:20px;">
+    <div class="col-md-12 col-sm-12" align="center" style="margin-bottom:45px;">
         {% endifequal %}
         {% ifequal l|length 2 %}
-        <div class="col-md-6 col-sm-6" align="center" style="margin-bottom:20px;">
+        <div class="col-md-6 col-sm-6" align="center" style="margin-bottom:45px;">
             {% endifequal %}
             {% ifequal l|length 3 %}
-            <div class="col-md-4 col-sm-4" align="center" style="margin-bottom:20px;">
+            <div class="col-md-4 col-sm-4" align="center" style="margin-bottom:45px;">
                 {% endifequal %}
                 <div class="team-member">
                     <div class="team-img" align="center">
@@ -58,7 +70,6 @@
                     </div>
                     <div class="team-hover">
                         <div class="desk">
-                            <h4>Hi There !</h4>
                             <p>{{ m.tag_line }}</p>
                         </div>
                         <div class="s-link">
@@ -84,6 +95,9 @@
             {% endfor %}
         </div>
     </div>
+</div>
+<div align="center" style="margin-bottom:20px;">
+<a class="log_reg" href="\complete_team">" View Full Team "</a>
 </div>
 <!--</div>-->
 {% endblock %}

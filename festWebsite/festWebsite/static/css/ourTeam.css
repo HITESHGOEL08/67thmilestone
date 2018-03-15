@@ -43,8 +43,8 @@ body {
 
 .team-member, .team-member .team-img {
     position: relative;
-    max-width: 310px;
-    max-height: 310px;
+    max-width: 280px;
+    max-height: 280px;
     border-radius: 50%;
 }
 .team-member {
@@ -150,6 +150,31 @@ body {
    top: 0;
   left: 0;
   z-index: -1
+}
+.log_reg{
+  position: relative;
+	padding:16px 24px;
+	cursor:pointer;
+	border: 3px solid #283048;
+	box-shadow:5px 5px 0 0 #283048;
+ -webkit-box-shadow:5px 5px 0 0 #283048;
+ -webkit-transition:all .2s ease-out;
+ transition:all .2s ease-out;
+ font-weight:bold;
+ color:#ffffff !important;
+ text-decoration: none !important;
+ font-family: 'Roboto', sans-serif;
+align-self: center;
+	}
+	.log_reg:hover {
+ -webkit-box-shadow:0 0 0 0 #283048;
+ box-shadow:0 0 0 0 #283048;
+ -webkit-transform:translate(2px,2px);
+ -ms-transform:translate(2px,2px);
+ transform:translate(2px,2px)
+background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b1b1b1, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,#b1b1b1, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 @media only screen and (max-width: 600px) {
     .background {
