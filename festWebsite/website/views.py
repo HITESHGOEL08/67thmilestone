@@ -170,9 +170,7 @@ def team(request):
     sp_main.append(sp)
     data.append(sp_main)
     types=[[1,3,3],[3],[2],[2],[2],[2],[2],[2],[3],[2]]
-    # headings=["Core Team","Sponsorship","Design","Public Relations","Talent Management","Technical","    ","Decoration","Social Media Marketing","Content Writing"]
-    headings = ["Core Team", "Sponsorship", "Design", "Public Relations", "Talent Management", "Technical",
-                "Decoration", "Social Media Marketing", "Content Writing", "    "]
+    headings=["Core Team","Sponsorship","Design","Public Relations","Talent Management","Technical","","Decoration","Social Media Marketing","Content Writing"]
     zipped = zip(data,types,headings)
     context_dict['zipped']=zipped
     return render(request,'website/team.html',context_dict)
