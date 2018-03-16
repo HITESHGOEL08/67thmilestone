@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>67th Milestone</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Import personal CSS -->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/new.css' %}">
+    <!-- Importing Font Awesome Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!-- Importing Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+<!-- Pre-Loader -->
+<div class="poverlay" id="preloader">
+    <div><img src="{% static 'images/logo.png' %}">
+        <p style="color:white">The Journey Continues<span class="dot1">.</span><span class="dot2">.</span><span
+                class="dot3">.</span></p>
+    </div>
+</div>
+
+<!-- Nav-Bar -->
+<div id="myNav" class="overlay">
+    <a id="close" href="javascript:void(0)" class="close-btn" onclick="closeNav()">close -</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="\event">Events</a>
+        <a href="\campusambassador">Campus Ambassador</a>
+        <!--<a href="#">Hospitality</a>-->
+        <a href="\sponsor">Sponsors</a>
+        <a href="\team">Team</a>
+        <!-- <a href="#">Gallery</a> -->
+    </div>
+</div>
+
+<span id="open" onclick="openNav()" class="menu-btn"> - menu</span>
+
+<!-- Login Div -->
+<div id="login-button">
+    {% if user.is_authenticated %}
+    <li><a class="dropdown-button" data-activates="dropdown"> {{ user.username }} <i class="material-icons right">arrow_drop_down</i></a>
+    </li>
+    <ul id="dropdown" class="dropdown-content">
+        <li><a href="\profile">Profile</a></li>
+        <li><a href="\logout">Logout</a></li>
+    </ul>
+    {% else %}
+    <a href="\login" class="btn btn-login ">Login</a>
+    {% endif %}
+</div>
+
+
+<!-- Landing Page -->
+<section>
+    <div class="mobdiv" style="text-align:center;background-image: url({% static 'images/mob_back.png' %});">
+        <p class="festnamemob">BML<br>PRESENTS</p>
+
+
+        <img class="mob_logo" src="{% static 'Logo 67th Milestone-White.svg' %}" width="250px" height="250px">
+        <p class="datemob">APRIL 5-7</p>
+    </div>
+    <div class="coverim" id="first" style="background-image: url({% static 'images/back.png' %});">
+        <p class="festname">67<sup>th</sup> <br>Milestone'18</p>
+        <p class="date">April 5-7</p>
+        <ul class="social">
+            <li><a href="https://www.instagram.com/67thmilestone/?hl=en" target="_blank"><img
+                    src="{% static 'images/instagram.png' %}"></a></li>
+            <li><a href="https://www.facebook.com/67milestone/?ref=br_rs" target="_blank"><img
+                    src="{% static 'images/facebook.png' %}"></a></li>
+            <li><a href="https://twitter.com/67th_milestone" target="_blank"><img
+                    src="{% static 'images/twitter.png' %}"></a></li>
+            <li><a href="https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw" target="_blank"><img
+                    src="{% static 'images/youtube.png' %}"></a></li>
+        </ul>
+
+        <!-- <ul class="navg_dots" id=dots>
+        <li> <a href="#first"><img src="dot.png"></a></li>
+        <li> <a href="#ti"><img src="dot.png"></a></li>
+        <li> <a href="#ti"><img src="dot.png"></a></li>
+        <li> <a href="#ti"><img src="dot.png"></a></li>
+        <li> <a href="#ti"><img src="dot.png"></a></li>
+      </ul> -->
+
+
+    </div>
+</section>
+<section id="banner">
+
+    <div class="row">
+        <div class="col s12 m6 banner-pic">
+            <img src="{% static 'images/poster.jpg' %}" alt="" class="responsive-img">
+        </div>
+        <div class="col s12 m6 banner-content">
+            <h2 class="highlight1">67th Milestone</h2>
+            <h3><span class="typed"></span></h3>
+            <div id="timer">
+                <span id="days"></span>Days
+                <span id="hours"></span>Hours
+                <span id="minutes"></span>Minutes
+                <span id="seconds"></span>Seconds
+            </div>
+        </div>
+    </div>
+</section>
+<section id="pronites">
+    <div class="section-heading">
+        <h2 class="highlight4">Pronites</h2>
+    </div>
+    <!-- <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-item white-text" href="#one!">
+        <h2>First Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#two!">
+        <h2>Second Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#three!">
+        <h2>Third Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#four!">
+        <h2>Fourth Panel</h2>
+      </div>
+    </div> -->
+    <div class="coming-soon">
+        <h1>Coming Soon</h1>
+    </div>
+</section>
+<section id="events">
+    <div class="section-heading">
+        <h2 class="highlight2"> Events </h2>
+    </div>
+    <div class="carousel events-slider">
+        {% for i in home_details %}
+        <a class="carousel-item" href="/event/{{ i.slug }}">
+            <img src="{{ MEDIA_URL }}{{ i.image }}">
+            <div class="overlay-event"></div>
+            <div class="text">{{ i.name }}</div>
+        </a>
+        {% endfor %}
+    </div>
+    <div class="btn-events">
+        <a href="\events" class="btn btn-login">View all events</a>
+    </div>
+</section>
+<section id="schedule">
+    <div class="section-heading">
+        <h2 class="highlight3"> Schedule </h2>
+    </div>
+    <!-- <div class="schedule-pic">
+      <img src="https://source.unsplash.com/600x400" class="responsive-img">
+    </div> -->
+    <div class="coming-soon">
+        <h1>Coming Soon</h1>
+    </div>
+    <div class="btn-schedule">
+        <a href="" class="btn btn-login" disabled>Download Schedule</a>
+    </div>
+    <div class="btn-aftermovie">
+        <a href="https://www.youtube.com/watch?v=VG47-yBbebE" target="_blank" class="btn btn-login-reverse">AfterMovie'17</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="silho">
+    <img src="{% static 'images/stranger.png' %}">
+</div>
+<footer>
+    <div class="row">
+        <div class="col m4 push-m1 s12 bmu-info">
+            <div class="col s6">
+                <img src="{% static 'images/BMU.png' %}" class="responsive-img">
+            </div>
+            <div class="col s6" style="padding-top:20px;">
+                <address>
+                    67th Milestone<br>
+                    BML Munjal University<br>
+                    NH 8, Gurugram(HR)<br>
+                    <i class="fas fa-phone"></i> 1800 103 6888<br>
+                    122413<br>
+                    <a href="http://bml.edu.in" target="_blank">www.bml.edu.in</a>
+                </address>
+            </div>
+        </div>
+        <div class="col m3 push-m1 s12 dank-footer">
+            <p class="dank-line-sanjeev">Made with skill, not love!</p>
+            <img src="{% static 'images/dank.png' %}" alt="Dank Image">
+            <p>&copy; 67th Milestone 2018</p>
+        </div>
+        <div class="col m3 s12 social-media">
+            <a href="https://fb.com/67milestone" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://twitter.com/67th_milestone" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://instagram.com/67thmilestone" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw" target="_blank"><i
+                    class="fab fa-youtube fa-2x"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Import particle js -->
+<script src="particles.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
+<script src="{% static 'js/typing.js' %}"></script>
+<script src="{% static 'js/nav.js' %}"></script>
+<script>
+        var poverlay = document.getElementById("preloader");
+        window.addEventListener('load', function(){
+          $('.poverlay').fadeOut();
+        })
+        $(document).ready(function(){
+          $('#close').fadeOut(10);
+          $('.festname').addClass('animated slideInDown');
+          $('.quote').addClass('animated slideInRight');
+        // particlesJS.load('particles-js', 'particles.json', function() {
+        //   console.log('callback - particles.js config loaded');
+        // });
+        // $(window).scroll(function(){
+        //     if ($(this).scrollTop() > 200) {
+        //         // $('#nav').fadeIn(500);
+        //         $('#nav').css("background","rgba(1,1,1,0.8)");
+        //     } else {
+        //         $('#nav').css("background","transparent");
+        //     }
+        // });
+        $(".button-collapse").sideNav();
+        $('.events-slider').carousel();
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        setInterval(function(){
+          $('#pronites .carousel').carousel('next');
+        } , 3000);
+        var timer;
+        var compareDate = new Date();
+        compareDate.setDate(36); //just for this demo today + 7 days
+
+        timer = setInterval(function() {
+          timeBetweenDates(compareDate);
+        }, 1000);
+
+        function timeBetweenDates(toDate) {
+          var dateEntered = toDate;
+          var now = new Date();
+          var difference = dateEntered.getTime() - now.getTime();
+
+          if (difference <= 0) {
+
+            // Timer done
+            clearInterval(timer);
+
+          } else {
+
+            var seconds = Math.floor(difference / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+
+            hours %= 24;
+            minutes %= 60;
+            seconds %= 60;
+
+            $("#days").text(days);
+            $("#hours").text(hours);
+            $("#minutes").text(minutes);
+            $("#seconds").text(seconds);
+          }
+        }
+      })
+
+</script>
+</body>
+</html>

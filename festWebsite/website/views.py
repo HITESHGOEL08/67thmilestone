@@ -28,7 +28,7 @@ def home(request):
     context_dict = {}
     homepage = list(Event.objects.filter(type2="1"))
     context_dict['home_details']=homepage
-    return render(request, 'website/home.html', context_dict)
+    return render(request, 'website/newhome.html', context_dict)
 	
 def success(request,context_dict):
     return render(request, 'website/Success.html', context_dict)
