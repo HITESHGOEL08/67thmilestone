@@ -1,111 +1,129 @@
 <html>
 {% load staticfiles %}
 <head>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-    <style>
-        body{
-            background: url("{% static  'images/GOT.jpg' %}");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            height: 100vh;
-            overflow:hidden !important;
-            color: #fff;
-        }
-        .form{
-            height: 550px;
-            width: 90%;
-            margin: 0 auto;
-            background: rgba(1,1,1,0.5);
-            margin: 50px;
-            padding: 50px;
-            overflow-y: scroll;
-        }
-        .input-field label {
-           color: #fff;
-       }
-       /* label focus color */
-       .input-field input[type=text]:focus + label {
-           color: #fff!important;
-       }
-       /* label underline focus color */
-       .input-field input[type=text]:focus {
-           border-bottom: 1px solid #fff;
-           box-shadow: 0 1px 0 0 #fff;
-       }
-       /* valid color */
-       .input-field input[type=text].valid {
-           border-bottom: 1px solid #000;
-           box-shadow: 0 1px 0 0 #000;
-       }
-       /* invalid color */
-       .input-field input[type=text].invalid {
-           border-bottom: 1px solid #000;
-           box-shadow: 0 1px 0 0 #000;
-       }
-       select option{
-        color: #fff!important;
-    }
+	<style>
+		body{
+			background: url("{% static  'images/GOT.jpg' %}");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			height: 100vh;
+			overflow:hidden !important;
+			color: #fff;
+		}
+		.form{
+			height: 550px;
+			width: 90%;
+			margin: 0 auto;
+			background: rgba(1,1,1,0.5);
+			margin: 10px;
+			padding: 50px;
+			overflow-y: scroll;
+		}
+		.input-field label {
+			color: #fff;
+		}
+		/* label focus color */
+		.input-field input[type=text]:focus + label {
+			color: #fff!important;
+		}
+		/* label underline focus color */
+		.input-field input[type=text]:focus {
+			border-bottom: 1px solid #fff;
+			box-shadow: 0 1px 0 0 #fff;
+		}
+		/* valid color */
+		.input-field input[type=text].valid {
+			border-bottom: 1px solid #000;
+			box-shadow: 0 1px 0 0 #000;
+		}
+		/* invalid color */
+		.input-field input[type=text].invalid {
+			border-bottom: 1px solid #000;
+			box-shadow: 0 1px 0 0 #000;
+		}
+		select option{
+			color: #fff!important;
+		}
 
+		.back{
+			margin-top: 5vh;
+			margin-left: -150px;
+			cursor: pointer;
+		}
+		@media only screen and (max-width: 500px) {
+			.back{
+				height: 20px;
+				width: 20px;
+				margin-left: -3px;
+margin-top: 3vh;
+			}
 
-</style>
+		}
 
-<div class="container panel">
-    <div class="form">
-        <ul class="tabs" style="text-align:center;background:transparent !important;">
-            <li class="tab" style="width:47%"><a href="#login" class="active">Login</a></li>
-            <li class="tab" style="width:47%"><a href="#register">Register</a></li>
-        </ul>
-        <div class="row" id="login">
-            <form id="login_form" method="post" action="/login/">
-                {% csrf_token %}
-                <div class="input-field">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" value="" size="50"/>
-                </div>
-                <div class="input-field">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" value="" size="50"/>
-                </div>
-                <div class="input-field" style="text-align: center;">
-                    <input type="submit" class="btn-login btn" value="submit"/>
-                </div>
-            </form>
-        </div>
+	</style>
 
-        <div class="row" id="register">
-            <form id="user_form" class="col s12" method="post" action="/register/" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in user_form.visible_fields %}
-                <div class="row">
-                    <div class="input-field">
-                        {{ field.errors }}
-                        <label for="{{ field.name }}">{{ field.help_text }}</label>
-                        {{ field }}
-                    </div>
-                </div>
-                {% endfor %}
+	<div class="container panel">
+		<div class="back">
+			<a onclick="goBack()"><img src="{% static  'images/backbutton.png' %}" height="50px" width="50 px"></a>
+		</div>
 
-                {% for field in profile_form.visible_fields %}
-                <div class="row">
-                    <div class="input-field">
-                        {{ field.errors }}
-                        <label for="{{ field.name }}">{{ field.help_text }}</label>
-                        {{ field }}
-                    </div>
-                </div>
-                {% endfor %}
-                <div class="input-field" style="text-align: center;">
-                    <input type="submit" value="Register" class="btn btn-login">
-                </div>
-            </form>
-       </div>
-    </div>
-</div>
+		<div class="form">
+			<ul class="tabs" style="text-align:center;background:transparent !important;">
+				<li class="tab" style="width:47%"><a href="#login" class="active">Login</a></li>
+				<li class="tab" style="width:47%"><a href="#register">Register</a></li>
+			</ul>
+			<div class="row" id="login">
+				<form id="login_form" method="post" action="/login/">
+					{% csrf_token %}
+					<div class="input-field">
+						<label for="username">Username</label>
+						<input type="text" name="username" value="" size="50"/>
+					</div>
+					<div class="input-field">
+						<label for="password">Password</label>
+						<input type="password" name="password" value="" size="50"/>
+					</div>
+					<div class="input-field" style="text-align: center;">
+						<input type="submit" class="btn-login btn" value="submit"/>
+					</div>
+				</form>
+			</div>
+
+			<div class="row" id="register">
+				<form id="user_form" class="col s12" method="post" action="/register/" enctype="multipart/form-data">
+					{% csrf_token %}
+					{% for field in user_form.visible_fields %}
+					<div class="row">
+						<div class="input-field">
+							{{ field.errors }}
+							<label for="{{ field.name }}">{{ field.help_text }}</label>
+							{{ field }}
+						</div>
+					</div>
+					{% endfor %}
+
+					{% for field in profile_form.visible_fields %}
+					<div class="row">
+						<div class="input-field">
+							{{ field.errors }}
+							<label for="{{ field.name }}">{{ field.help_text }}</label>
+							{{ field }}
+						</div>
+					</div>
+					{% endfor %}
+					<div class="input-field" style="text-align: center;">
+						<input type="submit" value="Register" class="btn btn-login">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -115,10 +133,12 @@
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 
 <script>$(document).ready(function() {
-    $('select').material_select();
+	$('select').material_select();
 });
 
-
+function goBack() {
+	window.history.back();
+}
 </script>
 </body>
 </html>

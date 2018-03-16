@@ -31,7 +31,7 @@ urlpatterns = [
     url(r'^event/(?P<event_name_slug>[\w\-]+)/$', views.show_event,name='show_event'),
     url(r'^pro_night/(?P<pro_night_name_slug>[\w\-]+)/$', views.show_pronight,name='show_pro_night'),
     url(r'^event/$',views.event_list,name='event_list'),
-
+    url(r'^download/(?P<file_name>[\w\-]+)', views.download,name='download'),
     url(r'^gallery/$', views.gallery,name='gallery'),
     url(r'^profile/$',views.profile,name='profile'),
     url(r'^(?P<event_name_slug>[\w\-]+)/register/$', views.single_event_register, name='single_event_register'),

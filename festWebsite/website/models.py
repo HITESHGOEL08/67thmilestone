@@ -67,7 +67,7 @@ class Team(models.Model):
     email = models.EmailField(default="")
     image = models.ImageField(upload_to='team', blank=True)
     position = models.CharField(max_length=30, default="")
-    tag_line = models.CharField(max_length=100, default="")
+    tag_line = models.CharField(max_length=500, default="")
 
     class Meta:
         verbose_name_plural = "Team"
@@ -103,7 +103,7 @@ class Events(models.Model):
     max_participants = models.IntegerField()
     prize = models.IntegerField()
     image = models.ImageField(upload_to='events_logo', blank=True)
-    description = models.CharField(max_length=500, default="")
+    description = models.CharField(max_length=2500, default="")
     time = models.TimeField()
     date = models.DateField(default=datetime.now)
     venue = models.CharField(max_length=10)
@@ -136,7 +136,7 @@ class Events(models.Model):
 
 class Pro_Night(models.Model):
     name = models.CharField(max_length=30)
-    description = models.CharField(max_length=500)
+    description = models.CharField(max_length=2500)
     main_image = models.ImageField(upload_to='pro_nights', blank=True)
     small_image_1 = models.ImageField(upload_to='pro_nights', blank=True)
     small_image_2 = models.ImageField(upload_to='pro_nights', blank=True)
