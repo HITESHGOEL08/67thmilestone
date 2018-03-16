@@ -89,7 +89,7 @@ class Team(models.Model):
 #     def __str__(self):
 #         return self.name
 
-class Event(models.Model):
+class Events(models.Model):
     name = models.CharField(max_length=50, default="")
     choice = (("Technical", "Technical"), ("Cultural", "Cultural"), ("Management", "Management"))
     type = models.CharField(max_length=30, choices=choice)

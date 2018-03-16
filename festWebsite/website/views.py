@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect, render_to_response, get_object_or
 from django import forms
 # from docx import Document
 from django.http import HttpResponse, HttpResponseRedirect
-from website.models import Campus_Ambassdors,Sponsors,Team,Event, UserProfile, Pro_Night, single_event
+from website.models import Campus_Ambassdors,Sponsors,Team,Events, UserProfile, Pro_Night, single_event
 from website.forms import Campus_Ambassdor_Form, UserForm, UserProfileForm
 from django.conf import settings
 from django.core.mail import send_mail,EmailMessage
@@ -26,7 +26,7 @@ def index(request):
 
 def home(request):
     context_dict = {}
-    homepage = list(Event.objects.filter(type2="1"))
+    homepage = list(Events.objects.filter(type2="1"))
     context_dict['home_details']=homepage
     return render(request, 'website/newhome.html', context_dict)
 	
@@ -177,7 +177,7 @@ def team(request):
 
 def show_event(request, event_name_slug):
     context_dict = {}
-    event_details = list(Event.objects.filter(slug=event_name_slug))
+    event_details = list(Events.objects.filter(slug=event_name_slug))
     i = event_details[0]
     if i.rules == "":
         context_dict['rules'] = 1
@@ -207,9 +207,9 @@ def show_event(request, event_name_slug):
 
 def event_list(request):
     context_dict={}
-    flagship = list(Event.objects.filter(type1="F"))
-    major = list(Event.objects.filter(type1="Ma"))
-    minor = list(Event.objects.filter(type1="Mi"))
+    flagship = list(Events.objects.filter(type1="F"))
+    major = list(Events.objects.filter(type1="Ma"))
+    minor = list(Events.objects.filter(type1="Mi"))
     context_dict['flagship'] = flagship
     context_dict['major'] = major
     context_dict['minor'] = minor
@@ -288,7 +288,7 @@ def profile(request):
     for i in events_registered:
         event=i.event_name
         print (event)
-        event_details = list(Event.objects.filter(slug=event))
+        event_details = list(Events.objects.filter(slug=event))
         j = event_details[0]
         events_registered_details.append(j)
     context_dict['registered_events']=events_registered_details
