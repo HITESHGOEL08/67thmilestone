@@ -98,7 +98,7 @@ class Event(models.Model):
     choice_home = (("1", "Home"), ("2", "NO"))
     type2 = models.CharField(max_length=10, choices=choice_home, default="2")
     choice_fee = (("CM", "CM"), ("T", "T"))
-    fee = models.CharField(max_length=5, choices=choice_fee, default="CM")
+    fees = models.CharField(max_length=5, choices=choice_fee, default="CM")
     min_participants = models.IntegerField()
     max_participants = models.IntegerField()
     prize = models.IntegerField()
