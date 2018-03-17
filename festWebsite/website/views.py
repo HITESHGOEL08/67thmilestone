@@ -14,7 +14,7 @@ from django.template.loader import get_template
 from django.template import Context, Template, RequestContext
 import datetime
 import hashlib
-import requests
+
 
 from django.contrib.auth import authenticate, login, logout
 from random import randint
@@ -269,8 +269,8 @@ def error(request):
 def download(request, file_name):
     path1 = '/rules/' + file_name + ".docx"
     path = settings.MEDIA_ROOT + path1
-    request.get("67thmilstone.com/media"+path1,allow_redirects = True)
-    return HttpResponseRedirect('/event')
+    # request.get("67thmilstone.com/media"+path1,allow_redirects = True)
+    return HttpResponseRedirect('/media'+path1)
     # response = HttpResponse(content_type='application/docx')
     # response['Content-Disposition'] = 'attachment; filename=rules.docx'
     # doc = docx.Document(path)
