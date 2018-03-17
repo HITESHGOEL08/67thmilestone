@@ -1,24 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>team_register</title>
-</head>
-<body>
-    <h1>
-        Team Registration
-    </h1>
-<form method="post" action="\{{ slug }}/team_register/">
-    {% csrf_token %}
-    <label>Team</label><input type="text" value="" name="team_name" size="50" />
-    <br>
-    {% for i in team_size %}
-    <label>Name</label><input type="text" value="" name="name{{ i }}" size="50" />
-    <label>Phone</label><input type="text" value="" name="phone{{ i }}" size="50" />
-    <label>Email</label><input type="text" value="" name="email{{ i }}" size="50" />
-	<br>
-    {% endfor %}
-    <input type="submit" name="submit" />
-</form>
-</body>
-</html>
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}team_register{% endblock %}
+{% block css %}
+<meta charset="UTF-8">
+  <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link type="text/css" rel="stylesheet" href="{% static 'css/team_event.css' %}">
+{% endblock %}
+{% block silho %}{% endblock %}
+{% block content %}
+<div class="header">
+    <h1>Team Registration</h1>
+</div>
+
+<div class="row ">
+    <form class="col s12  " method="post" action="\{{ slug }}/team_register/">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="input-field col s12 light-blue-text text-lighten-5">
+                <label>Team Name</label>
+                <input type="text" value="" name="team_name" size="50"/>
+            </div>
+        </div>
+
+        {% for i in team_size %}
+        <div class="row">
+            <div class="input-field col s6 light-blue-text text-lighten-5">
+                <label>Participate Name {{ i }}</label><input type="text" class="validate" value="" name="name{{ i }}" size="50"/>
+            </div>
+            <div class="input-field col s6 light-blue-text text-lighten-5">
+                <label>Participate Phone {{ i }}</label><input type="text"  value="" name="phone{{ i }}" size="50"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12  light-blue-text text-lighten-5">
+                <label>Participate Email {{ i }}</label>
+                <input type="email" value=""  class="validate" name="email{{ i }}" size="50"/>
+            </div>
+        </div>
+
+        {% endfor %}
+        <div class="center-align">
+            <input type="submit" value="Register" class="center-align btn btn-login">
+        </div>
+
+    </form>
+</div>
+{% endblock %}
+
+
+{% block js %}
+ <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+{% endblock %}
