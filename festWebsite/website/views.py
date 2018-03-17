@@ -4,7 +4,7 @@ import festWebsite.settings
 from wsgiref.util import FileWrapper
 from django.shortcuts import render, redirect, render_to_response, get_object_or_404
 from django import forms
-# from docx import Document
+import docx
 from django.http import HttpResponse, HttpResponseRedirect
 from website.models import Campus_Ambassdors,Sponsors,Team,Events, UserProfile, Pro_Night, single_event
 from website.forms import Campus_Ambassdor_Form, UserForm, UserProfileForm
@@ -261,13 +261,13 @@ def error(request):
     context_dict = {}
     return render(request, 'website/error.html', context_dict)
 
-# def download(request, file_name):
-#     path = settings.MEDIA_ROOT + '/rules/' + file_name + ".docx"
-#     response = HttpResponse(content_type='application/docx')
-#     response['Content-Disposition'] = 'attachment; filename=rules.docx'
-#     doc = Document(path)
-#     doc.save(response)
-#     return response
+def download(request, file_name):
+    path = settings.MEDIA_ROOT + '/rules/' + file_name + ".docx"
+    response = HttpResponse(content_type='application/docx')
+    response['Content-Disposition'] = 'attachment; filename=rules.docx'
+    doc = docx.Document(path)
+    doc.save(response)
+    return response
 
 def gallery(request):
     context_dict = {}
