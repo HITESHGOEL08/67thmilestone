@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>team_register</title>
+</head>
+<body>
+    <h1>
+        Team Registration
+    </h1>
+<form method="post" action="\{{ slug }}/team_register/">
+    {% csrf_token %}
+    <label>Team</label><input type="text" value="" name="team_name" size="50" />
+    <br>
+    {% for i in team_size %}
+    <label>Name</label><input type="text" value="" name="name{{ i }}" size="50" />
+    <label>Phone</label><input type="text" value="" name="phone{{ i }}" size="50" />
+    <label>Email</label><input type="text" value="" name="email{{ i }}" size="50" />
+	<br>
+    {% endfor %}
+    <input type="submit" name="submit" />
+</form>
+</body>
+</html>
