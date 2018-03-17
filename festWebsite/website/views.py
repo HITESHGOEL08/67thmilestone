@@ -190,6 +190,7 @@ def show_event(request, event_name_slug):
     l = k.find("/")
     m = k[l + 1:]
     n = m.find(".")
+    o=m[n+1:]
     m = m[:n]
     spon=[]
     if i.sponsor1!="":
@@ -206,6 +207,7 @@ def show_event(request, event_name_slug):
         context_dict['single'] =0
     context_dict['event_details']=event_details
     context_dict['file_name'] = m
+    context_dict['extension']=o
     context_dict['sponsors']=spon
     context_dict['slug']=event_name_slug
     return render(request,'website/event1.html',context_dict)
@@ -267,8 +269,8 @@ def error(request):
     return render(request, 'website/error.html', context_dict)
 
 @login_required(login_url='/login/')
-def download(request, file_name):
-    path1 = '/rules/' + file_name + ".pdf"
+def download(request, file_name, extension):
+    path1 = '/rules/' + file_name + "." + extension
     path = settings.MEDIA_ROOT + path1
     # request.get("67thmilstone.com/media"+path1,allow_redirects = True)
     return HttpResponseRedirect('/media'+path1)
