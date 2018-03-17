@@ -267,7 +267,7 @@ def error(request):
     return render(request, 'website/error.html', context_dict)
 
 def download(request, file_name):
-    path1 = '/rules/' + file_name + ".docx"
+    path1 = '/rules/' + file_name + ".pdf"
     path = settings.MEDIA_ROOT + path1
     # request.get("67thmilstone.com/media"+path1,allow_redirects = True)
     return HttpResponseRedirect('/media'+path1)
