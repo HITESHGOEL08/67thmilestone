@@ -5,8 +5,9 @@ from wsgiref.util import FileWrapper
 from django.shortcuts import render, redirect, render_to_response, get_object_or_404
 from django import forms
 import docx
+import requests
 from django.http import HttpResponse, HttpResponseRedirect
-from website.models import Campus_Ambassdors,Sponsors,Team,Events, UserProfile, Pro_Night, single_event
+from website.models import Campus_Ambassdors,Sponsors,Team,Events, UserProfile, Pro_Night, single_event, Team_details, event_register
 from website.forms import Campus_Ambassdor_Form, UserForm, UserProfileForm
 from django.conf import settings
 from django.core.mail import send_mail,EmailMessage
@@ -179,12 +180,17 @@ def show_event(request, event_name_slug):
     context_dict = {}
     event_details = list(Events.objects.filter(slug=event_name_slug))
     i = event_details[0]
+    context_dict['rules'] = 1
     if i.rules == "":
-        context_dict['rules'] = 1
+        context_dict['rules'] = 0
+    context_dict['prize']=1
+    if i.prize == 0:
+        context_dict['prize']=0
     k = str(i.rules)
     l = k.find("/")
     m = k[l + 1:]
     n = m.find(".")
+    o=m[n+1:]
     m = m[:n]
     spon=[]
     if i.sponsor1!="":
@@ -201,6 +207,7 @@ def show_event(request, event_name_slug):
         context_dict['single'] =0
     context_dict['event_details']=event_details
     context_dict['file_name'] = m
+    context_dict['extension'] = o
     context_dict['sponsors']=spon
     context_dict['slug']=event_name_slug
     return render(request,'website/event1.html',context_dict)
@@ -261,19 +268,16 @@ def error(request):
     context_dict = {}
     return render(request, 'website/error.html', context_dict)
 
-def download(request, file_name):
-    path = settings.MEDIA_ROOT + '/rules/' + file_name + ".docx"
-    response = HttpResponse(content_type='application/docx')
-    response['Content-Disposition'] = 'attachment; filename=rules.docx'
-    doc = docx.Document(path)
-    doc.save(response)
-    return response
+@login_required(login_url='/login/')
+def download(request, file_name, extension):
+    path1 = '/rules/' + file_name + "." + extension
+    return HttpResponseRedirect('/media'+path1)
 
 def gallery(request):
     context_dict = {}
     return render(request, 'website/gallery.html', context_dict)
 
-@login_required
+@login_required(login_url='/login/')
 def profile(request):
     context_dict = {}
     user_details = list(UserProfile.objects.filter(user=request.user))
@@ -284,14 +288,21 @@ def profile(request):
         context_dict['picture']=i.picture
     context_dict['email']=request.user.email
     events_registered = list(single_event.objects.filter(username=request.user.username))
+    events_registered1 = list(event_register.objects.filter(username=request.user.username))
+    events_registered_details1=[]
+    for i in events_registered1:
+        event_name=i.event_name
+        event_details = list(Events.objects.filter(name=event_name))
+        j = event_details[0]
+        events_registered_details1.append(j)
     events_registered_details=[]
     for i in events_registered:
         event=i.event_name
-        print (event)
         event_details = list(Events.objects.filter(slug=event))
         j = event_details[0]
         events_registered_details.append(j)
     context_dict['registered_events']=events_registered_details
+    context_dict['registered_events1'] = events_registered_details1
     obj = get_object_or_404(UserProfile, user=request.user)
     form = UserProfileForm(request.POST or None, instance=obj)
     context_dict['form']= form
@@ -327,8 +338,38 @@ def register(request):
             if 'picture' in request.FILES:
                 profile.picture = request.FILES['picture']
             profile.save()
+            '''email_user="67thmilestone@bml.edu.in"
+            email_password="kfskpcygexprpolj"
+            subject = "Greetings from 67th Milestone'18"
+            body1 = "Dear participant,\n\n" + \
+                    "Congratulations on successfully registering" + \
+                    "for 67th Milestone’18. We are delighted to host you at BML Munjal University from April 5-7, 2018. Please keep checking our website for further updates.\n\n" + \
+                    "Please find below your login details –\n" + \
+                    "Username: "
+            body2 = user_form.username
+            body3 = "For further details, refer to\n" + \
+                    "Facebook Page: https://www.facebook.com/67milestone/\n" + \
+                    "Instagram Page: https://www.instagram.com/67thmilestone/\n" + \
+                    "Aftermovie'17: https://www.youtube.com/watch?v=VG47-yBbebE\n" + \
+                    "Youtube Channel Page: https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw\n" + \
+                    "Regards,\n" + \
+                    "Team 67th Milestone"
+            body = body1 + body2 + body3
+            try:
+                mailServer = smtplib.SMTP("smtp.gmail.com", 687)
+                mailServer.ehlo()
+                mailServer.starttls()
+                mailServer.ehlo()
+                ms
+                mailServer.login(email_user, email_password)
+                mailServer.sendmail(email_user, ["pprashant2398@gmail.com"], msg.as_string())
+                mailServer.close()
+            except:
+                ok = False
+            emailsend = EmailMessage(subject, body, to=[user_form.email])
+            emailsend.send()'''
             registered = True
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/login')
         else:
             print(user_form.errors, profile_form.errors)
     else:
@@ -359,13 +400,13 @@ def user_login(request):
         context_dict={'user_form':user_form, 'profile_form':profile_form}
         return render(request,'website/login.html', context_dict)
 
-@login_required
+@login_required(login_url='/login/')
 def user_logout(requset):
     logout(requset)
     return HttpResponseRedirect('/')
 
 
-@login_required
+@login_required(login_url='/login/')
 def editprofile(request):
     obj = get_object_or_404(UserProfile, user=request.user)
     form = UserProfileForm(request.POST or None, instance=obj)
@@ -458,16 +499,44 @@ def hospitality(request):
     context_dict = {}
     return render(request, 'website/Hospitality.html', context_dict)
 
-@login_required
+@login_required(login_url='/login/')
 def single_event_register(request, event_name_slug):
     try:
         p = single_event(username=request.user.username, event_name=event_name_slug)
         p.save()
     except:
-        return HttpResponseRedirect('/')
-    return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/event/'+event_name_slug)
+    return HttpResponseRedirect('/profile')
 
 
 def complete_team(request):
     context_dict = {}
     return render(request, 'website/completeteam.html', context_dict)
+
+@login_required(login_url='/login/')
+def team_register(request, event_name_slug):
+    flag=0
+    event = list(Events.objects.filter(slug=event_name_slug))
+    name_event = event[0].name
+    size = event[0].max_participants
+    t = []
+    for i in range(size):
+        t.append(i)
+    context = {'slug':event_name_slug,'team_size':t}
+    try:
+        if request.method == 'POST':
+            p = event_register(username=request.user.username, event_name=name_event,
+                               team_name=request.POST.get('team_name'))
+            p.save()
+            for i in range(0, size):
+                team = Team_details(name = request.POST.get('name'+str(i)), team_name=request.POST.get('team_name'),
+                                    event_name=name_event, email=request.POST.get('email'+str(i)),
+                                    phone=request.POST.get('phone'+str(i)))
+                team.save()
+            flag=1
+    except:
+        return HttpResponseRedirect('/event/' + event_name_slug)
+    if flag==0:
+        return render(request, 'website/team_event.html', context)
+    else:
+        return HttpResponseRedirect('/profile')

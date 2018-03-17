@@ -238,7 +238,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     },
 # ]
 # EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
-# # EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = True
 # EMAIL_HOST = 'smtp.zoho.com'
 # EMAIL_HOST_USER = 'campus_ambassador@67thmilestone.com'

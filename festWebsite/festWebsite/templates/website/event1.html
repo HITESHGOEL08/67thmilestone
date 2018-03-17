@@ -31,7 +31,7 @@
     </div>
     <div class="col s12 m3 event-list">
         <ul>
-            <li>Fee: <span class="highlight">{{ i.fees }}</span></li>
+            <li>Fee Type: <span class="highlight">{{ i.fees }}</span></li>
             {% if single %}
             <li>Participants: <span class="highlight">{{ i.min_participants }}</span></li>
             {% else %}
@@ -39,16 +39,18 @@
             {% endif %}
             <li>Date & Time: <span class="highlight">{{ i.date }} {{ i.time }}</span></li>
             <li>Venue: <span class="highlight">{{ i.venue }}</span></li>
-            <li>Prize: <span class="highlight">{{ i.prize }}</span></li>
-            <!--{% if rules %}-->
-            <li><a href="/download/{{ file_name }}">Download Rules File</a></li>
-            <!--{% endif %}-->
+            {% if prize %}
+            <li>Prize(Worth): <span class="highlight">{{ i.prize }}</span>/-</li>
+            {% endif %}
+            {% if rules %}
+            <li><a href="/download/{{ file_name }}/{{ extension }}">Download Rules File</a></li>
+            {% endif %}
         </ul>
         <div class="btn-reg">
             {% if single %}
             <a href="\{{ slug }}/register" class="btn btn-login">Register</a>
             {% else %}
-            <a href="#" class="btn btn-login">Register</a>
+            <a href="\{{ slug }}/team_register" class="btn btn-login">Register</a>
             {% endif %}
         </div>
     </div>
@@ -71,6 +73,7 @@
     </div>
 </section>
 <section class="sponsors">
+{% if sponsors %}
     <div class="col s12 m12 highlight">
         <h3>Event Sponsors</h3>
     </div>
@@ -79,6 +82,7 @@
         <img src="{{ MEDIA_URL }}{{ j }}">
         {% endfor %}
     </div>
+{% endif %}
 </section>
 {% endfor %}
 <!-- Content ends -->
