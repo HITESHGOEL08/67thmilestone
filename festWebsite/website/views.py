@@ -14,11 +14,15 @@ from django.template.loader import get_template
 from django.template import Context, Template, RequestContext
 import datetime
 import hashlib
+import requests
+
 from django.contrib.auth import authenticate, login, logout
 from random import randint
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
+
+
 # Create your views here.
 def index(request):
     context_dict = {}
@@ -263,12 +267,15 @@ def error(request):
     return render(request, 'website/error.html', context_dict)
 
 def download(request, file_name):
-    path = settings.MEDIA_ROOT + '/rules/' + file_name + ".docx"
-    response = HttpResponse(content_type='application/docx')
-    response['Content-Disposition'] = 'attachment; filename=rules.docx'
-    doc = docx.Document(path)
-    doc.save(response)
-    return response
+    path1 = '/rules/' + file_name + ".docx"
+    path = settings.MEDIA_ROOT + path1
+    request.get("67thmilstone.com/media"+path1,allow_redirects = True)
+    return HttpResponseRedirect('/event')
+    # response = HttpResponse(content_type='application/docx')
+    # response['Content-Disposition'] = 'attachment; filename=rules.docx'
+    # doc = docx.Document(path)
+    # doc.save(response)
+    #return response
 
 def gallery(request):
     context_dict = {}
