@@ -179,8 +179,9 @@ def show_event(request, event_name_slug):
     context_dict = {}
     event_details = list(Events.objects.filter(slug=event_name_slug))
     i = event_details[0]
+    context_dict['rules'] = 1
     if i.rules == "":
-        context_dict['rules'] = 1
+        context_dict['rules'] = 0
     k = str(i.rules)
     l = k.find("/")
     m = k[l + 1:]
