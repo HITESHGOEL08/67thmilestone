@@ -5,7 +5,6 @@ from wsgiref.util import FileWrapper
 from django.shortcuts import render, redirect, render_to_response, get_object_or_404
 from django import forms
 import docx
-import requests
 from django.http import HttpResponse, HttpResponseRedirect
 from website.models import Campus_Ambassdors,Sponsors,Team,Events, UserProfile, Pro_Night, single_event, Team_details, event_register
 from website.forms import Campus_Ambassdor_Form, UserForm, UserProfileForm
@@ -15,11 +14,15 @@ from django.template.loader import get_template
 from django.template import Context, Template, RequestContext
 import datetime
 import hashlib
+
+
 from django.contrib.auth import authenticate, login, logout
 from random import randint
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
+
+
 # Create your views here.
 def index(request):
     context_dict = {}
