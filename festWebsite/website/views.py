@@ -266,6 +266,7 @@ def error(request):
     context_dict = {}
     return render(request, 'website/error.html', context_dict)
 
+@login_required(login_url='/login/')
 def download(request, file_name):
     path1 = '/rules/' + file_name + ".pdf"
     path = settings.MEDIA_ROOT + path1
@@ -281,7 +282,7 @@ def gallery(request):
     context_dict = {}
     return render(request, 'website/gallery.html', context_dict)
 
-@login_required
+@login_required(login_url='/login/')
 def profile(request):
     context_dict = {}
     user_details = list(UserProfile.objects.filter(user=request.user))
@@ -367,13 +368,13 @@ def user_login(request):
         context_dict={'user_form':user_form, 'profile_form':profile_form}
         return render(request,'website/login.html', context_dict)
 
-@login_required
+@login_required(login_url='/login/')
 def user_logout(requset):
     logout(requset)
     return HttpResponseRedirect('/')
 
 
-@login_required
+@login_required(login_url='/login/')
 def editprofile(request):
     obj = get_object_or_404(UserProfile, user=request.user)
     form = UserProfileForm(request.POST or None, instance=obj)
@@ -466,7 +467,7 @@ def hospitality(request):
     context_dict = {}
     return render(request, 'website/Hospitality.html', context_dict)
 
-@login_required
+@login_required(login_url='/login/')
 def single_event_register(request, event_name_slug):
     try:
         p = single_event(username=request.user.username, event_name=event_name_slug)
