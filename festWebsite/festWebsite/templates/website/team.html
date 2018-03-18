@@ -2,6 +2,13 @@
 {% load staticfiles %}
 {% block title %}Our Team{% endblock %}
 {% block css %}
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <link rel="stylesheet" type="text/css" href="{% static 'css/ourTeam.css' %}"/>
 <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap1.css' %}"/>
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600'
@@ -108,5 +115,28 @@
 {% endblock %}
 {% block silho %}{% static  'images/team.png' %}{% endblock %}
 {% block js %}
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Scroll -->
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
 <script src="{% static 'js/team.js' %}"></script>
+<script>
+    $(document).ready(function(){
+      $('.modal').modal();
+      $(".button-collapse").sideNav();
+      window.sr = ScrollReveal({ reset: true });
+      sr.reveal('.details-intro', { duration: 800 });
+      sr.reveal('.details-details', { duration: 800 });
+      sr.reveal('.details-benefits', { duration: 800 });
+      sr.reveal('.details-apply', { duration: 800 });
+      // $('ul.tabs').tabs({
+      //   swipeable : true,
+      //   responsiveThreshold : 1920
+    });
+
+
+</script>
 {% endblock %}
