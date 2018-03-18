@@ -1,0 +1,161 @@
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}Event Detail{% endblock %}
+{% block css %}
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Import personal CSS -->
+<link type="text/css" rel="stylesheet" href="{% static  'css/mentors.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static  'css/bootstrap.css' %}">
+
+<title>Mentors</title>
+{% endblock %}
+{% block silho %}{% static  'images/campusambss.png' %}{% endblock %}
+{% block content %}
+
+<!-- Content -->
+<section class="skewedBox">
+    <div class="box">
+        <h1>Mentors</h1>
+        <h6>"A mentor is someone who sees more talent and ability within you, than you see in yourself, and helps
+            bring it out of you!!"</h6>
+    </div>
+</section>
+<section class="details">
+    <div class="row details-benefits">
+
+
+        <div class="part" align="center">
+            <div class="col-md-12 col-sm-12">
+                <div class="diamond">
+                    <div class="dia">
+                        <img src="{% static  'images/bawa2.jpg' %}" alt="" width="320" height="316"/>
+                    </div>
+                </div>
+                <div class="team-title" align="center">
+                    <h6>Col. Mohit Bawa</h6>
+                    <h6>Dean Student Welfare</h6>
+                    <span>mohit.bawa@bmu.edu.in</span>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row details-intro">
+
+        <div class="part" align="center">
+            <div class="col-md-4 col-sm-4">
+
+
+                <div class="diamond">
+                    <div class="dia">
+                        <img src="{% static  'images/anshu.jpg' %}" alt=""/>
+                    </div>
+                </div>
+                <div class="team-title" align="center">
+                    <h6>Ms. Anshu Sharma</h6>
+                    <h6>Assistant Professor</h6>
+                    <span>anshu.sharma@bmu.edu.in</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="part" align="center">
+            <div class="col-md-4 col-sm-4">
+
+
+                <div class="diamond">
+                    <div class="dia">
+                        <img src="{% static  'images/adnan1.jpg' %}" alt=""/>
+                    </div>
+                </div>
+                <div class="team-title" align="center">
+                    <h6>Mr. Adnan Hussain</h6>
+                    <h6>Faculty Associate</h6>
+                    <span>adnan.hussain@bmu.edu.in</span>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="part" align="center">
+            <div class="col-md-4 col-sm-4">
+
+
+                <div class="diamond">
+                    <div class="dia">
+                        <img src="{% static  'images/surya4.jpg' %}" alt=""/>
+                    </div>
+                </div>
+                <div class="team-title" align="center">
+                    <h6>Dr. Surya Prakash</h6>
+                    <h6>Assistant Professor</h6>
+                    <span>surya.prakash@bmu.edu.in</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row details-benefits container" style="margin-top: 100px;">
+
+
+        <div style="text-align: center; background-image: -webkit-linear-gradient(to bottom right, #43C6AC, #191654); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #43C6AC, #191654); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #43C6AC, #191654); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #43C6AC, #191654); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #43C6AC, #191654); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;">
+            <font>
+                <h4 class="">Vote of Thanks To Our Mentors</h4>
+                <h5 class="">From - Team 67th Milestone</h5>
+                <h5 class=""
+                    style="color: #a5a5a5 !important;font-size: 19px !important;letter-spacing: 1px;">"Thanks for
+                    guiding us towards the right path. You all are the fantastic mentors that are worthy of
+                    emulation. You deserve a big thank you from all of us. Your perseverance, integrity and
+                    people-loving nature are just a few of the qualities that continue to inspire the team. Thank
+                    you for being our mentor."</h5>
+
+            </font>
+        </div>
+
+
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Scroll -->
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('.modal').modal();
+      $(".button-collapse").sideNav();
+      window.sr = ScrollReveal({ reset: true });
+      sr.reveal('.details-intro', { duration: 800 });
+      sr.reveal('.details-details', { duration: 800 });
+      sr.reveal('.details-benefits', { duration: 800 });
+      sr.reveal('.details-apply', { duration: 800 });
+      // $('ul.tabs').tabs({
+      //   swipeable : true,
+      //   responsiveThreshold : 1920
+    });
+
+
+</script>
+{% endblock %}

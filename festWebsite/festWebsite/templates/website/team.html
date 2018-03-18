@@ -8,33 +8,38 @@
       rel='stylesheet' type='text/css'>
 {% endblock %}
 {% block content %}
+<section class="skewedBox">
+    <div class="box">
+        <h1>Our Team</h1>
+        <h6>Unity is strength...When there is team work and collaboration, wonderful things can be achieved!!"</h6>
+    </div>
+</section>
 
 <div class="background" style="background:url({% static  'images/teampara.png' %});">
-
 </div>
 
-<div style="text-align: center;
-	font-size: 40px;
-	color: #fff;
-	 font-family: 'Abril Fatface', cursive;
-	/*font-family: 'Permanent Marker', cursive;*/
-	margin: 20px 0;
-	background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
-    background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
-    background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
-    background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
-    background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
-    color:transparent;
-    -webkit-background-clip: text;
-    background-clip: text;">
-    <h1>Our Team</h1>
-</div>
+<!--<div style="text-align: center;-->
+<!--font-size: 40px;-->
+<!--color: #fff;-->
+<!--font-family: 'Abril Fatface', cursive;-->
+<!--/*font-family: 'Permanent Marker', cursive;*/-->
+<!--margin: 20px 0;-->
+<!--background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */-->
+<!--background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */-->
+<!--background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/-->
+<!--background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */-->
+<!--background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */-->
+<!--color:transparent;-->
+<!-- -webkit-background-clip: text;-->
+<!--background-clip: text;">-->
+<!--<h1>Our Team</h1>-->
+<!--</div>-->
 
 <!--<div class="main-team">-->
 <div class="row">
-    <div class="heading-title text-center">
-        <p class="p-top-30 half-txt">Unity is strength...When there is team work and collaboration, wonderful things can be achieved!! </p>
-    </div>
+    <!--<div class="heading-title text-center">-->
+    <!--<p class="p-top-30 half-txt">Unity is strength...When there is team work and collaboration, wonderful things can be achieved!! </p>-->
+    <!--</div>-->
     {% for i,j,k in zipped %}
     {% if i %}
     <h3 align="center" style="text-align: center !important;
@@ -43,11 +48,11 @@
 	 font-family: 'Source Sans Pro';
 	/*font-family: 'Source Sans Pro', cursive;*/
 	margin: 20px 0;
-	background-image: -webkit-linear-gradient(to bottom right, #ffffff, #283048); /* For Chrome and Safari */
-    background-image:    -moz-linear-gradient(to bottom right, #ffffff, #283048); /* For old Fx (3.6 to 15) */
-    background-image:     -ms-linear-gradient(to bottom right, #ffffff, #283048); /* For pre-releases of IE 10*/
-    background-image:      -o-linear-gradient(to bottom right, #ffffff, #283048); /* For old Opera (11.1 to 12.0) */
-    background-image:         linear-gradient(to bottom right, #ffffff, #283048); /* Standard syntax; must be last */
+	background-image: -webkit-linear-gradient(to top , #1D4350, #fff); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to top , #1D4350, #fff); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to top , #1D4350, #fff); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to top , #1D4350, #fff); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to top , #1D4350, #fff); /* Standard syntax; must be last */
     color:transparent;
     -webkit-background-clip: text;
     background-clip: text;"> {{ k }} </h3>
@@ -97,7 +102,7 @@
     </div>
 </div>
 <div align="center" style="margin-bottom:20px;">
-<a class="log_reg" href="\complete_team">" View Full Team "</a>
+    <a class="log_reg" href="\complete_team">" View Full Team "</a>
 </div>
 <!--</div>-->
 {% endblock %}

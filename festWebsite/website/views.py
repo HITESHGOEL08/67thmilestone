@@ -10,10 +10,12 @@ from website.models import Campus_Ambassdors,Sponsors,Team,Events, UserProfile, 
 from website.forms import Campus_Ambassdor_Form, UserForm, UserProfileForm
 from django.conf import settings
 from django.core.mail import send_mail,EmailMessage
+
 from django.template.loader import get_template
 from django.template import Context, Template, RequestContext
 import datetime
 import hashlib
+from django.test.utils import override_settings
 
 
 from django.contrib.auth import authenticate, login, logout
@@ -225,7 +227,11 @@ def event_list(request):
     context_dict['minor'] = minor
     return render(request,'website/event_list.html',context_dict)
 
+
 def campusambassador(request):
+    # settings.EMAIL_HOST_USER = 'campus_ambassador@67thmilestone.com'
+    # settings.EMAIL_HOST_PASSWORD = 'TFYnRgcF9K4x'
+    # settings.DEFAULT_FROM_EMAIL = settings.EMAIL_HOST_USER
     form = Campus_Ambassdor_Form()
     context_dict={}
     if request.method == 'POST':
@@ -341,36 +347,23 @@ def register(request):
             if 'picture' in request.FILES:
                 profile.picture = request.FILES['picture']
             profile.save()
-            '''email_user="67thmilestone@bml.edu.in"
-            email_password="kfskpcygexprpolj"
             subject = "Greetings from 67th Milestone'18"
-            body1 = "Dear participant,\n\n" + \
-                    "Congratulations on successfully registering" + \
-                    "for 67th Milestone’18. We are delighted to host you at BML Munjal University from April 5-7, 2018. Please keep checking our website for further updates.\n\n" + \
-                    "Please find below your login details –\n" + \
-                    "Username: "
-            body2 = user_form.username
-            body3 = "For further details, refer to\n" + \
-                    "Facebook Page: https://www.facebook.com/67milestone/\n" + \
-                    "Instagram Page: https://www.instagram.com/67thmilestone/\n" + \
-                    "Aftermovie'17: https://www.youtube.com/watch?v=VG47-yBbebE\n" + \
-                    "Youtube Channel Page: https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw\n" + \
-                    "Regards,\n" + \
-                    "Team 67th Milestone"
+            body1 = u"Dear participant,\n\n" + \
+                    u"Congratulations on successfully registering " + \
+                    u"for 67th Milestone’18. We are delighted to host you at BML Munjal University from April 5-7, 2018. \nPlease keep checking our website for further updates.\n\n" + \
+                    u"Please find below your login details –\n" + \
+                    u"Username: "
+            body2 = str(user.username)
+            body3 = u"\n\nFor further details, refer to\n" + \
+                    u"Facebook Page: https://www.facebook.com/67milestone/\n" + \
+                    u"Instagram Page: https://www.instagram.com/67thmilestone/\n" + \
+                    u"Aftermovie'17: https://www.youtube.com/watch?v=VG47-yBbebE\n" + \
+                    u"Youtube Channel Page: https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw\n\n" + \
+                    u"Regards,\n" + \
+                    u"Team 67th Milestone"
             body = body1 + body2 + body3
-            try:
-                mailServer = smtplib.SMTP("smtp.gmail.com", 687)
-                mailServer.ehlo()
-                mailServer.starttls()
-                mailServer.ehlo()
-                ms
-                mailServer.login(email_user, email_password)
-                mailServer.sendmail(email_user, ["pprashant2398@gmail.com"], msg.as_string())
-                mailServer.close()
-            except:
-                ok = False
-            emailsend = EmailMessage(subject, body, to=[user_form.email])
-            emailsend.send()'''
+            emailsend = EmailMessage(subject, body, to=[user.email])
+            emailsend.send()
             registered = True
             return HttpResponseRedirect('/login')
         else:
@@ -380,6 +373,7 @@ def register(request):
         profile_form = UserProfileForm()
     context_dict={'user_form':user_form, 'profile_form':profile_form, 'registered':registered}
     return render(request,'website/login.html', context_dict)
+
 
 @csrf_protect
 @csrf_exempt
@@ -507,6 +501,40 @@ def single_event_register(request, event_name_slug):
     try:
         p = single_event(username=request.user.username, event_name=event_name_slug)
         p.save()
+        event = list(Events.objects.filter(slug=event_name_slug))
+        name_event = event[0].name
+        date=event[0].date
+        time=event[0].time
+        subject = "Greetings from 67th Milestone'18"
+        body=u"Dear participant,\n\n" + \
+            u"Greetings from Team 67th Milestone!\n\n"+\
+        u"We are delighted to confirm your presence for the festival. " +\
+        u"You’ve been registered for the " +\
+        str(name_event)+\
+        u" scheduled on " +\
+        u"(" +\
+        str(date)+ \
+        u" and " +\
+        str(time)+\
+        u" for the event Scheduled)"+\
+        u". Fest Itinerary will be shared soon.\n"+\
+        u"\nNote – For assistance to all the participants, we will also be providing Shuttle Service from " +\
+        u"IFFCO Chowk to BML Munjal University from April 4-8, 2018 at two time zones.\n"+\
+        u"\nIFFCO Chowk to BMU: 9 a.m. and 5 p.m.\n"+\
+        u"\nBMU to IFFCO Chowk: 11 a.m. and 7 p.m.\n"+\
+        u"\nA minimal service charge will be fared for the transport services on the account of the frequency of passengers."+ \
+        u" Kindly validate your seating and you will be informed about the exact fare charges in a few days. Upon filling the form,"+\
+        u" you confirm yourself for availing the transportation service.\n"+\
+        u"\nTo apply for the services, please fill the this form – https://goo.gl/forms/jQzmF09qLRnmDITV2\n\n"+\
+        u"For further details, refer to\n" + \
+        u"Facebook Page: https://www.facebook.com/67milestone/\n" + \
+        u"Instagram Page: https://www.instagram.com/67thmilestone/\n" + \
+        u"Aftermovie'17: https://www.youtube.com/watch?v=VG47-yBbebE\n" + \
+        u"Youtube Channel Page: https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw\n\n" + \
+        u"Regards,\n" + \
+        u"Team 67th Milestone"
+        emailsend = EmailMessage(subject, body, to=[request.user.email])
+        emailsend.send()
     except:
         return HttpResponseRedirect('/event/'+event_name_slug)
     return HttpResponseRedirect('/profile')
@@ -543,3 +571,7 @@ def team_register(request, event_name_slug):
         return render(request, 'website/team_event.html', context)
     else:
         return HttpResponseRedirect('/profile')
+
+def mentor(request):
+    context_dict = {}
+    return render(request, 'website/Mentors.html', context_dict)

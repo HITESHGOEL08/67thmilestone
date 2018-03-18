@@ -42,4 +42,5 @@ urlpatterns = [
     url(r'^edit', views.editprofile, name='edit'),
     url(r'^hospitality/$', views.hospitality, name='Hospitality'),
     url(r'^complete_team/$', views.complete_team, name='complete_team'),
+    url(r'^mentors/$', views.mentor, name='mentor'),
 ]

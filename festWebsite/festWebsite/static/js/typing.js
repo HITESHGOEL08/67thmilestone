@@ -1,6 +1,6 @@
 $(function(){
 $(".typed").typed({
-strings: ["is a technical fest.", "is a cultural fest.", "is back again.", "Are you ready?"],
+strings: ["is a technical fest.", "is a cultural fest.","is a management fest.", "is back again.", "Are you ready?"],
 // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 stringsElement: null,
 // typing speed
@@ -14,7 +14,7 @@ backDelay: 500,
 // loop
 loop: true,
 // false = infinite
-loopCount: 5,
+loopCount: 6,
 // show cursor
 showCursor: false,
 // character for cursor

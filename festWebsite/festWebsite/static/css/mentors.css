@@ -1,0 +1,147 @@
+body{
+	color: #fff;
+}
+.skewedBox{
+	position: relative;
+	background: linear-gradient(to bottom right, #43C6AC, #191654);
+	/*opacity: 0.7; */
+	padding: 20px 0;
+	transform: skew(0deg, 7deg) translateY(-185px);
+}
+.box{
+	font-family: 'Abril Fatface', sans-serif;
+	padding: 50px;
+	padding-top: 150px;
+	text-align: right;
+	transform: skew(0deg, -7deg);
+	color: #fff !important;
+}
+.details, .box h6{
+	font-family: 'Roboto', serif;
+}
+.details h6{
+	font-weight: 600;
+}
+.details ul li{
+	list-style-type: none;
+}
+.details strong{
+	background-image: -webkit-linear-gradient(to bottom right, #43C6AC, #191654); /* For Chrome and Safari */
+  	background-image:    -moz-linear-gradient(to bottom right, #43C6AC, #191654); /* For old Fx (3.6 to 15) */
+  	background-image:     -ms-linear-gradient(to bottom right, #43C6AC, #191654); /* For pre-releases of IE 10*/
+  	background-image:      -o-linear-gradient(to bottom right, #43C6AC, #191654); /* For old Opera (11.1 to 12.0) */
+  	background-image:         linear-gradient(to bottom right, #43C6AC, #191654); /* Standard syntax; must be last */
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+  	font-size: 1.5rem;
+}
+.silho img{
+	margin-bottom: -7px; 
+	width: 100%;
+}
+.modal{
+	background: rgba(1,1,1,0.9);
+	border: 1px solid #fff;
+}
+.modal-content h4{
+	background-image: -webkit-linear-gradient(to bottom right, #43C6AC, #191654); /* For Chrome and Safari */
+  	background-image:    -moz-linear-gradient(to bottom right, #43C6AC, #191654); /* For old Fx (3.6 to 15) */
+  	background-image:     -ms-linear-gradient(to bottom right, #43C6AC, #191654); /* For pre-releases of IE 10*/
+  	background-image:      -o-linear-gradient(to bottom right, #43C6AC, #191654); /* For old Opera (11.1 to 12.0) */
+  	background-image:         linear-gradient(to bottom right, #43C6AC, #191654); /* Standard syntax; must be last */
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+}
+.diamond, .dia {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+}
+.diamond {
+  transform: rotate(45deg) translateY(-25px) translateX(-25px);
+}
+.diamond .dia {
+  width: 380px;
+  height: 380px;
+  transform: rotate(-45deg);
+}
+.diamond img {
+  width: 100%;
+  height: auto;
+}
+.team-title {
+    position: static;
+background-image: -webkit-linear-gradient(to bottom right, #43C6AC, #191654); /* For Chrome and Safari */
+  	background-image:    -moz-linear-gradient(to bottom right, #43C6AC, #191654); /* For old Fx (3.6 to 15) */
+  	background-image:     -ms-linear-gradient(to bottom right, #43C6AC, #191654); /* For pre-releases of IE 10*/
+  	background-image:      -o-linear-gradient(to bottom right, #43C6AC, #191654); /* For old Opera (11.1 to 12.0) */
+  	background-image:         linear-gradient(to bottom right, #43C6AC, #191654); /* Standard syntax; must be last */
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+  	font-size: 1.5rem;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.team-title h6 {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+}
+.team-title span { 
+    font-size: 12px !important;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    letter-spacing: 1px;
+}
+.mentor_back1{
+	position: relative;
+	background-image: url("1111.png") ;
+}
+.dodeca, .dodeca div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.dodeca {
+  transform: rotate(120deg);
+}
+.dode1 {
+  transform: rotate(-60deg);
+}
+.dode2 {
+  transform: rotate(-60deg);
+}
+
+/*@media screen and (min-width: 400px) {
+    
+.diamond, .dia {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+}
+.diamond {
+  transform: rotate(45deg) translateY(-25px) translateX(-25px);
+}
+.diamond .dia {
+  width: 300px;
+  height: 300px;
+  transform: rotate(-45deg);
+}
+.diamond img {
+  width: 100%;
+  height: auto;
+}
+}*/
