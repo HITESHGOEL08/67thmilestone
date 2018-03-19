@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accomodation</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <h1>
+        Fest Accomodation Form
+    </h1>
+<br>
+<form method="post" action="/accomodation/">
+    {% csrf_token %}
+    {{form.as_p}}
+    <a href="/profile/"> <input type="submit" name="Submit" /></a>
+</form>
+{% else %}
+<h3>
+    <a href="/login/">Please Login First</a>
+</h3>
+{% endif %}
+
+</body>
+</html>

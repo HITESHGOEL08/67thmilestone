@@ -1,5 +1,5 @@
 from django import forms
-from website.models import Campus_Ambassdors
+from website.models import Campus_Ambassdors,FestAccomodation
 from website.models import UserProfile
 from django.contrib.auth.models import User
 
@@ -47,3 +47,14 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('name','contact', 'college', 'gender', 'picture', 'Terms_and_Conditions')
+
+class FestAccomodationForm(forms.ModelForm):
+    day1 = forms.BooleanField(required=False, label="4th April 12:00 pm to 5th April 12:00 pm", widget=forms.CheckboxInput())
+    day2 = forms.BooleanField(required=False,label="5th April 12:00 pm to 6th April 12:00 pm", widget=forms.CheckboxInput())
+    day3 = forms.BooleanField(required=False,label="6th April 12:00 pm to 7th April 12:00 pm", widget=forms.CheckboxInput())
+    day4 = forms.BooleanField(required=False,label="7th April 12:00 pm to 8th April 12:00 pm", widget=forms.CheckboxInput())
+    date = forms.DateField(label="Expected Check in Date", widget=forms.widgets.DateInput(attrs={'type':'date'}))
+    time = forms.TimeField(label="Expected Check in Time", widget=forms.widgets.TimeInput(attrs={'type':'time'}))
+    class Meta:
+        model = FestAccomodation
+        fields = ('day1', 'day2', 'day3', 'day4', 'date', 'time')

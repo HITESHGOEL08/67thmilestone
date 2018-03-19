@@ -3,7 +3,7 @@
 {% block title %}Our Team{% endblock %}
 {% block css %}
 <!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 <!--Let browser know website is optimized for mobile-->
@@ -18,7 +18,7 @@
 <section class="skewedBox">
     <div class="box">
         <h1>Our Team</h1>
-        <h6>Unity is strength...When there is team work and collaboration, wonderful things can be achieved!!"</h6>
+        <h6>Unity is strength...When there is team work and collaboration, wonderful things can be achieved!!</h6>
     </div>
 </section>
 
@@ -43,7 +43,7 @@
 <!--</div>-->
 
 <!--<div class="main-team">-->
-<div class="row">
+<div class="row" style="margin-top: -100px;">
     <!--<div class="heading-title text-center">-->
     <!--<p class="p-top-30 half-txt">Unity is strength...When there is team work and collaboration, wonderful things can be achieved!! </p>-->
     <!--</div>-->
@@ -75,6 +75,10 @@
             {% ifequal l|length 3 %}
             <div class="col-md-4 col-sm-4" align="center" style="margin-bottom:45px;">
                 {% endifequal %}
+                 {% ifequal l|length 4 %}
+                <div class="col-md-3 col-sm-3" align="center" style="margin-bottom:45px; margin-left:25px;">
+                {% endifequal %}
+
                 <div class="team-member">
                     <div class="team-img" align="center">
                         <img src="{{ MEDIA_URL }}{{ m.image }}" alt="team member" class="img-responsive"

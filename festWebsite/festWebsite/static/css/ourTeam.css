@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Abril+Fatface|Permanent+Marker|Roboto";
+@import "https://fonts.googleapis.com/css?family=Abril+Fatface|Permanent+Marker|Montserrat";
 
 body {
     font-family: 'Source Sans Pro', sans-serif !important;
@@ -24,6 +24,10 @@ body {
 	text-align: right;
 	transform: skew(0deg, -7deg);
 	color: #fff !important;
+}
+.box h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 .main-team{
     background: #000000;

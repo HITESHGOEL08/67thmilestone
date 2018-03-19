@@ -203,3 +203,11 @@ class Team_details(models.Model):
     phone = models.BigIntegerField(blank=True)
     email = models.EmailField(default="",blank=True)
 
+class FestAccomodation(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    day1 = models.BooleanField()
+    day2 = models.BooleanField()
+    day3 = models.BooleanField()
+    day4 = models.BooleanField()
+    date = models.DateField()
+    time = models.TimeField()
