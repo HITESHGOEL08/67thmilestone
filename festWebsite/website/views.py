@@ -4,8 +4,6 @@ import festWebsite.settings
 from wsgiref.util import FileWrapper
 from django.shortcuts import render, redirect, render_to_response, get_object_or_404
 from django import forms
-import docx
-import requests
 from django.http import HttpResponse, HttpResponseRedirect
 from website.models import Campus_Ambassdors, Sponsors, Team, Events, UserProfile, Pro_Night, single_event, \
     Team_details, event_register
