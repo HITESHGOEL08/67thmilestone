@@ -89,20 +89,20 @@ text-align: left;
 
 /* Info */
 #info{
-	transition: .2s;
-	margin-top: 5px;
-	margin-left: 10px;
+	transition: .2s!important;
+	margin-top: 5px!important;
+	margin-left: 10px!important;
 }
 #info:hover{
-	color: crimson;
-	transform: scale(1.1);
-	cursor: pointer;
+	color: crimson!important;
+	transform: scale(1.1)!important;
+	cursor: pointer!important;
 }
 .info{
-	border: 0.2px solid crimson;
-	color: #fff;
-	padding: 5px;
-	display: none;
+	border: 0.2px solid crimson!important;
+	color: #fff!important;
+	padding: 5px!important;
+	display: none!important;
 }
 
 
