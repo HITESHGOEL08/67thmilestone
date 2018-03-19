@@ -17,7 +17,7 @@ from django.template.loader import get_template
 from django.template import Context, Template, RequestContext
 import datetime
 import hashlib
-import pyqrcode
+# import pyqrcode
 from django.contrib.auth import authenticate, login, logout
 from random import randint
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
@@ -561,9 +561,9 @@ def single_event_register(request, event_name_slug):
             i.contact))
         print(name_event, i.name, i.contact)
         print(a)
-        ticket_no = pyqrcode.create(a)
-        ticket_no.svg(path1, scale=8)
-        emailsend.attach_file(path1)
+        # ticket_no = pyqrcode.create(a)
+        # ticket_no.svg(path1, scale=8)
+        # emailsend.attach_file(path1)
         emailsend.send()
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
@@ -647,9 +647,9 @@ def team_register(request, event_name_slug):
                 request.user.email) + "\nPhone : " + str(i.contact))
             print(name_event, i.name, i.contact)
             print(a)
-            ticket_no = pyqrcode.create(a)
-            ticket_no.svg(path1, scale=8)
-            emailsend.attach_file(path1)
+            # ticket_no = pyqrcode.create(a)
+            # ticket_no.svg(path1, scale=8)
+            # emailsend.attach_file(path1)
             emailsend.send()
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
