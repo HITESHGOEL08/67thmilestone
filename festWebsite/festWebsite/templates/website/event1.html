@@ -31,7 +31,7 @@
     </div>
     <div class="col s12 m3 event-list">
         <ul>
-            <li>Fee Type: <span class="highlight">{{ i.fees }}</span></li>
+            <li>Fee Type: <span class="highlight">{{ i.fees }}</span></span><i id="info" class="material-icons">help_outline</i></li>
             {% if single %}
             <li>Participants: <span class="highlight">{{ i.min_participants }}</span></li>
             {% else %}
@@ -55,6 +55,39 @@
         </div>
     </div>
 </section>
+
+<!-- Info Section -->
+<section class="info container">
+  <table>
+        <thead>
+        <tr>
+          <td>Type of Fee</td>
+          <td>Charges</td>
+          <td>Inclusions</td>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cultural Management Fest Fee</td>
+            <td>Rs. 200/- per person</td>
+            <td>Fest Entry + Cultural-Management Fest Events</td>
+          </tr>
+          <tr>
+            <td>Technical Fest Fee</td>
+            <td>Rs. 450/- per team (Team size - 2 to 5 only)</td>
+            <td>Fest Entry + Technical Fest Events</td>
+          </tr>
+        </tbody>
+      </table>
+      <h6 class="highlight">NOTE</h6>
+      <p>Cultural-Management Fest Fee can be paid both online as well as on the spot. Any person
+        paying this fee is entitled to enjoy full 3 day fest.</p>
+      <p>Technical Fest Fee can be paid only on the spot (offline mode). Any person paying this fee is
+        entitled to enjoy full 3 day fest.</p>
+</section>
+<!-- Ends -->
+
+
 <section class="row poc container">
     <div class="col s12 m12 highlight">
         <h3>Event Organizers</h3>
@@ -97,6 +130,9 @@
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script>
     $(document).ready(function(){
+    $("#info").click(function(){
+        $(".info").fadeToggle();
+    });x
       $(".button-collapse").sideNav();
       window.sr = ScrollReveal({ reset: true });
         sr.reveal('.picture-desc', { duration: 800 });

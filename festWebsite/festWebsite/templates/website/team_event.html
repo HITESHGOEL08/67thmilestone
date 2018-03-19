@@ -19,7 +19,7 @@
     <h1>Team Registration</h1>
 </div>
 
-<div class="row ">
+<div class="row container">
     <form class="col s12  " method="post" action="\{{ slug }}/team_register/">
         {% csrf_token %}
 
@@ -33,15 +33,15 @@
         {% for i in team_size %}
         <div class="row">
             <div class="input-field col s6 light-blue-text text-lighten-5">
-                <label>Participate Name {{ i }}</label><input type="text" class="validate" value="" name="name{{ i }}" size="50"/>
+                <label>Participant Name {{ i }}</label><input type="text" class="validate" value="" name="name{{ i }}" size="50"/>
             </div>
             <div class="input-field col s6 light-blue-text text-lighten-5">
-                <label>Participate Phone {{ i }}</label><input type="text"  value="" name="phone{{ i }}" size="50"/>
+                <label>Participant Phone {{ i }}</label><input type="text"  value="" name="phone{{ i }}" size="50"/>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12  light-blue-text text-lighten-5">
-                <label>Participate Email {{ i }}</label>
+                <label>Participant Email {{ i }}</label>
                 <input type="email" value=""  class="validate" name="email{{ i }}" size="50"/>
             </div>
         </div>

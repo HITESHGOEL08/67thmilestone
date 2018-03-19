@@ -86,6 +86,26 @@ text-align: left;
     max-width: 170px;
     height: auto;
 }
+
+/* Info */
+#info{
+	transition: .2s;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+#info:hover{
+	color: crimson;
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.info{
+	border: 0.2px solid crimson;
+	color: #fff;
+	padding: 5px;
+	display: none;
+}
+
+
 @media only screen and (max-width: 500px) {
     .event-heading h2{
     	font-size: 2rem;
