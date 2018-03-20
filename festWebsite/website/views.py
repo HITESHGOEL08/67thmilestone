@@ -550,21 +550,19 @@ def single_event_register(request, event_name_slug):
                u"Regards,\n" + \
                u"Team 67th Milestone"
         emailsend = EmailMessage(subject, body, to=[request.user.email])
-        gh = name_event + request.user.username
-        # path1 = settings.MEDIA_DIR
-        path1= '/home/bml/67thmilestone/festwebsite/festwebiste/media'
+        gh = event_name_slug + request.user.username
+        path1= os.path.getcwd()
         path1 += "/qrcode/"
-        path1 += (gh + ".svg")
+        path = path1+(gh+'.svg')
         user_details = list(UserProfile.objects.filter(user=request.user))
         i = user_details[0]
-        a = (
-        str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(request.user.email) + "\nPhone : " + str(
+        a = ( str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(request.user.email) + "\nPhone : " + str(
             i.contact))
         print(name_event, i.name, i.contact)
         print(a)
         ticket_no = pyqrcode.create(a)
-        ticket_no.svg(path1, scale=8)
-        # emailsend.attach_file(path1)
+        ticket_no.svg(path, scale=8)
+        emailsend.attach_file(path)
         print(ticket_no)
         emailsend.send()
     except:
@@ -639,10 +637,10 @@ def team_register(request, event_name_slug):
                    u"Regards,\n" + \
                    u"Team 67th Milestone"
             emailsend = EmailMessage(subject, body, to=[request.user.email])
-            gh = name_event + request.user.username
-            path1 = settings.MEDIA_DIR
+            gh = event_name_slug + request.user.username
+            path1 = os.path.getcwd()
             path1 += "/qrcode/"
-            path1 += (gh + ".svg")
+            path = path1 + (gh + '.svg')
             user_details = list(UserProfile.objects.filter(user=request.user))
             i = user_details[0]
             a = (str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(
@@ -650,8 +648,8 @@ def team_register(request, event_name_slug):
             print(name_event, i.name, i.contact)
             print(a)
             ticket_no = pyqrcode.create(a)
-            ticket_no.svg(path1, scale=8)
-            emailsend.attach_file(path1)
+            ticket_no.svg(path, scale=8)
+            emailsend.attach_file(path)
             emailsend.send()
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
