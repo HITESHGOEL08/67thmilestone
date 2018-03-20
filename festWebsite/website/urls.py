@@ -21,7 +21,7 @@ from website import views
 urlpatterns = [
     url(r'^bmladmin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
-    url(r'^campusambassador/$',views.campusambassador,name='campusambassador'),
+    url(r'^campusambassador',views.campusambassador,name='campusambassador'),
     url(r'^success/$',views.success,name='success'),
     url(r'^error/$',views.error,name='error'),
     url(r'^contact/$', views.contact, name='contact'),

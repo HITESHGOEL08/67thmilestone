@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+
+body{
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	color: #fff;
+	height: 100vh;
+	background: #780206;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#btn-back{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-family: 'Abril Fatface', cursive;
+	color: #fff;
+	font-size: 1.5rem;
+	transition: .2s;
+}
+#btn-back:hover{
+	color: crimson;
+	transform: scale(1.1);
+}
+.panel{
+	width: 60%;
+	margin: 0 auto;
+	height: 100vh;
+	background: rgba(1,1,1,0.6);
+	overflow-y: scroll;
+}
+.tabs a{
+	color: rgba(255,255,255,0.7)!important;
+}
+.tabs a:focus, a:active, a:hover{
+	color: crimson!important;
+	border-bottom: none!important;
+}
+.tabs.tabs-transparent .indicator {
+  background-color: crimson;
+}
+form{
+	margin: 10px 0;
+}
+.input-field .prefix{
+	color: rgba(255,255,255,0.5);	
+}
+input:focus{
+	border: none!important;
+	border-bottom: 2px solid crimson!important;
+}
+.input-field .prefix.active, .input-field label:not(.label-icon).active{
+  color: crimson!important;
+}
+select option{
+			color: #fff!important;
+		}
+@media only screen and (max-width: 600px) {
+  .panel{
+  	width: 80%;
+  }
+  #btn-back{
+    display:none!important;
+  }
+}

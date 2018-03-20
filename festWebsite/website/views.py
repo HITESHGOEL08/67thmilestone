@@ -384,7 +384,7 @@ def register(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
     context_dict = {'user_form': user_form, 'profile_form': profile_form, 'registered': registered}
-    return render(request, 'website/login.html', context_dict)
+    return render(request, 'website/login1.html', context_dict)
 
 
 @csrf_protect
@@ -407,7 +407,7 @@ def user_login(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
         context_dict = {'user_form': user_form, 'profile_form': profile_form}
-        return render(request, 'website/login.html', context_dict)
+        return render(request, 'website/login1.html', context_dict)
 
 
 @login_required(login_url='/login/')
@@ -551,7 +551,8 @@ def single_event_register(request, event_name_slug):
                u"Team 67th Milestone"
         emailsend = EmailMessage(subject, body, to=[request.user.email])
         gh = name_event + request.user.username
-        path1 = settings.MEDIA_DIR
+        # path1 = settings.MEDIA_DIR
+        path1= '/home/bml/67thmilestone/festwebsite/festwebiste/media'
         path1 += "/qrcode/"
         path1 += (gh + ".svg")
         user_details = list(UserProfile.objects.filter(user=request.user))
@@ -561,9 +562,10 @@ def single_event_register(request, event_name_slug):
             i.contact))
         print(name_event, i.name, i.contact)
         print(a)
-        # ticket_no = pyqrcode.create(a)
-        # ticket_no.svg(path1, scale=8)
+        ticket_no = pyqrcode.create(a)
+        ticket_no.svg(path1, scale=8)
         # emailsend.attach_file(path1)
+        print(ticket_no)
         emailsend.send()
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)

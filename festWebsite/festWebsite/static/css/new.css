@@ -34,7 +34,7 @@ body{
   height: 100vh;
   width: 100vw;
   padding: 0px;
-  position: relative;
+  position: fixed;
   top: 0px;
   z-index: 10000!important;
   max-width: 100%!important;

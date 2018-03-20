@@ -16,7 +16,7 @@ text-align: left;
 	font-family: 'Abril Fatface', sans-serif;
 }
 .skew2{
-	transform: skew(0deg, 7deg) translateY(-450px);
+	transform: skew(0deg, 7deg) translateY(-440px);
 	position: relative;
 	padding: 50px 20px;
 	z-index: 1!important;
@@ -102,7 +102,7 @@ text-align: left;
 	border: 0.2px solid crimson!important;
 	color: #fff!important;
 	padding: 5px!important;
-	display: none!important;
+	display: none;
 }
 
 

@@ -18,7 +18,7 @@
 </section>
 <section class="skew2">
     <div class="tagline">
-        <h4>{{ i.one_liner }}</h4>
+        <h5><em>{{ i.one_liner }}</em></h5>
     </div>
 </section>
 <section class="row picture-desc">
@@ -31,7 +31,7 @@
     </div>
     <div class="col s12 m3 event-list">
         <ul>
-            <li>Fee Type: <span class="highlight">{{ i.fees }}</span></span><i id="info" class="material-icons">help_outline</i></li>
+            <li>Fee Type: <span class="highlight">{{ i.fees }}</span><i id="info" class="material-icons">help_outline</i></li>
             {% if single %}
             <li>Participants: <span class="highlight">{{ i.min_participants }}</span></li>
             {% else %}
@@ -132,7 +132,7 @@
     $(document).ready(function(){
     $("#info").click(function(){
         $(".info").fadeToggle();
-    });x
+    });
       $(".button-collapse").sideNav();
       window.sr = ScrollReveal({ reset: true });
         sr.reveal('.picture-desc', { duration: 800 });
