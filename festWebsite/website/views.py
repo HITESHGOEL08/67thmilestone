@@ -551,15 +551,17 @@ def single_event_register(request, event_name_slug):
                u"Team 67th Milestone"
         emailsend = EmailMessage(subject, body, to=[request.user.email])
         gh = event_name_slug + request.user.username
-        path1= os.path.getcwd()
+        path1 = os.getcwd()
         path1 += "/qrcode/"
-        path = path1+(gh+'.svg')
+        path = path1+(gh + ".svg")
         user_details = list(UserProfile.objects.filter(user=request.user))
         i = user_details[0]
-        a = ( str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(request.user.email) + "\nPhone : " + str(
+        a = (
+        str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(request.user.email) + "\nPhone : " + str(
             i.contact))
         print(name_event, i.name, i.contact)
         print(a)
+        print(path)
         ticket_no = pyqrcode.create(a)
         ticket_no.svg(path, scale=8)
         emailsend.attach_file(path)
@@ -637,10 +639,10 @@ def team_register(request, event_name_slug):
                    u"Regards,\n" + \
                    u"Team 67th Milestone"
             emailsend = EmailMessage(subject, body, to=[request.user.email])
-            gh = event_name_slug + request.user.username
-            path1 = os.path.getcwd()
+            gh = name_event + request.user.username
+            path1 = os.getcwd()
             path1 += "/qrcode/"
-            path = path1 + (gh + '.svg')
+            path = path1 + (gh + ".svg")
             user_details = list(UserProfile.objects.filter(user=request.user))
             i = user_details[0]
             a = (str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(
