@@ -19,7 +19,7 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="icon" href="{% static 'images/black.png' %}" type="image/png">
 </head>
-<body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
+<body >
 <!-- Nav-Bar -->
 <nav>
     <div class="nav-wrapper">
@@ -139,23 +139,23 @@
 
 
 </script>
-<script type="text/javascript">
-$(document).ready(function () {
-    //Disable full page
-    $("body").on("contextmenu",function(e){
-        return false;
-    });
+<!--<script type="text/javascript">-->
+<!--$(document).ready(function () {-->
+    <!--//Disable full page-->
+    <!--$("body").on("contextmenu",function(e){-->
+        <!--return false;-->
+    <!--});-->
 
 
-});
- $(document).keydown(function(e){
-        if(e.which === 123){
+<!--});-->
+ <!--$(document).keydown(function(e){-->
+        <!--if(e.which === 123){-->
 
-           return false;
+           <!--return false;-->
 
-        }
+        <!--}-->
 
-    });
-</script>
+    <!--});-->
+<!--</script>-->
 </body>
 </html>

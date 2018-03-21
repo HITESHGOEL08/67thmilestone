@@ -114,7 +114,7 @@
 
 
 </style>
-<body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
+<body >
 <!-- Pre-Loader -->
 <div class="poverlay" id="preloader">
     <div><img src="{% static 'images/logo.png' %}">
@@ -130,7 +130,7 @@
     <div class="overlay-content">
         <a href="\event">Events</a>
         <a href="\campusambassador">Campus Ambassador</a>
-        <li><a href="\hospitality">Hospitality</a></li>
+        <a href="\hospitality">Hospitality</a>
         <a href="\sponsor">Sponsors</a>
         <a href="\mentors">Mentors</a>
         <a href="\team">Team</a>
@@ -276,20 +276,6 @@
     <div class="section-heading">
         <h2 class="highlight4">Pronites</h2>
     </div>
-    <!-- <div class="carousel carousel-slider center" data-indicators="true">
-      <div class="carousel-item white-text" href="#one!">
-        <h2>First Panel</h2>
-      </div>
-      <div class="carousel-item white-text" href="#two!">
-        <h2>Second Panel</h2>
-      </div>
-      <div class="carousel-item white-text" href="#three!">
-        <h2>Third Panel</h2>
-      </div>
-      <div class="carousel-item white-text" href="#four!">
-        <h2>Fourth Panel</h2>
-      </div>
-    </div> -->
     <div class="coming-soon">
         <h1>Coming Soon</h1>
     </div>
@@ -300,7 +286,7 @@
         <h2 class="highlight2"> Events </h2>
     </div>
     <!-- Large device div -->
-    <div class="carousel events-slider hide-on-small-only">
+    <div class="carousel events-slider">
         {% for i in home_details %}
         <a class="carousel-item black" href="/event/{{ i.slug }}">
             <img src="{{ MEDIA_URL }}{{ i.image }}">
@@ -311,18 +297,19 @@
     </div>
     <!-- Large device div ends -->
     <!-- Small device div -->
-    <div class="carousel carousel-slider center hide-on-med-and-up">
-        <div class="carousel-fixed-item center">
-            <a class="btn btn-login-reverse">View All Events</a>
-        </div>
-        {% for i in home_details %}
-        <div class="carousel-item white-text" href="/event/{{ i.slug }}"
-             style="background: url({{ MEDIA_URL }}{{ i.image }}); background-size: cover; background-repeat: no-repeat;">
-            <h2>{{ i.name }}</h2>
-        </div>
-        {% endfor %}
-    </div>
+    <!--<div class="carousel carousel-slider center hide-on-med-and-up">-->
+        <!--<div class="carousel-fixed-item center">-->
+            <!--<a class="btn btn-login-reverse">View All Events</a>-->
+        <!--</div>-->
+        <!--{% for i in home_details %}-->
+        <!--<div class="carousel-item white-text" href="/event/{{ i.slug }}"-->
+             <!--style="background: url({{ MEDIA_URL }}{{ i.image }}); background-size: cover; background-repeat: no-repeat;">-->
+            <!--<h2>{{ i.name }}</h2>-->
+        <!--</div>-->
+        <!--{% endfor %}-->
+    <!--</div>-->
     <!-- Small device div ends-->
+
     <div class="btn-events hide-on-small-only">
         <a href="\event" class="btn btn-login">View all events</a>
     </div>
@@ -482,23 +469,23 @@
 
 
 </script>
-<script type="text/javascript">
-$(document).ready(function () {
-    //Disable full page
-    $("body").on("contextmenu",function(e){
-        return false;
-    });
+<!--<script type="text/javascript">-->
+<!--$(document).ready(function () {-->
+    <!--//Disable full page-->
+    <!--$("body").on("contextmenu",function(e){-->
+        <!--return false;-->
+    <!--});-->
 
 
-});
- $(document).keydown(function(e){
-        if(e.which === 123){
+<!--});-->
+ <!--$(document).keydown(function(e){-->
+        <!--if(e.which === 123){-->
 
-           return false;
+           <!--return false;-->
 
-        }
+        <!--}-->
 
-    });
-</script>
+    <!--});-->
+<!--</script>-->
 </body>
 </html>
