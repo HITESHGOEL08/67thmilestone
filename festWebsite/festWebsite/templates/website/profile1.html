@@ -1,0 +1,154 @@
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block css %}
+{% load staticfiles %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/main4.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/campusamb1.css' %}">
+<title>User Profile</title>
+{% endblock %}
+{% block silho %}{% static  'images/super.png' %}{% endblock %}
+{% block content %}
+<section class="skewedBox">
+    <div class="box">
+        <h3>My Profile</h3>
+    </div>
+</section>
+<section class="details container row" style="margin:4vh 5vw !important;width:90% !important">
+    <!--<div class="row">
+    <div class="col s12 m6 l6 banda"><img src="danish_Gden9qy.jpg" style="height:30vh"></div>
+    <div class="details-intro col l6 s12 m6">
+      <strong>Name</strong>
+      <ul>
+        <li><span><b>College : </b></span>BMU</li>
+        <li><span><b>Contact No. : </b></span>9206685767</li>
+        <li><span><b>kgvjnk : </b></span>fnjfkv</li>
+      </ul>
+      <button class="btn">EDIT</button>
+    </div></div>-->
+    <div class="card horizontal">
+        <div class="card-image">
+            <img src="{{ MEDIA_URL }}{{ picture }}" style="height:40vh">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content ">
+                <strong>{{ name }}</strong>
+                <ul>
+                    <li><span><b>College : </b></span>{{ college }}</li>
+                    <li><span><b>Contact No. : </b></span>{{ contact }}</li>
+                    <li><span><b>E-mail : </b></span>{{ email }}</li>
+                </ul>
+            </div>
+            <div class="card-action ">
+            <button class="btn modal-trigger btn-login" href="#modalEdit">EDIT</button>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal for editing profile -->
+  <div id="modalEdit" class="modal black">
+   <div class="modal-content ">
+      <h4>Registration</h4>
+
+
+      <form id="category_form" class="col s12" method="post" action="\campusambassador">
+      {% csrf_token %}
+          {% for hidden in form.hidden_fields %}
+              {{ hidden }}
+              {% endfor %}
+          {% for field in form.visible_fields %}
+              {{ field.errors }}
+              {{ field.help_text }}
+              {{ field }}
+              <br>
+              {% endfor %}
+          <br>
+    <button class="btn btn-login" type="submit" name="submit" style="margin-bottom: 30px;" value="SUBMIT">
+SUBMIT
+        </button>
+    </form>
+
+          <!--<a href="\67milestone" class="modal-action modal-close waves-effect waves-blue btn-flat ">Submit</a>-->
+
+     </div>
+   </div>
+   <!-- Modal ends -->
+
+
+
+    <div class="row details-events" style="margin:20px 10vw;" align=center>
+        <strong align=center style="text-align:center !important">Events Registered</strong>
+        <ul class="row">
+            {% for i in registered_events %}
+            <li class="col l3 m6 s12">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <a href="/event/{{ i.slug }}"><img class="activator" src="{{ MEDIA_URL }}{{ i.image }}" style="height:40vh;"></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ i.name }}<i
+                                class="material-icons right">more_vert</i></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ i.name }}<i
+                                class="material-icons right">close</i></span>
+                        <div class="row">
+                            <div class="col s6">
+                                <p>{{ i.one_liner }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+            {% for i,j in registered_events1 %}
+            <li class="col l3 m6 s12">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <a href="/event/{{ i.slug }}"><img class="activator" src="{{ MEDIA_URL }}{{ i.image }}" style="height:40vh;"></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ i.name }}<i
+                                class="material-icons right">more_vert</i></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ i.name }}<i
+                                class="material-icons right">close</i></span>
+                        <div class="row">
+                            {% for k in j %}
+                            <div class="col s6">
+                                <p>{{ k }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Scroll -->
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('.modal').modal();
+        $(".button-collapse").sideNav();
+        window.sr = ScrollReveal({ reset: true });
+        sr.reveal('.details-intro', { duration: 800 });
+        sr.reveal('.details-events', { duration: 800 });
+    // $('ul.tabs').tabs({
+    //   swipeable : true,
+    //   responsiveThreshold : 1920
+    });
+
+
+
+</script>
+{% endblock %}

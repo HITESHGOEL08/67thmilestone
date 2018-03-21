@@ -95,3 +95,8 @@ background: linear-gradient(to right, #780206, #061161) !important; /* W3C, IE 1
 {
     display: block;
 }
+
+.modal{
+    background: #000!important;
+    color: #fff;
+}

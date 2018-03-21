@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from website.models import Campus_Ambassdors, Sponsors, Team, Events, UserProfile, single_event, Team_details, event_register
+from website.models import Campus_Ambassdors, Sponsors, Team, Events, UserProfile, single_event, Team_details, event_register, FestAccomodation
 
 class CampusAmbassdorAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('email',)}
@@ -27,6 +27,9 @@ class TeamEventAdmin(admin.ModelAdmin):
 class TeamEventRegister(admin.ModelAdmin):
     pass
 
+class FestAccomodationAdmin(admin.ModelAdmin):
+    pass
+
 admin.site.register(Campus_Ambassdors, CampusAmbassdorAdmin)
 admin.site.register(Sponsors, SponsorsAdmin)
 admin.site.register(Team, TeamAdmin)
@@ -35,3 +38,4 @@ admin.site.register(UserProfile, UserAdmin)
 admin.site.register(single_event, SingleEventAdmin)
 admin.site.register(Team_details, TeamEventAdmin)
 admin.site.register(event_register, TeamEventRegister)
+admin.site.register(FestAccomodation, FestAccomodationAdmin)

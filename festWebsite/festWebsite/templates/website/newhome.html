@@ -39,7 +39,7 @@
         <a href="\sponsor">Sponsors</a>
         <a href="\mentors">Mentors</a>
         <a href="\team">Team</a>
-        <!-- <a href="#">Gallery</a> -->
+         <a href="\gallery">Gallery</a>
     </div>
 </div>
 
@@ -134,23 +134,39 @@
         <h1>Coming Soon</h1>
     </div>
 </section>
+
 <section id="events">
     <div class="section-heading">
         <h2 class="highlight2"> Events </h2>
     </div>
-    <div class="carousel events-slider">
+    <!-- Large device div -->
+    <div class="carousel events-slider hide-on-small-only">
         {% for i in home_details %}
-        <a class="carousel-item" href="/event/{{ i.slug }}">
+        <a class="carousel-item black" href="/event/{{ i.slug }}">
             <img src="{{ MEDIA_URL }}{{ i.image }}">
             <div class="overlay-event"></div>
             <div class="text">{{ i.name }}</div>
         </a>
         {% endfor %}
     </div>
-    <div class="btn-events">
+    <!-- Large device div ends -->
+    <!-- Small device div -->
+    <div class="carousel carousel-slider center hide-on-med-and-up">
+    <div class="carousel-fixed-item center">
+      <a class="btn btn-login-reverse">View All Events</a>
+    </div>
+        {% for i in home_details %}
+    <div class="carousel-item white-text" href="/event/{{ i.slug }}" style="background: url('https://source.unsplash.com/400x400'); background-size: cover; background-repeat: no-repeat;">
+      <h2>{{ i.name }}</h2>
+    </div>
+        {% endfor %}
+    </div>
+    <!-- Small device div ends-->
+    <div class="btn-events hide-on-small-only">
         <a href="\event" class="btn btn-login">View all events</a>
     </div>
 </section>
+
 <section id="schedule">
     <div class="section-heading">
         <h2 class="highlight3"> Schedule </h2>
@@ -171,7 +187,7 @@
 
 <!-- Footer -->
 <div class="silho">
-    <img src="{% static 'images/stranger.png' %}">
+    <img src="{% static 'images/batman.png' %}">
 </div>
 <footer>
     <div class="row">
@@ -184,8 +200,8 @@
                     67th Milestone<br>
                     BML Munjal University<br>
                     NH 8, Gurugram(HR)<br>
-                    <i class="fas fa-phone"></i> 1800 103 6888<br>
                     122413<br>
+                    <i class="fas fa-phone"></i> 1800 103 6888<br>
                     <a href="http://bml.edu.in" target="_blank">www.bml.edu.in</a>
                 </address>
             </div>
@@ -240,6 +256,9 @@
         $('.carousel.carousel-slider').carousel({fullWidth: true});
         setInterval(function(){
           $('#pronites .carousel').carousel('next');
+        } , 3000);
+        setInterval(function(){
+          $('#events .carousel-slider').carousel('next');
         } , 3000);
         var timer;
         var compareDate = new Date();

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>67th Milestone</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Import personal CSS -->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/homelast.css' %}">
+
+
+    <!--<link type="text/css" rel="stylesheet" href="{% static 'css/new.css' %}">-->
+    <!-- Importing Font Awesome Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!-- Importing Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<style>
+        .background {
+  background:
+   url("{% static 'images/back12.jpg' %}");
+   background-repeat: no-repeat;
+    background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: .55;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-animation: zoomin 10s ease-in infinite;
+  animation: zoomin 10s ease-in infinite;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+
+}
+
+/* The outermost element*/
+.header-wrapper {
+  overflow: hidden;
+  width:400px;
+  height:200px;
+  text-align:center;
+}
+
+/* The innermost element*/
+.zoomoutheader {
+  width:400px;
+  height:200px;
+  text-align:center;
+  background: none;
+  -webkit-animation: zoomout 10s ease-in infinite;
+  animation: zoomout 10s ease-in infinite;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+
+
+/* Zoom in Keyframes */
+@-webkit-keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+} /*End of Zoom in Keyframes */
+
+/* Zoom out Keyframes */
+@-webkit-keyframes zoomout {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.67);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomout {
+    0% {transform: scale(1);}
+  50% {transform: scale(0.67);}
+  100% {transform: scale(1);}
+}/*End of Zoom out Keyframes */
+
+#meow{
+  z-index: 1000 !important;
+  position: fixed;
+  top: 50%; left: 10px;
+  transform: translateY(-50%);
+  display: none;
+}
+#meow img{
+  max-width: 50px;
+  height: auto;
+}
+
+
+
+.sanjeev-div{
+  background: url("{% static 'images/bg.png' %}");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+</style>
+<body>
+<!-- Pre-Loader -->
+<div class="poverlay" id="preloader">
+    <div><img src="{% static 'images/logo.png' %}">
+        <p style="color:white">The Journey Continues<span class="dot1">.</span><span class="dot2">.</span><span
+                class="dot3">.</span></p></div>
+</div>
+
+
+<div id="myNav" class="overlay">
+    <a id="close" href="javascript:void(0)" class="close-btn" onclick="closeNav()"><i class="material-icons">sort</i></a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="\event">Events</a>
+        <a href="\campusambassador">Campus Ambassador</a>
+        <li><a href="\hospitality">Hospitality</a></li>
+        <a href="\sponsor">Sponsors</a>
+        <a href="\mentors">Mentors</a>
+        <a href="\team">Team</a>
+        <a href="\gallery">Gallery</a>
+    </div>
+</div>
+
+
+<!-- Login Div -->
+<div id="login-button">
+    {% if user.is_authenticated %}
+    <li><a class="dropdown-button" data-activates="dropdown"> {{ user.username }} <i class="material-icons right">arrow_drop_down</i></a>
+    </li>
+    <ul id="dropdown" class="dropdown-content">
+        <li><a href="\profile">Profile</a></li>
+        <li><a href="\logout">Logout</a></li>
+    </ul>
+    <script>
+        function(){
+            document.getElementById("loginpic").style.display = "none!important";
+            document.getElementById("login-button").style.display = "block";
+        }
+    </script>
+    {% else %}
+    <script>
+        function(){
+            document.getElementById("loginpic").style.display = "block!important";
+            document.getElementById("login-button").style.display = "none";
+        }
+    </script>
+    {% endif %}
+</div>
+
+<span id="open" onclick="openNav()" class="menu-btn"><i class="material-icons">menu</i></span>
+
+<!-- Social Media -->
+<ul id="meow">
+    <li><a href="https://www.instagram.com/67thmilestone/?hl=en" target="_blank"><img
+            src="{% static 'images/instagram.png' %}"></a></li>
+    <li><a href="https://www.facebook.com/67milestone/?ref=br_rs" target="_blank"><img
+            src="{% static 'images/facebook.png' %}"></a></li>
+    <li><a href="https://twitter.com/67th_milestone" target="_blank"><img
+            src="{% static 'images/twitter.png' %}"></a></li>
+    <li><a href="https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw" target="_blank"><img
+            src="{% static 'images/youtube.png' %}"></a></li>
+</ul>
+
+<!-- Landing page for large screens-->
+<section class="hide-on-small-only">
+    <div id="particles-js"></div>
+    <div class="row nav-got" align="center">
+        <a href="\event"><div class="col m2 boo" style="cursor: pointer;">
+            <img style="max-height: 200px;max-width: 200px;" src="{% static 'images/Events.png' %}">
+    </div></a>
+        <a href="\sponsor"><div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                              src="{% static 'images/Sponsors.png' %}">
+        </div></a>
+        <a href="\campusambassador"><div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                              src="{% static 'images/CA.png' %}">
+        </div></a>
+        <a href="\mentors"><div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                              src="{% static 'images/Men.png' %}">
+        </div></a>
+        <a href="\hospitality"><div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                              src="{% static 'images/hosp.png' %}">
+        </div></a>
+       <a href="\login"> <div class="col m2 boo"  id="loginpic" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                              src="{% static 'images/Log.png' %}">
+        </div></a>
+    </div>
+    <div class="row dragon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <path id="dragon-dark"
+                  d="M471.5 449.2l-1.3-.7-94.2-52-16-20.5 2-20 12.2-17 27.3-3 11.9 23.4 18.4-10.4 26.4-40.2L492 224l6-102.2-12.5 57.7-29 35-23.5 4.7 6.5-8.4-8.5 1.2-2-12 16 1.8-16-5.8v-14l20.5 1.8-11.7-3.3-11-6.5-2.6-13.8 22-1.7 12 2.7-13.7-6-20.7.8-7-9.8 20-6.4-23.8 2.4-14.6-2.2 10.6-7.2-15.5 1.7 22.5-23.3-25.8 16.6-28.7 9 30-39.8-37.7 42.5-15.3 7.3 23.7-37.3-34.2 42.3-20.7 17.7 14.7-30.3 11.2-17.2 17-16.8-15.7 8-12.3 15.3-.4 5.5-24.6 44.2 11.8-30.7-1.7-18-1.5 18.7-19 44V170l10.4-33 2.6-19.8-20.8 46-5.5 7 1.5 16.6-4.2 18-7.3 5.4V167l-7.5 22.5 1.8 15-13 35.3 1.2 7.7-5.8 5.3-5 22.4-12.4 15.6 5.2 17.4 6-5.4 8.8 4.4 8.4-3.7 10-.3-3.2-5.4 21.2-41.3 15.6-4.5 14.2-25.8 6.2.8 5 3.8-4.7-6.3-5.3-2.3 1.3-1.7 12-.5 10 7.2 12 13.8-13-18-12.7-7.8 22.2-2.4 18.4 5.4-16.9-9.2-27.2 1.1 12-10.8 22.7-4.2 28.7 11 4.3 10.2-17.2 43.5-57.3 62.2-10.5 61.8 25.2 65.4z"/>
+            <path id="dragon-light" d="M533.7,489.3l-5-50l-12-33.7l-6.7-2l-42.7-22l-35.7,7L297,462l-39.3,9l-32.3-2.3l52-7.7l24.7-12.7l-8.3-32.7
+           l-7,2.7c0,0,3-23.8,1.3-39.1l-7,4.1c0,0,12.7-42.3,11.7-52.3H285c0,0,26-30.3,26.3-34.3H299c0,0,38.3-19,51.2-34.8h-6.7l21.8-13.2
+           l9-12H369l8.7-16l-4-8.7l-2,3.7l-10.3-12.3l-8.7-2.3l1,2l-16-0.7l-17,4.7l-5.7,5.3l2.7-11.3l5.7-5.7l0.3,3l23.7-13.8l0.8,2.8
+           l13.8-1.2l18.3,9.2l-0.2,3.2l7,8.3l-3.5,50.2l-62,67.3l-4.3,41l-3,1.7l3.2,33.2l2-2l14.3,27.5l62-45.5l21.2-25.1l13.4-8.8L451,312
+           l36.5-93.8l12.2-135.5L542,179l29.3,78.7l-13.6,127.1l-12.5,93L533.7,489.3z"/>
+            <path id="dragon-eye" d="M264.5 231.5l-6.3 5.5-1.2 6.6-3.9 8.8 7.7-5.8.4-5.6z"/>
+            <path id="dragon-front"
+                  d="M228 511.3l83-5 76-30.7 67.7-84.7 76-133-6.7-78.7-56.7-135 27.3 22 41 42 44.7 149-2.3 30.3 2.3 55s-32 117.3-31.7 135L537 504l-5 28.3-4.7-42.7 15.3-19.3 9-92.3-29 30.3-57.3 120.3-38.3 3.7-43.3 1.7 56-13 37.3-40.3 56-114.3-52.3 34-79 75.7-50.7 38.2-29-2.3-37 5.7-57-6.4z"/>
+        </svg>
+    </div>
+
+    <div id="deviceOrientation"></div>
+    <!--   <div align="center"><img style="max-height: 800px;max-width: 800px; margin-top: -250px;" src="dragon.png"></div>
+     -->
+    <div class="hover07 row khaleesi">
+        <img style="max-height: 400px;max-width: 400px;" src="{% static 'images/khaleesi.png' %}">
+    </div>
+
+    <div align="center" style="z-index: 3;position: absolute; top: 420px; left: 50%; transform: translateX(-50%);"><img
+            style="max-width: 500px;max-height: 500px; " src="{% static 'images/namecolg1.png' %}"></div>
+
+
+    <div class="background">
+        <div class="header-wrapper">
+            <div class="zoomoutheader">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Landing page for small devices -->
+<section class="sanjeev-div hide-on-med-and-up">
+    <div class="sanjeev-content">
+        <div class="main-heading">
+            <h1>67<sup>th</sup> Milestone</h1>
+        </div>
+        <div class="main-date">
+            <h4>April 5<sup>th</sup> - 7<sup>th</sup></h4>
+        </div>
+    </div>
+</section>
+
+
+<!-- 2nd Div  -->
+<section id="banner">
+
+    <div class="row">
+        <div class="col s12 m6 banner-pic">
+            <img src="{% static 'images/poster.jpg' %}" alt="" class="responsive-img">
+        </div>
+        <div class="col s12 m6 banner-content">
+            <h2 class="highlight1">67<sup>th</sup> Milestone</h2>
+            <h3><span class="typed"></span>
+                <h3>
+                    <div id="timer">
+                        <span id="days"></span>Days
+                        <span id="hours"></span>Hours
+                        <span id="minutes"></span>Minutes
+                        <span id="seconds"></span>Seconds
+                    </div>
+                </h3>
+            </h3>
+        </div>
+
+    </div>
+</section>
+<section id="pronites">
+    <div class="section-heading">
+        <h2 class="highlight4">Pronites</h2>
+    </div>
+    <!-- <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-item white-text" href="#one!">
+        <h2>First Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#two!">
+        <h2>Second Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#three!">
+        <h2>Third Panel</h2>
+      </div>
+      <div class="carousel-item white-text" href="#four!">
+        <h2>Fourth Panel</h2>
+      </div>
+    </div> -->
+    <div class="coming-soon">
+        <h1>Coming Soon</h1>
+    </div>
+</section>
+
+<section id="events">
+    <div class="section-heading">
+        <h2 class="highlight2"> Events </h2>
+    </div>
+    <!-- Large device div -->
+    <div class="carousel events-slider hide-on-small-only">
+        {% for i in home_details %}
+        <a class="carousel-item black" href="/event/{{ i.slug }}">
+            <img src="{{ MEDIA_URL }}{{ i.image }}">
+            <div class="overlay-event"></div>
+            <div class="text">{{ i.name }}</div>
+        </a>
+        {% endfor %}
+    </div>
+    <!-- Large device div ends -->
+    <!-- Small device div -->
+    <div class="carousel carousel-slider center hide-on-med-and-up">
+        <div class="carousel-fixed-item center">
+            <a class="btn btn-login-reverse">View All Events</a>
+        </div>
+        {% for i in home_details %}
+        <div class="carousel-item white-text" href="/event/{{ i.slug }}"
+             style="background: url({{ MEDIA_URL }}{{ i.image }}); background-size: cover; background-repeat: no-repeat;">
+            <h2>{{ i.name }}</h2>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Small device div ends-->
+    <div class="btn-events hide-on-small-only">
+        <a href="\event" class="btn btn-login">View all events</a>
+    </div>
+</section>
+
+<section id="schedule">
+    <div class="section-heading">
+        <h2 class="highlight3"> Schedule </h2>
+    </div>
+    <!-- <div class="schedule-pic">
+      <img src="https://source.unsplash.com/600x400" class="responsive-img">
+    </div> -->
+    <div class="coming-soon">
+        <h1>Coming Soon</h1>
+    </div>
+    <div class="btn-schedule">
+        <a href="" class="btn btn-login" disabled>Download Schedule</a>
+    </div>
+    <div class="btn-aftermovie">
+        <a href="https://www.youtube.com/watch?v=VG47-yBbebE" target="_blank" class="btn btn-login-reverse">AfterMovie'17</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="silho">
+    <img src="{% static 'images/batman.png' %}">
+</div>
+<footer>
+    <div class="row">
+        <div class="col m4 push-m1 s12 bmu-info">
+            <div class="col s6">
+                <img src="{% static 'images/BMU.png' %}" class="responsive-img">
+            </div>
+            <div class="col s6" style="padding-top:20px;">
+                <address>
+                    67th Milestone<br>
+                    BML Munjal University<br>
+                    NH 8, Gurugram(HR)<br>
+                    122413<br>
+                    <i class="fas fa-phone"></i> 1800 103 6888<br>
+                    <a href="http://bml.edu.in" target="_blank">www.bml.edu.in</a>
+                </address>
+            </div>
+        </div>
+        <div class="col m3 push-m1 s12 dank-footer">
+            <p class="dank-line-sanjeev">Made with skill, not love!</p>
+            <img src="{% static 'images/dank.png' %}" alt="Dank Image">
+            <p>&copy; 67th Milestone 2018</p>
+        </div>
+        <div class="col m3 s12 social-media">
+            <a href="https://fb.com/67milestone" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://twitter.com/67th_milestone" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://instagram.com/67thmilestone" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw" target="_blank"><i
+                    class="fab fa-youtube fa-2x"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Import particle js -->
+<script src="particles.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
+<script src="{% static 'js/typing.js' %}"></script>
+<script src="{% static 'js/nav.js' %}"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{% static 'js/homejs.js' %}"></script>
+<script src="{% static 'js/homejspara.js' %}"></script>
+
+<script>
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (width >= 500 ){
+      if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+          document.getElementById("meow").style.display = "block";
+          document.getElementById("open").style.display = "block";
+      } else {
+          document.getElementById("meow").style.display = "none";
+          document.getElementById("open").style.display = "none";
+          document.getElementById("close").style.display = "none";
+      }
+    }
+    else{
+      document.getElementById("open").style.display = "block";
+    }
+  }
+    var overlay = document.getElementById("preloader");
+    window.addEventListener('load', function(){
+    $('.poverlay').fadeOut();
+    })
+      $(document).ready(function(){
+        $('#close').fadeOut();
+        $('#open').fadeOut();
+        $('.festname').addClass('animated slideInDown');
+        $('.quote').addClass('animated slideInRight');
+        // particlesJS.load('particles-js', 'particles.json', function() {
+        //   console.log('callback - particles.js config loaded');
+        // });
+        // $(window).scroll(function(){
+        //     if ($(this).scrollTop() > 200) {
+        //         // $('#nav').fadeIn(500);
+        //         $('#nav').css("background","rgba(1,1,1,0.8)");
+        //     } else {
+        //         $('#nav').css("background","transparent");
+        //     }
+        // });
+        $(".button-collapse").sideNav();
+        $('.events-slider').carousel();
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        setInterval(function(){
+          $('#pronites .carousel').carousel('next');
+        } , 3000);
+        var timer;
+        var compareDate = new Date();
+        compareDate.setDate(36); //just for this demo today + 7 days
+
+        timer = setInterval(function() {
+          timeBetweenDates(compareDate);
+        }, 1000);
+
+        function timeBetweenDates(toDate) {
+          var dateEntered = toDate;
+          var now = new Date();
+          var difference = dateEntered.getTime() - now.getTime();
+
+          if (difference <= 0) {
+
+            // Timer done
+            clearInterval(timer);
+
+          } else {
+
+            var seconds = Math.floor(difference / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+
+            hours %= 24;
+            minutes %= 60;
+            seconds %= 60;
+
+            $("#days").text(days);
+            $("#hours").text(hours);
+            $("#minutes").text(minutes);
+            $("#seconds").text(seconds);
+          }
+        }
+      })
+
+
+
+
+</script>
+</body>
+</html>

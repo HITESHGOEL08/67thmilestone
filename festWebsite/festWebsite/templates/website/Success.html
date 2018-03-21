@@ -1,13 +1,17 @@
-{% extends 'website/base.html' %}
+{% extends 'website/base1.html' %}
 {% load staticfiles %}
 {% block title %}Woah!{% endblock %}
 {% block css %}
 <link type="text/css" rel="stylesheet" href="{% static 'css/success.css' %}">{% endblock %}
-{% block image %}{% static  'images/success.jpg' %}{% endblock %}
-{% block heading %}Thank You!{% endblock %}
 {% block content %}
-<div class="row">
+<div class="skew">
+    <div class="box">
+        <h2>Success</h2>
+    </div>
+</div>
+<div class="row container text">
     <h6>You have successfully registered for Campus Ambassador with Email:<span class="user-info">{{ email }}</span> and
         Phone:<span class="user-info">{{ phone }}</span></h6>
 </div>
+
 {% endblock %}

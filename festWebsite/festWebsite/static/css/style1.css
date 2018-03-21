@@ -1,5 +1,5 @@
 .skew1{
-	transform: skew(0deg, -7deg) translateY(-147px);
+	transform: skew(0deg, -5deg) translateY(-250px);
 	padding: 50px 20px;
 	background: #7b4397;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
@@ -9,14 +9,14 @@
 }
 .event-heading{
 text-align: left;
-	transform: skew(0deg, 7deg);
-	padding: 50px 50px;
-	padding-top: 150px;
+	transform: skew(0deg, 5deg);
+	padding: 0px 50px;
+	padding-top: 200px;
 	color: #fff;
 	font-family: 'Abril Fatface', sans-serif;
 }
 .skew2{
-	transform: skew(0deg, 7deg) translateY(-440px);
+	transform: skew(0deg, 7deg) translateY(-540px);
 	position: relative;
 	padding: 50px 20px;
 	z-index: 1!important;
@@ -32,7 +32,7 @@ text-align: left;
 }
 .picture-desc{
 	position: relative;
-	margin-top: -250px;
+	margin-top: -400px;
 	color: #fff;
 }
 .event-desc h4{

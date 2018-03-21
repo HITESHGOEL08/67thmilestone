@@ -91,6 +91,15 @@ background-image: -webkit-linear-gradient(to bottom right, #43C6AC, #191654); /*
     text-align: center;
     margin-top: 40px;
 }
+a{
+    text-decoration:none !important;
+    color: white !important;
+}
+
+a:hover, a:focus{
+    text-decoration:none !important;
+    color: white !important;
+}
 .team-title h6 {
     display: block;
     text-transform: uppercase;

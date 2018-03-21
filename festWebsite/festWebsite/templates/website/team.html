@@ -2,15 +2,17 @@
 {% load staticfiles %}
 {% block title %}Our Team{% endblock %}
 {% block css %}
-<!--Import Google Icon Font-->
-<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-<!-- Compiled and minified CSS -->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/ourTeam.css' %}"/>
 <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap1.css' %}"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600'
       rel='stylesheet' type='text/css'>
 {% endblock %}
@@ -25,31 +27,14 @@
 <div class="background" style="background:url({% static  'images/teampara.png' %});">
 </div>
 
-<!--<div style="text-align: center;-->
-<!--font-size: 40px;-->
-<!--color: #fff;-->
-<!--font-family: 'Abril Fatface', cursive;-->
-<!--/*font-family: 'Permanent Marker', cursive;*/-->
-<!--margin: 20px 0;-->
-<!--background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */-->
-<!--background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */-->
-<!--background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/-->
-<!--background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */-->
-<!--background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */-->
-<!--color:transparent;-->
-<!-- -webkit-background-clip: text;-->
-<!--background-clip: text;">-->
-<!--<h1>Our Team</h1>-->
-<!--</div>-->
 
-<!--<div class="main-team">-->
 <div class="row" style="margin-top: -100px;">
     <!--<div class="heading-title text-center">-->
     <!--<p class="p-top-30 half-txt">Unity is strength...When there is team work and collaboration, wonderful things can be achieved!! </p>-->
     <!--</div>-->
     {% for i,j,k in zipped %}
     {% if i %}
-    <h3 align="center" style="text-align: center !important;
+    <h3 class="col-12" align="center" style="text-align: center !important;
 	font-size: 40px;
 	color: #fff;
 	 font-family: 'Source Sans Pro';
@@ -67,16 +52,16 @@
     {% if l %}
     {% for m in l %}
     {% ifequal l|length 1 %}
-    <div class="col-md-12 col-sm-12" align="center" style="margin-bottom:45px;">
+    <div class="col-12" align="center" style="margin-bottom:45px;">
         {% endifequal %}
         {% ifequal l|length 2 %}
-        <div class="col-md-6 col-sm-6" align="center" style="margin-bottom:45px;">
+        <div class="col-6" align="center" style="margin-bottom:45px;">
             {% endifequal %}
             {% ifequal l|length 3 %}
-            <div class="col-md-4 col-sm-4" align="center" style="margin-bottom:45px;">
+            <div class="col-4" align="center" style="margin-bottom:45px;">
                 {% endifequal %}
                  {% ifequal l|length 4 %}
-                <div class="col-md-3 col-sm-3" align="center" style="margin-bottom:45px; margin-left:25px;">
+                <div class="col-3" align="center" style="margin-bottom:45px;">
                 {% endifequal %}
 
                 <div class="team-member">

@@ -55,7 +55,21 @@ input:focus{
 }
 select option{
 			color: #fff!important;
-		}
+}
+.btn-login{
+        background: transparent!important;
+        border: 1px solid white;
+        border-radius: 1px;
+        transition: 0.2s ease-in-out!important;
+      }
+
+      .btn-login:hover{
+        color: #fff;
+        /*background: linear-gradient(to bottom right, #ee0979, #ff6a00)!important;*/
+        background: crimson!important;
+        transition: 0.2s ease-in-out;
+        box-shadow: 1px 1px 15px 5px crimson;
+      }
 @media only screen and (max-width: 600px) {
   .panel{
   	width: 80%;

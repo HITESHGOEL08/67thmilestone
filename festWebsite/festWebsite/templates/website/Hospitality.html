@@ -2,101 +2,206 @@
 {% load staticfiles %}
 {% block title %}Hospitality{% endblock %}
 {% block css %}
- <link type="text/css" rel="stylesheet" href="{% static 'css/hospitalitymain.css' %}">
- <link type="text/css" rel="stylesheet" href="{% static 'css/hospitality.css' %}" >
+<link type="text/css" rel="stylesheet" href="{% static 'css/hospitalitymain.css' %}">
+<link type="text/css" rel="stylesheet" href="{% static 'css/hospitality.css' %}">
 
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 {% endblock %}
-{% block silho %}{% static  'images/campusambss.png' %}{% endblock %}
+{% block silho %}{% static 'images/stranger.png' %}{% endblock %}
 {% block heading %}Hospitality{% endblock %}
 {% block content %}
-<h4 id="myHeader">About Fest</h4>
+<!--<h4 id="myHeader">About Fest</h4>-->
 <div class="containr">
-  
-  <div class="containrb">
-    
-    <div class="row">
-      <div class="col">
-          <button class=" btn tablinks" onclick="openCity(event, 'Fest')">About Fest</button>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <button class="btn tablinks"  onclick="openCity(event, 'University')">About University</button>
-      </div>
-    </div>
+    <div class="containrb">
 
-    <div class="row">
-      <div class="col">
-        <button class="btn tablinks" onclick="openCity(event, 'Instructions')">Instructions</button>
-      </div>
-    </div>
+        <div class="row">
+            <div class="col">
+                <button class=" btn tablinks" onclick="openCity(event, 'Fest')">About Fest</button>
+            </div>
+        </div>
 
-    <div class="row">
-      <div class="col">
-        <button class="btn tablinks" onclick="openCity(event, 'Accomodation')">Accomodation</button>
-      </div>
-    </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn tablinks" onclick="openCity(event, 'University')">About University</button>
+            </div>
+        </div>
 
-    <div class="row">
-      <div class="col">
-        <button class="btn tablinks" onclick="openCity(event, 'RTC')">Reaching the college</button>
-      </div>
-    </div>
+        <!--<div class="row">-->
+        <!--<div class="col">-->
+        <!--<button class="btn tablinks" onclick="openCity(event, 'Instructions')">Instructions</button>-->
+        <!--</div>-->
+        <!--</div>-->
 
-    <div class="row">
-      <div class="col">
-        <button class="btn tablinks" onclick="openCity(event, 'FAQs')">F.A.Q</button>
-      </div>
-    </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn tablinks" onclick="openCity(event, 'Accomodation')">Accomodation</button>
+            </div>
+        </div>
 
-  </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn tablinks" onclick="openCity(event, 'RTC')">Reaching the college</button>
+            </div>
+        </div>
 
-  
+        <!--<div class="row">-->
+        <!--<div class="col">-->
+        <!--<button class="btn tablinks" onclick="openCity(event, 'FAQs')">F.A.Q</button>-->
+        <!--</div>-->
+        <!--</div>-->
 
-  <div class="containrt">
-    <div id="Fest" class="tabcontent w3-container w3-center w3-animate-right">
-      <h3>What is Lorem Ipsum?</h3>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-      </p>
-    </div>
-
-    <div id="University" class="tabcontent w3-container w3-center w3-animate-right">
-      <h3>About University</h3>
-      <p>        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p> 
-    </div>
-
-    <div id="Instructions" class="tabcontent w3-container w3-center w3-animate-right">
-      <h3>Instructions</h3>
-      <p>        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-    </div>
-
-    <div id="Accomodation" class="tabcontent w3-container w3-center w3-animate-right">
-      <h3>Accomodation</h3>
-      <p>Tokyo is the capital of Japan.</p>
-      <button class="btn reg">Register</button>
-    </div>
-
-    <div id="RTC" class="tabcontent w3-container w3-center w3-animate-right">
-      <h3>Reaching The College</h3>
-      <div id="map"></div>
-    </div>
-
-    <div id="FAQs" class="tabcontent w3-container w3-center w3-animate-right">
-      <h3>F.A.Q</h3>
-      <p>Tokyo is the capital of Japan.</p>
     </div>
 
 
-  </div>
+    <div class="containrt">
+        <div id="Fest" class="tabcontent w3-container w3-center w3-animate-right">
+            <h3>About the Fest</h3>
+            <p>BML Munjal University is hosting the second annual techno-cultural management fest, “67th Milestone” on
+                April 5-7, 2018. 67th Milestone is a multi-faceted event which will be hosting a wide range of cultural
+                and technical events. Throughout its journey, it will offer a platform for artists to perform, techies
+                to scratch their head, speed enthusiasts to get behind the wheel and fashion freaks to walk the
+                ramp.</p>
+            <p>67th Milestone uniquely distinguishes itself by offering companies an opportunity to hold recruitment
+                rounds for students. Students as well as each one present for this promising event will have the
+                opportunity of a lifetime to gain inspiration from and interact with eminent leaders of the industry,
+                executives from leading business houses and achievers from their respective spheres.</p>
+            <p>With 67th Milestone only a few weeks away, every corner of the campus on eavesdropping has some gossip
+                about 67th Milestone to offer. Vivaciousness and zealousness amongst students is at its peak and they
+                are leaving no stone unturned to benchmark the first of its kind techno-cultural management fest, “67th
+                Milestone.” It always strive to create the proactive experience of entertainment and magnify the strike
+                of events, thereby the 67th Milestone has created a more superior stack stored for you on this occasion.
+                We are immensely proud to announce you that this year there is a surprise bonanza – all events are based
+                on the theme “TV Series” that is profound to enhance this fest’s liveliness and strike on all the
+                unexplored domains. </p>
+        </div>
 
-  <br style="clear: both;"/>
+        <div id="University" class="tabcontent w3-container w3-center w3-animate-right">
+            <h3>About University</h3>
+            <p> BML Munjal University (BMU), found in 2014 by The Hero Group and mentored by Imperial College London,
+                has excelled in the field of academics and innovative learning. BMU is associated with foreign
+                universities like Singapore Management University and University of Texas to fulfill its vision and
+                offer global-approach exposure to its students. The former President of India, Shri Pranab Mukherjee,
+                also resolute the status of BML Munjal University as one of the finest private colleges in the
+                developing Indian sub-continent on July 12, 2017.</p>
+            <p>BMU has achieved several milestones in the field of academics, sports, annual sports, research
+                conferences etc. BMU aims to create ethical leaders who are skilled, knowledgeable and possess life
+                skills essential for leading organizations to heightened results. BMU is creating an enabling
+                environment for a sustainable college life. Through collaborations with KPMG, IBM, Siemens, Hero
+                MotoCorp and other leading companies, our students are a step forward for their future growth and
+                development BML Munjal University hosts a flamboyant and diverse student community hailing from Jammu to
+                Tamil Nadu that joins together to form an unison in the country’s growth and development through their
+                unique vision. The gates of the college are open for students which will amplify their presence into a
+                vast land of opportunities. We not only excel in academics, but also provide a nourishment to create an
+                Individual and hone it’s personality to its pinnacle. </p>
+            <p>Various events have been conducted in past few years with great success. They have been a great
+                opportunity for students to show their talent, colleges their magnificence and sponsors their branding.
+                The students of BML Munjal University are the driving force of the University who are global-ready and
+                wish to create a difference in the society through their dedication and talent. </p>
+        </div>
+
+        <!--<div id="Instructions" class="tabcontent w3-container w3-center w3-animate-right">-->
+        <!--<h3>Instructions</h3>-->
+        <!--<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the-->
+        <!--industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and-->
+        <!--scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap-->
+        <!--into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the-->
+        <!--release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing-->
+        <!--software like Aldus PageMaker including versions of Lorem Ipsum.-->
+        <!--</p>-->
+        <!--</div>-->
+
+        <div id="Accomodation" class="tabcontent w3-container w3-center w3-animate-right">
+            <h3>Accomodation</h3>
+            <p>Accommodation Charges- Rs. 200/- per day</p>
+            <p>The payment can be done by both online and offline mode.</p>
+
+            <h5>Timmings</h5>
+            <li> Check-in Time - 12 p.m.</li>
+            <li> Check-out Time - 12 p.m.</li>
+
+            <p>Note: Since the Fest commences from 5th April in the morning, participants are welcomed to the campus
+                from 4th April for accommodation. It is advisable to the participants to reserve their accommodation
+                prior their event schedule and stay to avail accommodation reservations.</p>
+
+
+            <button class="btn reg modal-trigger btn-login" href="#modalhosp">Register</button>
+        </div>
+
+        <!-- Modal for editing profile -->
+        <div id="modalhosp" class="modal modal-fixed-footer">
+            <div class="modal-content">
+
+
+                {% if user.is_authenticated %}
+                <h4>
+                    Fest Accomodation Form
+                </h4>
+                <br>
+                <form method="post" action="/hospitality/">
+                    {% csrf_token %}
+                    <p>
+                        <input type="checkbox" id="test1" name="group1"/>
+                        <label for="test1">4th April 12:00 pm to 5th April 12:00 pm</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="test2" name="group2"/>
+                        <label for="test2">5th April 12:00 pm to 6th April 12:00 pm</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="test3" name="group3"/>
+                        <label for="test3">6th April 12:00 pm to 7th April 12:00 pm</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="test4" name="group4"/>
+                        <label for="test4">7th April 12:00 pm to 8th April 12:00 pm</label>
+                    </p>
+
+
+                    <div class="row">
+                        <div class="col s6">
+                            <input type="text" id="date" class="datepicker" name="group5"
+                                   placeholder="Expected Arrival Date" required>
+                        </div>
+                        <div class="col s6">
+                            <input type="text" id="time" class="timepicker" name="group6"
+                                   placeholder="Expected Arrival Time" required>
+                        </div>
+                    </div>
+                    <input type="submit" name="Submit" class="btn btn-login"/>
+                </form>
+                {% else %}
+                <h3>
+                    <a href="/login/">Please Login First</a>
+                </h3>
+                {% endif %}
+
+                <!--<a href="\67milestone" class="modal-action modal-close waves-effect waves-blue btn-flat ">Submit</a>-->
+
+            </div>
+        </div>
+        <!-- Modal ends -->
+
+
+        <div id="RTC" class="tabcontent w3-container w3-center w3-animate-right">
+            <h3>Reaching The College</h3>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14058.98548934169!2d76.80880814999999!3d28.24537685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d478e1d59b7fb%3A0xb1787ccb5563c223!2sBML+MUNJAL+UNIVERSITY!5e0!3m2!1sen!2sin!4v1521635009222"
+                width="600" height="450" frameborder="0" style="border:1" allowfullscreen></iframe>
+             </div>
+        </div>
+
+        <!--<div id="FAQs" class="tabcontent w3-container w3-center w3-animate-right">-->
+        <!--<h3>F.A.Q</h3>-->
+        <!--<p>Tokyo is the capital of Japan.</p>-->
+        <!--</div>-->
+
+
+    </div>
+
+    <br style="clear: both;"/>
 
 </div>
 
@@ -104,20 +209,43 @@
 {% endblock %}
 
 {% block js %}
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
     $(document).ready(function(){
+    $('.modal').modal();
+    $('.timepicker').pickatime();
         $(".button-collapse").sideNav();
     // $('ul.tabs').tabs({
     //   swipeable : true,
     //   responsiveThreshold : 1920
-    });
-  </script>
 
-  <script>
+    });
+
+$('.datepicker').pickadate({
+
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<script>
     var p=0;
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
@@ -137,6 +265,25 @@ function openCity(evt, cityName) {
 }
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 <script>
   window.onscroll = function() {myFunction()};
@@ -201,12 +348,49 @@ function openCity(evt, cityName) {
     }
   
   }
-  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 <script>
 $(window).scroll(function() {    
 var scroll = $(window).scrollTop();
 });
-</script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 
 {% endblock %}

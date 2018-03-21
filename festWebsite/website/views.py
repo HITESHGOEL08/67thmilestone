@@ -35,11 +35,13 @@ def home(request):
     context_dict = {}
     homepage = list(Events.objects.filter(type2="1"))
     context_dict['home_details'] = homepage
-    return render(request, 'website/newhome.html', context_dict)
+    return render(request, 'website/homelast.html', context_dict)
 
 
 def success(request, context_dict):
+
     return render(request, 'website/Success.html', context_dict)
+
 
 
 def contact(request):
@@ -199,6 +201,12 @@ def show_event(request, event_name_slug):
     context_dict['prize'] = 1
     if i.prize == 0:
         context_dict['prize'] = 0
+    context_dict['t']=1
+    if i.fees=="N":
+        context_dict['t']=0
+    context_dict['hack']=0
+    if i.slug=="hackbmu":
+        context_dict['hack']=1
     k = str(i.rules)
     l = k.find("/")
     m = k[l + 1:]
@@ -206,6 +214,15 @@ def show_event(request, event_name_slug):
     o = m[n + 1:]
     m = m[:n]
     spon = []
+    registered_details = list(single_event.objects.filter(username=request.user.username, event_name=event_name_slug))
+    print(registered_details)
+    context_dict['registered'] = 1
+    if len(registered_details) > 0:
+        context_dict['registered'] = 0
+    else:
+        team_register_details = list(single_event.objects.filter(username=request.user.username, event_name=i.name))
+        if len(team_register_details) > 0:
+            context_dict['registered'] = 0
     if i.sponsor1 != "":
         spon.append(i.sponsor1)
     if i.sponsor2 != "":
@@ -285,7 +302,6 @@ def error(request):
     return render(request, 'website/error.html', context_dict)
 
 
-
 def download(request, file_name, extension):
     path1 = '/rules/' + file_name + "." + extension
     return HttpResponseRedirect('/media' + path1)
@@ -293,7 +309,7 @@ def download(request, file_name, extension):
 
 def gallery(request):
     context_dict = {}
-    return render(request, 'website/gallery.html', context_dict)
+    return render(request, 'website/gallery1.html', context_dict)
 
 
 @login_required(login_url='/login/')
@@ -309,11 +325,19 @@ def profile(request):
     events_registered = list(single_event.objects.filter(username=request.user.username))
     events_registered1 = list(event_register.objects.filter(username=request.user.username))
     events_registered_details1 = []
+    team_details2 = []
     for i in events_registered1:
         event_name = i.event_name
+        team_name=i.team_name
         event_details = list(Events.objects.filter(name=event_name))
         j = event_details[0]
         events_registered_details1.append(j)
+        team_details1=list(Team_details.objects.filter(event_name=event_name,team_name=team_name))
+        t=[]
+        for j in team_details1:
+            t.append(j.name)
+        team_details2.append(t)
+    zipped=zip(events_registered_details1,team_details2)
     events_registered_details = []
     for i in events_registered:
         event = i.event_name
@@ -321,7 +345,7 @@ def profile(request):
         j = event_details[0]
         events_registered_details.append(j)
     context_dict['registered_events'] = events_registered_details
-    context_dict['registered_events1'] = events_registered_details1
+    context_dict['registered_events1'] = zipped
     obj = get_object_or_404(UserProfile, user=request.user)
     form = UserProfileForm(request.POST or None, instance=obj)
     context_dict['form'] = form
@@ -338,8 +362,8 @@ def profile(request):
         else:
             context_dict['form'] = form
             context_dict['error'] = 'The form was not updated successfully.'
-            return render(request, 'website/profile.html', context_dict)
-    return render(request, 'website/profile.html', context_dict)
+            return render(request, 'website/profile1.html', context_dict)
+    return render(request, 'website/profile1.html', context_dict)
 
 
 @csrf_protect
@@ -402,7 +426,10 @@ def user_login(request):
                 return HttpResponseRedirect("Account Disabled")
         else:
             print("Invalid credentials: {0}, {1}".format(username, password))
-            return HttpResponse("Invalid login details")
+            context_dict={}
+            context_dict['error'] ="Invalid login details"
+            return render(request, 'website/login1.html', context_dict)
+            # return HttpResponse("Invalid login details")
     else:
         user_form = UserForm()
         profile_form = UserProfileForm()
@@ -508,6 +535,71 @@ def show_pronight(request, pro_night_name_slug):
 
 def hospitality(request):
     context_dict = {}
+    if request.method == 'POST':
+        day1=False
+        if request.POST.get('group1') == "on":
+            day1=True
+        day2 = False
+        if request.POST.get('group2') == "on":
+            day2= True
+        day3 = False
+        if request.POST.get('group3') == "on":
+            day3 = True
+        day4 = False
+        if request.POST.get('group4') == "on":
+            day4 = True
+        date = request.POST.get('group5')
+        time=request.POST.get('group6')
+        d=date.split(" ")
+        months={'January':1,'February':2,'March':3,'April':4,'May':5,'June':6,'July':7,
+                'August':8,'September':9,'October':10,'November':11,'December':12}
+        d1=d[1]
+        d2=d1[0:len(d1)-1]
+        month=months.get(d2)
+        mo=""
+        if month<10:
+            mo+="0"
+        mo+=str(month)
+        date=d[2]+"-"+mo+"-"+d[0]
+        if time[5]=="P":
+            hour=int(time[0:2])
+            hour+=12
+            d1=str(hour)+time[2:5]
+            d1+=":00"
+            time=d1
+        try:
+            p = FestAccomodation(user=request.user, day1=day1,day2=day2, day3=day3,day4=day4,
+                              date=date,time=time)
+            p.save()
+            email = request.user.email
+            print(email)
+            subject = "Greetings from 67th Milestone'18"
+            body1 = u"Hi,\n\n" + \
+                    u"Greetings from Team 67th Milestone'18 and welcome to our family. \n\n" + \
+                    u"Thank you for applying for accommodation during the fest.\n"+\
+                    u"Show this email to get your accommodation verified during fest.\n"+\
+                    u"\n The days for which you have applied for accommodation are : \n\n"
+            body2=""
+            if day1:
+                body2+=u"4th April 12:00 pm to 5th April 12:00 pm\n"
+            if day2:
+                body2 += u"5th April 12:00 pm to 6th April 12:00 pm\n"
+            if day3:
+                body2 += u"6th April 12:00 pm to 7th April 12:00 pm\n"
+            if day4:
+                body2 += u"7th April 12:00 pm to 8th April 12:00 pm\n"
+            body3 = u"\n\nFor more updates, stay tuned on - \n\n" + \
+                    u"Website - www.67thmilestone.com \n" + \
+                    u"Facebook - www.facebook.com/67milestone\n" + \
+                    u"Instagram - www.instagram.com/67thmilestone\n" + \
+                    u"Twitter - www.twitter.com/67th_milestone\n"
+            body = body1 + body2 + body3
+            print(body)
+            emailsend = EmailMessage(subject, body, to=[email])
+            emailsend.send()
+        except:
+            context_dict['error']="Already registered"
+            return render(request, 'website/Hospitality.html', context_dict)
     return render(request, 'website/Hospitality.html', context_dict)
 
 
@@ -583,76 +675,85 @@ def team_register(request, event_name_slug):
     event = list(Events.objects.filter(slug=event_name_slug))
     name_event = event[0].name
     size = event[0].max_participants
+    min_size=event[0].min_participants
     t = []
-    for i in range(size):
+    for i in range(1,size+1):
         t.append(i)
     context = {'slug': event_name_slug, 'team_size': t}
     try:
         if request.method == 'POST':
-            p = event_register(username=request.user.username, event_name=name_event,
-                               team_name=request.POST.get('team_name'))
-            p.save()
-            body4 = "The details of your team is : \n"
-            for i in range(0, size):
+            count=0
+            for i in range(1, size+1):
                 if request.POST.get('name' + str(i)) != "" and request.POST.get('email' + str(i)) and request.POST.get(
                                 'phone' + str(i)):
-                    team = Team_details(name=request.POST.get('name' + str(i)), team_name=request.POST.get('team_name'),
+                    count+=1
+            if count>=min_size:
+                p = event_register(username=request.user.username, event_name=name_event,
+                               team_name=request.POST.get('team_name'))
+                p.save()
+                body4 = "The details of your team is : \n"
+                for i in range(1, size+1):
+                    if request.POST.get('name' + str(i)) != "" and request.POST.get('email' + str(i)) and request.POST.get(
+                                'phone' + str(i)):
+                        team = Team_details(name=request.POST.get('name' + str(i)), team_name=request.POST.get('team_name'),
                                         event_name=name_event, email=request.POST.get('email' + str(i)),
                                         phone=request.POST.get('phone' + str(i)))
-                    body4 += request.POST.get('name' + str(i))
-                    body4 += "\n"
-                    team.save()
-            flag = 1
-            event = list(Events.objects.filter(slug=event_name_slug))
-            name_event = event[0].name
-            date = event[0].date
-            time = event[0].time
-            subject = "Greetings from 67th Milestone'18"
-            body = u"Dear participant,\n\n" + \
-                   u"Greetings from Team 67th Milestone!\n\n" + \
-                   u"We are delighted to confirm your presence for the festival. " + \
-                   u"You’ve been registered for the " + \
-                   str(name_event) + \
-                   u" scheduled on " + \
-                   u"(" + \
-                   str(date) + \
-                   u" and " + \
-                   str(time) + \
-                   u" for the Team event Scheduled)" + \
-                   u". Fest Itinerary will be shared soon.\n\n" + \
-                   str(body4) + \
-                   u"\n\nNote : \n" + \
-                   u"No participant will be allowed to enter without College ID Card" + \
-                   u"\nFor assistance to all the participants, we will also be providing Shuttle Service from " + \
-                   u"IFFCO Chowk to BML Munjal University from April 4-8, 2018 at two time zones.\n" + \
-                   u"\nIFFCO Chowk to BMU: 9 a.m. and 5 p.m.\n" + \
-                   u"\nBMU to IFFCO Chowk: 11 a.m. and 7 p.m.\n" + \
-                   u"\nA minimal service charge will be fared for the transport services on the account of the frequency of passengers." + \
-                   u" Kindly validate your seating and you will be informed about the exact fare charges in a few days. Upon filling the form," + \
-                   u" you confirm yourself for availing the transportation service.\n" + \
-                   u"\nTo apply for the services, please fill the this form – https://goo.gl/forms/jQzmF09qLRnmDITV2\n\n" + \
-                   u"For further details, refer to\n" + \
-                   u"Facebook Page: https://www.facebook.com/67milestone/\n" + \
-                   u"Instagram Page: https://www.instagram.com/67thmilestone/\n" + \
-                   u"Aftermovie'17: https://www.youtube.com/watch?v=VG47-yBbebE\n" + \
-                   u"Youtube Channel Page: https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw\n\n" + \
-                   u"Regards,\n" + \
-                   u"Team 67th Milestone"
-            emailsend = EmailMessage(subject, body, to=[request.user.email])
-            gh = name_event + request.user.username
-            path1 = os.getcwd()
-            path1 += "/qrcode/"
-            path = path1 + (gh + ".svg")
-            user_details = list(UserProfile.objects.filter(user=request.user))
-            i = user_details[0]
-            a = (str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(
-                request.user.email) + "\nPhone : " + str(i.contact))
-            print(name_event, i.name, i.contact)
-            print(a)
-            ticket_no = pyqrcode.create(a)
-            ticket_no.svg(path, scale=8)
-            emailsend.attach_file(path)
-            emailsend.send()
+                        body4 += request.POST.get('name' + str(i))
+                        body4 += "\n"
+                        team.save()
+                        flag = 1
+                        event = list(Events.objects.filter(slug=event_name_slug))
+                        name_event = event[0].name
+                        date = event[0].date
+                        time = event[0].time
+                        subject = "Greetings from 67th Milestone'18"
+                        body = u"Dear participant,\n\n" + \
+                               u"Greetings from Team 67th Milestone!\n\n" + \
+                               u"We are delighted to confirm your presence for the festival. " + \
+                               u"You’ve been registered for the " + \
+                               str(name_event) + \
+                               u" scheduled on " + \
+                               u"(" + \
+                               str(date) + \
+                               u" and " + \
+                               str(time) + \
+                               u" for the Team event Scheduled)" + \
+                               u". Fest Itinerary will be shared soon.\n\n" + \
+                               str(body4) + \
+                               u"\n\nNote : \n" + \
+                               u"No participant will be allowed to enter without College ID Card" + \
+                               u"\nFor assistance to all the participants, we will also be providing Shuttle Service from " + \
+                               u"IFFCO Chowk to BML Munjal University from April 4-8, 2018 at two time zones.\n" + \
+                               u"\nIFFCO Chowk to BMU: 9 a.m. and 5 p.m.\n" + \
+                               u"\nBMU to IFFCO Chowk: 11 a.m. and 7 p.m.\n" + \
+                               u"\nA minimal service charge will be fared for the transport services on the account of the frequency of passengers." + \
+                               u" Kindly validate your seating and you will be informed about the exact fare charges in a few days. Upon filling the form," + \
+                               u" you confirm yourself for availing the transportation service.\n" + \
+                               u"\nTo apply for the services, please fill the this form – https://goo.gl/forms/jQzmF09qLRnmDITV2\n\n" + \
+                               u"For further details, refer to\n" + \
+                               u"Facebook Page: https://www.facebook.com/67milestone/\n" + \
+                               u"Instagram Page: https://www.instagram.com/67thmilestone/\n" + \
+                               u"Aftermovie'17: https://www.youtube.com/watch?v=VG47-yBbebE\n" + \
+                               u"Youtube Channel Page: https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw\n\n" + \
+                               u"Regards,\n" + \
+                               u"Team 67th Milestone"
+                        emailsend = EmailMessage(subject, body, to=[request.user.email])
+                        gh = name_event + request.user.username
+                        path1 = os.getcwd()
+                        path1 += "/qrcode/"
+                        path = path1 + (gh + ".svg")
+                        user_details = list(UserProfile.objects.filter(user=request.user))
+                        i = user_details[0]
+                        a = (str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(request.user.email) + "\nPhone : " + str(i.contact))
+                        print(name_event, i.name, i.contact)
+                        print(a)
+                        ticket_no = pyqrcode.create(a)
+                        ticket_no.svg(path, scale=8)
+                        emailsend.attach_file(path)
+                        emailsend.send()
+            else:
+                context['error']="Please enter minimum number of participants"
+                return render(request, 'website/team_event.html', context)
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
     if flag == 0:

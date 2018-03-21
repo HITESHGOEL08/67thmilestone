@@ -729,12 +729,20 @@ body{
   opacity: 0;
   font-family: 'Abril Fatface', cursive;
 }
+.text a{
+    color: #fff!important;
+    text-decoration: none!important;
+}
+.text a:hover{
+    color: #fff!important;
+    text-decoration: none!important;
+}
 .events-slider .carousel-item:hover .text {
   opacity: 1;
 }
 @media only screen and (max-width: 500px){
   #events{
-    background: #000;
+    background: #111;
   }
 }
 @media only screen and (max-width: 390px){

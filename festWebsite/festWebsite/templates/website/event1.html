@@ -18,7 +18,7 @@
 </section>
 <section class="skew2">
     <div class="tagline">
-        <h5><em>{{ i.one_liner }}</em></h5>
+        <h6><em>{{ i.one_liner }}</em></h6>
     </div>
 </section>
 <section class="row picture-desc">
@@ -47,10 +47,24 @@
             {% endif %}
         </ul>
         <div class="btn-reg">
+            {% if t %}
+            {% if registered %}
             {% if single %}
             <a href="\{{ slug }}/register" class="btn btn-login">Register</a>
             {% else %}
+            {% if hack %}
+            <a href="hackbmu.67thmilestone.com" class="btn btn-login">Register</a>
+            {% else %}
             <a href="\{{ slug }}/team_register" class="btn btn-login">Register</a>
+            {% endif %}
+            {% endif %}
+            {% else %}
+            {% if single %}
+            <a href="\{{ slug }}/register" class="btn btn-login" disabled>Register</a>
+            {% else %}
+            <a href="\{{ slug }}/team_register" class="btn btn-login" disabled>Register</a>
+            {% endif %}
+            {% endif %}
             {% endif %}
         </div>
     </div>
@@ -132,6 +146,7 @@
     $(document).ready(function(){
     $("#info").click(function(){
         $(".info").fadeToggle();
+        window.scrollBy(0, 200);
     });
       $(".button-collapse").sideNav();
       window.sr = ScrollReveal({ reset: true });

@@ -1,0 +1,24 @@
+body{
+    color: #fff!important;
+}
+.skew{
+	position: relative;
+	background: linear-gradient(to right, #d31027, #ea384d);
+	/*opacity: 0.7; */
+	padding: 20px 0;
+	padding-bottom: 0px;
+	transform: skew(0deg, 7deg) translateY(-185px);
+}
+.box{
+	font-family: 'Abril Fatface', sans-serif;
+	padding: 10px 50px;
+	padding-top: 150px;
+	text-align: right;
+	transform: skew(0deg, -7deg);
+	color: #fff !important;
+}
+.text{
+    background: #111;
+    padding: 50px 20px;
+    box-shadow: 1px 1px 10px 1px crimson;
+}

@@ -1,0 +1,59 @@
+body{
+	color: #fff;
+}
+.skewedBox{
+	position: relative;
+	background: linear-gradient(to bottom right, #ee0979, #ff6a00);
+	/*opacity: 0.7; */
+	padding: 20px 0;
+	transform: skew(0deg, 5deg) translateY(-185px);
+}
+.box{
+	font-family: 'Abril Fatface', sans-serif;
+	padding: 50px;
+	padding-top: 180px;
+	padding-bottom: 30px;
+	text-align: right;
+	transform: skew(0deg, -5deg);
+}
+.details, .box h6{
+	font-family: 'Roboto', serif;
+}
+.details h6{
+	font-weight: 600;
+}
+.details strong{
+	background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+  	background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+  	background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+  	background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+  	background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+  	font-size: 2rem;
+}
+.silho img{
+	margin-bottom: -7px; 
+	width: 100%;
+}
+.modal{
+	background: rgba(1,1,1,0.9);
+	border: 1px solid #fff;
+}
+.modal-content h4{
+	background-image: -webkit-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For Chrome and Safari */
+  	background-image:    -moz-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Fx (3.6 to 15) */
+  	background-image:     -ms-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For pre-releases of IE 10*/
+  	background-image:      -o-linear-gradient(to bottom right, #ee0979, #ff6a00); /* For old Opera (11.1 to 12.0) */
+  	background-image:         linear-gradient(to bottom right, #ee0979, #ff6a00); /* Standard syntax; must be last */
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+}
+ul {
+	list-style-type: none !important;
+}
+.card-reveal p{
+	color: black;
+}
