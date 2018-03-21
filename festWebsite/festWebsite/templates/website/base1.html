@@ -137,6 +137,25 @@
     });
 
 
+
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+    //Disable full page
+    $("body").on("contextmenu",function(e){
+        return false;
+    });
+
+
+});
+ $(document).keydown(function(e){
+        if(e.which === 123){
+
+           return false;
+
+        }
+
+    });
 </script>
 </body>
 </html>
