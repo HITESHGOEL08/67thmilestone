@@ -42,7 +42,7 @@ def create():
             df = pa.DataFrame(e, columns=labels)
             df.to_csv(i.name + ".csv")
             subject = "Registration File"
-            body = u"Find the attached CSV File for registered participants for your event" + i.name
+            body = u"Find the attached CSV File for registered participants for your event " + i.name
             to = []
             to.append(i.contact_email1)
             to.append(i.contact_email2)
@@ -93,7 +93,7 @@ def create():
             df = pa.DataFrame(g, columns=labels)
             df.to_csv(i.name + ".csv")
             subject = "Registration File"
-            body = u"Find the attached CSV File for registered participants for single events"
+            body = u"Find the attached CSV File for registered participants for single events "
             to = []
             to.append(i.contact_email1)
             to.append(i.contact_email2)
@@ -109,7 +109,7 @@ def create():
     to = ['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
           'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
           'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
-          'mahima.chopra.15csc@bml.edu.in','nishit.garg.15csc@bml.edu.in'
+          'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
           'natasha.dora.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']
     emailsend = EmailMessage(subject, body, to=to)
     path = os.getcwd()
@@ -121,7 +121,7 @@ def create():
     to = ['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
           'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
           'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
-          'mahima.chopra.15csc@bml.edu.in','nishit.garg.15csc@bml.edu.in'
+          'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
           'natasha.dora.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']
     emailsend = EmailMessage(subject, body, to=to)
     for fil in multiple_events:
