@@ -438,6 +438,7 @@ section{
   padding-top: 110px;
 }
 .banner-content{
+  text-align: center!important;
   padding: 150px 50px!important;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300!important;
@@ -485,7 +486,7 @@ section{
 }
 #timer span {
   font-size: 60px;
-  color: #333;
+  color: #555;
   margin: 0 3px 0 15px;
 }
 #timer span:first-child {
@@ -501,6 +502,7 @@ section{
     padding-top: 0px!important;
   }
   .banner-content{
+    margin-top: 50%;
     padding: 10px 10px!important;
   }
   #timer {
@@ -716,7 +718,7 @@ svg {
   width: 75vw;
   margin: 0 auto;
   position: absolute;
-  top: 30px; left: 50%;
+  top: 8px; left: 50%;
   transform: translateX(-55%); 
 }
 

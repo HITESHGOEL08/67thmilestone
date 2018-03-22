@@ -24,7 +24,7 @@
 <style>
         .background {
   background:
-   url("{% static 'images/back12.jpg' %}");
+   url("{% static 'images/newback.jpg' %}");
    background-repeat: no-repeat;
     background-size: cover;
   position: absolute;
@@ -251,13 +251,13 @@
 
 
 <!-- 2nd Div  -->
-<section id="banner">
+<section id="banner" style="background: url({% static 'images/2div.jpg' %}); background-position: center; background-size: cover;">
 
     <div class="row">
-        <div class="col s12 m6 banner-pic">
-            <img src="{% static 'images/poster.jpg' %}" alt="" class="responsive-img">
-        </div>
-        <div class="col s12 m6 banner-content">
+        <!--<div class="col s12 m6 banner-pic">-->
+            <!--<img src="{% static 'images/poster.jpg' %}" alt="" class="responsive-img">-->
+        <!--</div>-->
+        <div class="col s12 banner-content">
             <h2 class="highlight1">67<sup>th</sup> Milestone</h2>
             <h3><span class="typed"></span>
                 <h3>
