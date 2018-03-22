@@ -39,9 +39,7 @@ def home(request):
 
 
 def success(request, context_dict):
-
     return render(request, 'website/Success.html', context_dict)
-
 
 
 def contact(request):
@@ -201,12 +199,12 @@ def show_event(request, event_name_slug):
     context_dict['prize'] = 1
     if i.prize == 0:
         context_dict['prize'] = 0
-    context_dict['t']=1
-    if i.fees=="N":
-        context_dict['t']=0
-    context_dict['hack']=0
-    if i.slug=="hackbmu":
-        context_dict['hack']=1
+    context_dict['t'] = 1
+    if i.fees == "N":
+        context_dict['t'] = 0
+    context_dict['hack'] = 0
+    if i.slug == "hackbmu":
+        context_dict['hack'] = 1
     k = str(i.rules)
     l = k.find("/")
     m = k[l + 1:]
@@ -328,16 +326,16 @@ def profile(request):
     team_details2 = []
     for i in events_registered1:
         event_name = i.event_name
-        team_name=i.team_name
+        team_name = i.team_name
         event_details = list(Events.objects.filter(name=event_name))
         j = event_details[0]
         events_registered_details1.append(j)
-        team_details1=list(Team_details.objects.filter(event_name=event_name,team_name=team_name))
-        t=[]
+        team_details1 = list(Team_details.objects.filter(event_name=event_name, team_name=team_name))
+        t = []
         for j in team_details1:
             t.append(j.name)
         team_details2.append(t)
-    zipped=zip(events_registered_details1,team_details2)
+    zipped = zip(events_registered_details1, team_details2)
     events_registered_details = []
     for i in events_registered:
         event = i.event_name
@@ -426,8 +424,8 @@ def user_login(request):
                 return HttpResponseRedirect("Account Disabled")
         else:
             print("Invalid credentials: {0}, {1}".format(username, password))
-            context_dict={}
-            context_dict['error'] ="Invalid login details"
+            context_dict = {}
+            context_dict['error'] = "Invalid login details"
             return render(request, 'website/login1.html', context_dict)
             # return HttpResponse("Invalid login details")
     else:
@@ -536,12 +534,12 @@ def show_pronight(request, pro_night_name_slug):
 def hospitality(request):
     context_dict = {}
     if request.method == 'POST':
-        day1=False
+        day1 = False
         if request.POST.get('group1') == "on":
-            day1=True
+            day1 = True
         day2 = False
         if request.POST.get('group2') == "on":
-            day2= True
+            day2 = True
         day3 = False
         if request.POST.get('group3') == "on":
             day3 = True
@@ -549,39 +547,39 @@ def hospitality(request):
         if request.POST.get('group4') == "on":
             day4 = True
         date = request.POST.get('group5')
-        time=request.POST.get('group6')
-        d=date.split(" ")
-        months={'January':1,'February':2,'March':3,'April':4,'May':5,'June':6,'July':7,
-                'August':8,'September':9,'October':10,'November':11,'December':12}
-        d1=d[1]
-        d2=d1[0:len(d1)-1]
-        month=months.get(d2)
-        mo=""
-        if month<10:
-            mo+="0"
-        mo+=str(month)
-        date=d[2]+"-"+mo+"-"+d[0]
-        if time[5]=="P":
-            hour=int(time[0:2])
-            hour+=12
-            d1=str(hour)+time[2:5]
-            d1+=":00"
-            time=d1
+        time = request.POST.get('group6')
+        d = date.split(" ")
+        months = {'January': 1, 'February': 2, 'March': 3, 'April': 4, 'May': 5, 'June': 6, 'July': 7,
+                  'August': 8, 'September': 9, 'October': 10, 'November': 11, 'December': 12}
+        d1 = d[1]
+        d2 = d1[0:len(d1) - 1]
+        month = months.get(d2)
+        mo = ""
+        if month < 10:
+            mo += "0"
+        mo += str(month)
+        date = d[2] + "-" + mo + "-" + d[0]
+        if time[5] == "P":
+            hour = int(time[0:2])
+            hour += 12
+            d1 = str(hour) + time[2:5]
+            d1 += ":00"
+            time = d1
         try:
-            p = FestAccomodation(user=request.user, day1=day1,day2=day2, day3=day3,day4=day4,
-                              date=date,time=time)
+            p = FestAccomodation(user=request.user, day1=day1, day2=day2, day3=day3, day4=day4,
+                                 date=date, time=time)
             p.save()
             email = request.user.email
             print(email)
             subject = "Greetings from 67th Milestone'18"
             body1 = u"Hi,\n\n" + \
                     u"Greetings from Team 67th Milestone'18 and welcome to our family. \n\n" + \
-                    u"Thank you for applying for accommodation during the fest.\n"+\
-                    u"Show this email to get your accommodation verified during fest.\n"+\
-                    u"\n The days for which you have applied for accommodation are : \n\n"
-            body2=""
+                    u"Thank you for applying for accommodation during the fest.\n" + \
+                    u"Show this email to get your accommodation verified during fest.\n" + \
+                    u"\n The number of days for which you have applied for accommodation are : \n\n"
+            body2 = ""
             if day1:
-                body2+=u"4th April 12:00 pm to 5th April 12:00 pm\n"
+                body2 += u"4th April 12:00 pm to 5th April 12:00 pm\n"
             if day2:
                 body2 += u"5th April 12:00 pm to 6th April 12:00 pm\n"
             if day3:
@@ -598,7 +596,7 @@ def hospitality(request):
             emailsend = EmailMessage(subject, body, to=[email])
             emailsend.send()
         except:
-            context_dict['error']="Already registered"
+            context_dict['error'] = "Already registered"
             return render(request, 'website/Hospitality.html', context_dict)
     return render(request, 'website/Hospitality.html', context_dict)
 
@@ -625,14 +623,13 @@ def single_event_register(request, event_name_slug):
                str(time) + \
                u" for the Individual event Scheduled)" + \
                u". Fest Itinerary will be shared soon.\n" + \
-               u"\n\nNote : No participant will be allowed to enter without College ID Card" + \
+               u"\n\nNote : No participant will be allowed to enter the campus without College ID Card" + \
                u"\nNote – For assistance to all the participants, we will also be providing Shuttle Service from " + \
-               u"IFFCO Chowk to BML Munjal University from April 4-8, 2018 at two time zones.\n" + \
-               u"\nIFFCO Chowk to BMU: 9 a.m. and 5 p.m.\n" + \
-               u"\nBMU to IFFCO Chowk: 11 a.m. and 7 p.m.\n" + \
-               u"\nA minimal service charge will be fared for the transport services on the account of the frequency of passengers." + \
-               u" Kindly validate your seating and you will be informed about the exact fare charges in a few days. Upon filling the form," + \
-               u" you confirm yourself for availing the transportation service.\n" + \
+               u"\nTransportation from 'Iffco Chowk Metro Station' to 'BML Munjal University' will be provided on the days" + \
+               u" of the fest at very reasonable rates.Timings of the available options will be shared later on." + \
+               u"\nA minimal service charge will be fared for the transport services depending upon the frequency of passengers." + \
+               u" Kindly validate your seating. Upon filling the form," + \
+               u" confirm your details for availing the transportation service.\n" + \
                u"\nTo apply for the services, please fill the this form – https://goo.gl/forms/jQzmF09qLRnmDITV2\n\n" + \
                u"For further details, refer to\n" + \
                u"Facebook Page: https://www.facebook.com/67milestone/\n" + \
@@ -645,12 +642,13 @@ def single_event_register(request, event_name_slug):
         gh = event_name_slug + request.user.username
         path1 = os.getcwd()
         path1 += "/qrcode/"
-        path = path1+(gh + ".svg")
+        path = path1 + (gh + ".svg")
         user_details = list(UserProfile.objects.filter(user=request.user))
         i = user_details[0]
         a = (
-        str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(request.user.email) + "\nPhone : " + str(
-            i.contact))
+            str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(
+                request.user.email) + "\nPhone : " + str(
+                i.contact))
         print(name_event, i.name, i.contact)
         print(a)
         print(path)
@@ -675,29 +673,31 @@ def team_register(request, event_name_slug):
     event = list(Events.objects.filter(slug=event_name_slug))
     name_event = event[0].name
     size = event[0].max_participants
-    min_size=event[0].min_participants
+    min_size = event[0].min_participants
     t = []
-    for i in range(1,size+1):
+    for i in range(1, size + 1):
         t.append(i)
     context = {'slug': event_name_slug, 'team_size': t}
     try:
         if request.method == 'POST':
-            count=0
-            for i in range(1, size+1):
+            count = 0
+            for i in range(1, size + 1):
                 if request.POST.get('name' + str(i)) != "" and request.POST.get('email' + str(i)) and request.POST.get(
                                 'phone' + str(i)):
-                    count+=1
-            if count>=min_size:
+                    count += 1
+            if count >= min_size:
                 p = event_register(username=request.user.username, event_name=name_event,
-                               team_name=request.POST.get('team_name'))
+                                   team_name=request.POST.get('team_name'))
                 p.save()
                 body4 = "The details of your team is : \n"
-                for i in range(1, size+1):
-                    if request.POST.get('name' + str(i)) != "" and request.POST.get('email' + str(i)) and request.POST.get(
+                for i in range(1, size + 1):
+                    if request.POST.get('name' + str(i)) != "" and request.POST.get(
+                                    'email' + str(i)) and request.POST.get(
                                 'phone' + str(i)):
-                        team = Team_details(name=request.POST.get('name' + str(i)), team_name=request.POST.get('team_name'),
-                                        event_name=name_event, email=request.POST.get('email' + str(i)),
-                                        phone=request.POST.get('phone' + str(i)))
+                        team = Team_details(name=request.POST.get('name' + str(i)),
+                                            team_name=request.POST.get('team_name'),
+                                            event_name=name_event, email=request.POST.get('email' + str(i)),
+                                            phone=request.POST.get('phone' + str(i)))
                         body4 += request.POST.get('name' + str(i))
                         body4 += "\n"
                         team.save()
@@ -721,14 +721,13 @@ def team_register(request, event_name_slug):
                                u". Fest Itinerary will be shared soon.\n\n" + \
                                str(body4) + \
                                u"\n\nNote : \n" + \
-                               u"No participant will be allowed to enter without College ID Card" + \
-                               u"\nFor assistance to all the participants, we will also be providing Shuttle Service from " + \
-                               u"IFFCO Chowk to BML Munjal University from April 4-8, 2018 at two time zones.\n" + \
-                               u"\nIFFCO Chowk to BMU: 9 a.m. and 5 p.m.\n" + \
-                               u"\nBMU to IFFCO Chowk: 11 a.m. and 7 p.m.\n" + \
-                               u"\nA minimal service charge will be fared for the transport services on the account of the frequency of passengers." + \
-                               u" Kindly validate your seating and you will be informed about the exact fare charges in a few days. Upon filling the form," + \
-                               u" you confirm yourself for availing the transportation service.\n" + \
+                               u"No participant will be allowed to enter the campus without College ID Card" + \
+                               u"\nFor assistance to all the participants, we will also be providing Shuttle Service from the following locations. " + \
+                               u"\nTransportation from 'Iffco Chowk Metro Station' to 'BML Munjal University' will be provided on the days" + \
+                               u" of the fest at very reasonable rates.Timings of the available options will be shared later on." + \
+                               u"\nA minimal service charge will be fared for the transport services depending upon the frequency of passengers." + \
+                               u" Kindly validate your seating. Upon filling the form," + \
+                               u" confirm your details for availing the transportation service.\n" + \
                                u"\nTo apply for the services, please fill the this form – https://goo.gl/forms/jQzmF09qLRnmDITV2\n\n" + \
                                u"For further details, refer to\n" + \
                                u"Facebook Page: https://www.facebook.com/67milestone/\n" + \
@@ -744,7 +743,8 @@ def team_register(request, event_name_slug):
                         path = path1 + (gh + ".svg")
                         user_details = list(UserProfile.objects.filter(user=request.user))
                         i = user_details[0]
-                        a = (str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(request.user.email) + "\nPhone : " + str(i.contact))
+                        a = (str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(
+                            request.user.email) + "\nPhone : " + str(i.contact))
                         print(name_event, i.name, i.contact)
                         print(a)
                         ticket_no = pyqrcode.create(a)
@@ -752,11 +752,11 @@ def team_register(request, event_name_slug):
                         emailsend.attach_file(path)
                         emailsend.send()
             else:
-                context['error']=1
+                context['error'] = 1
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
     if flag == 0:
-        context['error']=1
+        context['error'] = 1
         return render(request, 'website/team_event.html', context)
     else:
         return HttpResponseRedirect('/profile')
@@ -777,6 +777,7 @@ def FestAccomodationView(request):
         form = FestAccomodationForm()
     context['form'] = form
     return render(request, 'website/accomodation.html', context)
+
 
 def mentor(request):
     context_dict = {}

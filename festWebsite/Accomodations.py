@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'festWebsite.settings')
