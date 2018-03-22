@@ -27,7 +27,7 @@ def create():
     emailsend = EmailMessage(subject, body, to=['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
                                                 'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
                                                 'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
-                                                'shreya.mathur.15bk@bml.edu.in'])
+                                                'shreya.mathur.15bk@bml.edu.in', 'nishit.garg.15csc@bml.edu.in'])
     path = os.getcwd()
     path += "/Campus_Ambassadors.csv"
     print(path)
