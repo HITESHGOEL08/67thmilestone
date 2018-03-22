@@ -49,7 +49,7 @@ a:hover, a:focus {
     <!--</div>-->
     {% for i,j,k in zipped %}
     {% if i %}
-    <h3 class="col-12" align="center" style="text-align: center !important;
+    <h3 class="col m12 s12" align="center" style="text-align: center !important;
 	font-size: 40px;
 	color: #fff;
 	 font-family: 'Source Sans Pro';
@@ -67,16 +67,16 @@ a:hover, a:focus {
     {% if l %}
     {% for m in l %}
     {% ifequal l|length 1 %}
-    <div class="col-12" align="center" style="margin-bottom:45px;">
+    <div class="col m12 s12" align="center" style="margin-bottom:45px;">
         {% endifequal %}
         {% ifequal l|length 2 %}
-        <div class="col-6" align="center" style="margin-bottom:45px;">
+        <div class="col m6 s12" align="center" style="margin-bottom:45px;">
             {% endifequal %}
             {% ifequal l|length 3 %}
-            <div class="col-4" align="center" style="margin-bottom:45px;">
+            <div class="col m4 s12"  align="center" style="margin-bottom:45px;">
                 {% endifequal %}
                  {% ifequal l|length 4 %}
-                <div class="col-3" align="center" style="margin-bottom:45px;">
+                <div class="col m3 s12" align="center" style="margin-bottom:45px;">
                 {% endifequal %}
 
                 <div class="team-member">
