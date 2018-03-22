@@ -31,7 +31,11 @@
     </div>
     <div class="col s12 m3 event-list">
         <ul>
+            {% if hack %}
+            <li></li>
+            {% else %}
             <li>Fee Type: <span class="highlight">{{ i.fees }}</span><i id="info" class="material-icons">help_outline</i></li>
+            {% endif %}
             {% if single %}
             <li>Participants: <span class="highlight">{{ i.min_participants }}</span></li>
             {% else %}
@@ -53,7 +57,7 @@
             <a href="\{{ slug }}/register" class="btn btn-login">Register</a>
             {% else %}
             {% if hack %}
-            <a href="hackbmu.67thmilestone.com" class="btn btn-login">Register</a>
+            <a href="https://www.hackbmu.67thmilestone.com" class="btn btn-login">Register</a>
             {% else %}
             <a href="\{{ slug }}/team_register" class="btn btn-login">Register</a>
             {% endif %}

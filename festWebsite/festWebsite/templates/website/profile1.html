@@ -47,10 +47,10 @@
      <!-- Modal for editing profile -->
   <div id="modalEdit" class="modal black">
    <div class="modal-content ">
-      <h4>Registration</h4>
+      <h4>Edit Profile</h4>
 
 
-      <form id="category_form" class="col s12" method="post" action="\campusambassador">
+      <form id="category_form" class="col s12" method="post" enctype="multipart/form-data" action="/profile/">
       {% csrf_token %}
           {% for hidden in form.hidden_fields %}
               {{ hidden }}
