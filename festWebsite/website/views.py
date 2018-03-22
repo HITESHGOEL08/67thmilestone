@@ -220,7 +220,7 @@ def show_event(request, event_name_slug):
     if len(registered_details) > 0:
         context_dict['registered'] = 0
     else:
-        team_register_details = list(single_event.objects.filter(username=request.user.username, event_name=i.name))
+        team_register_details = list(event_register.objects.filter(username=request.user.username, event_name=i.name))
         if len(team_register_details) > 0:
             context_dict['registered'] = 0
     if i.sponsor1 != "":
@@ -752,11 +752,11 @@ def team_register(request, event_name_slug):
                         emailsend.attach_file(path)
                         emailsend.send()
             else:
-                context['error']="Please enter minimum number of participants"
-                return render(request, 'website/team_event.html', context)
+                context['error']=1
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
     if flag == 0:
+        context['error']=1
         return render(request, 'website/team_event.html', context)
     else:
         return HttpResponseRedirect('/profile')

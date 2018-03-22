@@ -1,6 +1,7 @@
 {% if error %}
 <script>
     alert("Invalid login credentials!");
+
 </script>
 {% endif %}
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 <body>
-<a href="" id="btn-back" onclick="goBack()"><i class="material-icons">arrow_back</i> Back</a>
+<a href="javascript: history.go(-1)" id="btn-back" onclick="goBack()"><i class="material-icons">arrow_back</i> Back</a>
 <section class="panel">
     <div class="row">
         <div class="col s12">
@@ -174,13 +175,16 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script>
+    		function goBack() {
+	window.history.back();
+}
+
+</script>
+<script>
     $(document).ready(function(){
         $('select').material_select();
     });
-		function goBack() {
-	window.history.back();
-}
-    	
+
 
 </script>
 </body>

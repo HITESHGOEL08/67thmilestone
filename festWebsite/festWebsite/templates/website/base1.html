@@ -2,7 +2,7 @@
 <html>
 <head>
     {% load staticfiles %}
-  {% block css %}{% endblock %}
+    {% block css %}{% endblock %}
     <link rel="icon" href="{% static 'images/black.png' %}" type="image/png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,14 +19,18 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="icon" href="{% static 'images/black.png' %}" type="image/png">
 </head>
-<body >
+<body>
 <!-- Nav-Bar -->
 <nav>
     <div class="nav-wrapper">
         <ul class="right show-on-small">
+            {% if user.is_authenticated %}
+            {% else %}
             <li>
                 <a href="\login" class="btn btn-login green hide-on-med-and-up">Login</a>
             </li>
+            {% endif %}
+
             <li>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             </li>
@@ -43,7 +47,8 @@
             <li><a href="\mentors">Mentors</a></li>
             <li><a href="\team">Team</a></li>
             {% if user.is_authenticated %}
-            <li><a class="dropdown-button" data-activates="dropdown" > {{ user.username }} <i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" data-activates="dropdown"> {{ user.username }} <i
+                    class="material-icons right">arrow_drop_down</i></a></li>
             <ul id="dropdown" class="dropdown-content">
                 <li><a href="\profile">Profile</a></li>
                 <li><a href="\logout">Logout</a></li>
@@ -138,24 +143,26 @@
 
 
 
+
+
 </script>
 <!--<script type="text/javascript">-->
 <!--$(document).ready(function () {-->
-    <!--//Disable full page-->
-    <!--$("body").on("contextmenu",function(e){-->
-        <!--return false;-->
-    <!--});-->
+<!--//Disable full page-->
+<!--$("body").on("contextmenu",function(e){-->
+<!--return false;-->
+<!--});-->
 
 
 <!--});-->
- <!--$(document).keydown(function(e){-->
-        <!--if(e.which === 123){-->
+<!--$(document).keydown(function(e){-->
+<!--if(e.which === 123){-->
 
-           <!--return false;-->
+<!--return false;-->
 
-        <!--}-->
+<!--}-->
 
-    <!--});-->
+<!--});-->
 <!--</script>-->
 </body>
 </html>

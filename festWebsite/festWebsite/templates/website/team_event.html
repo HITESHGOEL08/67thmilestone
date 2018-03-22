@@ -1,7 +1,13 @@
 {% extends 'website/base1.html' %}
+{% if error %}
+<script>
+    alert("Please enter details for minimum number of participants");
+</script>
+{% endif %}
 {% load staticfiles %}
 {% block title %}team_register{% endblock %}
 {% block css %}
+
 <meta charset="UTF-8">
   <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
