@@ -1,0 +1,102 @@
+<html>
+{% load staticfiles %}
+  <head onload="submitPayuForm()">
+      <link rel="stylesheet" href="{% static 'css/payment.css' %}" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <style>
+
+      h2{
+      font-family: 'Lato', sans-serif;
+      font-size:90px;
+      text-align:center;
+      }
+       #email.invalid {
+     border-bottom: 1px solid #ee5253;
+     box-shadow: 0 1px 0 0 #000;
+   }
+     #amn:focus {
+     border-bottom: 1px solid #48dbfb;
+     box-shadow: 0 1px 0 0 #000;
+   }
+
+    </style>
+    <script type="text/javascript">
+    var hash = "{{ hashh }}";
+    function submitPayuForm() {
+      if(hash =='') {
+        return;
+      }
+      var payuForm = document.forms.payuForm;
+      payuForm.submit();
+    }
+  </script>
+  </head>
+  <body style=" background-image: url('backpay.jpg')
+      height: 100%;
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;">
+  <header>
+      <h5>67<sup>th</sup> Milestone - Payment Confirmation</h5>
+      <img src="{% static 'images\Logo 67th Milestone-White.svg' %}" alt="Logo">
+      <img src="{% static 'images\BMU.png' %}" alt="Logo">
+  </header>
+
+  <section class="content container">
+    {% if error %}
+
+      <span style="color:red">Please fill all mandatory fields.</span>
+      <br/>
+      <br/>
+      {% endif %}
+
+      <form action= {{ action }} method="post" name="payuForm">
+          {% csrf_token %}
+      <input type="hidden" name="key" value="{{ MERCHANT_KEY }}" />
+      <input type="hidden" name="hash_string" value="{{ hash_string }}" />
+      <input type="hidden" name="hash" value="{{ hashh }}"/>
+       <input type="hidden" name="posted" value="{{ posted }}"/>
+      <input type="hidden" name="txnid" value="{{ txnid }}" />
+
+          <!-- Sanjeev's code-->
+          <div class="row">
+              <label for="amn">Amount : {{ posted.amount }} </label>
+          <input type="hidden" name="amount" value="{{ posted.amount|default:'' }}"  id="amn" />
+          </div>
+
+          <div class="row">
+            <label for="firstname">First Name : {{ posted.firstname }}</label>
+          <input type="hidden" name="firstname" id="firstname" value="{{ posted.firstname|default:'' }}" class="validate" />
+          </div>
+
+<div class="row">
+    <label for="email" data-error="Please enter the correct email address" data-success="right">Email : {{posted.email}}</label>
+          <input type="hidden" name="email" id="email" value="{{ posted.email|default:'' }}" class="validate" />
+</div>
+          <div class="row">
+              <label for="phn_num">Phone number: {{ posted.phone }} </label>
+          <input type="hidden" id="phn_num" name="phone" value="{{ posted.phone|default:'' }}" />
+          </div>
+
+<div class="row">
+    <label for="pro_info">Product info: {{ posted.productinfo }} </label>
+          <input type="hidden" id="pro_info" name="productinfo" class="materialize-textarea" value="{{ posted.productinfo }}"/>
+</div>
+
+          <div class="row">
+            <input type="hidden" name="surl" value="https://www.67thmilestone.com/payment_success/{{ slug }}" size="64" />
+
+          <input type="hidden" name="furl" value="https://www.67thmilestone.com/payment_failure/{{ slug }}" size="64" />
+          <input type="hidden" name="service_provider" value="payu_paisa" size="64" />
+          </div>
+
+          <input type="submit" value="Submit" class="btn btn-success"/>
+          <a href="/payment_failure/{{ slug }}" class="btn btn-fail">Abort</a>
+
+    </form>
+      </section>
+  </body>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</html>

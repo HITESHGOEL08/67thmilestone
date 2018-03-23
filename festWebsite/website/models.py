@@ -108,13 +108,13 @@ class Events(models.Model):
     date = models.DateField(default=datetime.now)
     venue = models.CharField(max_length=100)
     contact_name1 = models.CharField(max_length=30, default="", blank=True)
-    contact_phone1 = models.BigIntegerField( blank=True)
+    contact_phone1 = models.BigIntegerField(blank=True)
     contact_image1 = models.ImageField(upload_to='event_contact', blank=True)
     contact_email1 = models.EmailField(default="", blank=True)
     contact_name2 = models.CharField(max_length=30, default="", blank=True)
     contact_phone2 = models.BigIntegerField(blank=True)
     contact_image2 = models.ImageField(upload_to='event_contact', blank=True)
-    contact_email2 = models.EmailField(default="",blank=True)
+    contact_email2 = models.EmailField(default="", blank=True)
     rules = models.FileField(upload_to='rules', blank=True)
     sponsor1 = models.ImageField(upload_to='events_sponsors', blank=True)
     sponsor2 = models.ImageField(upload_to='events_sponsors', blank=True)
@@ -188,20 +188,23 @@ class single_event(models.Model):
     class Meta:
         unique_together = ('username', 'event_name')
 
+
 class event_register(models.Model):
     username = models.CharField(max_length=30)
     event_name = models.CharField(max_length=30)
-    team_name= models.CharField(max_length=30)
+    team_name = models.CharField(max_length=30)
 
     class Meta:
-        unique_together = ('event_name','team_name')
+        unique_together = ('event_name', 'team_name')
+
 
 class Team_details(models.Model):
-    team_name=models.CharField(max_length=30)
+    team_name = models.CharField(max_length=30)
     event_name = models.CharField(max_length=30)
-    name=models.CharField(max_length=30,blank=True)
+    name = models.CharField(max_length=30, blank=True)
     phone = models.BigIntegerField(blank=True)
-    email = models.EmailField(default="",blank=True)
+    email = models.EmailField(default="", blank=True)
+
 
 class FestAccomodation(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -211,3 +214,13 @@ class FestAccomodation(models.Model):
     day4 = models.BooleanField()
     date = models.DateField()
     time = models.TimeField()
+
+
+class Payment_Status(models.Model):
+    username = models.CharField(max_length=30)
+    event_name = models.CharField(max_length=30)
+    choice_home = (("YES", "YES"), ("NO", "NO"))
+    payment = models.CharField(max_length=4, choices=choice_home, default="NO")
+
+    class Meta:
+        unique_together = ('event_name', 'username')

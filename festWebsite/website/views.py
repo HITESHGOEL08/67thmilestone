@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect, render_to_response, get_object_or
 from django import forms
 from django.http import HttpResponse, HttpResponseRedirect
 from website.models import Campus_Ambassdors, Sponsors, Team, Events, UserProfile, Pro_Night, single_event, \
-    Team_details, event_register
+    Team_details, event_register, Payment_Status
 from website.models import FestAccomodation
 from website.forms import Campus_Ambassdor_Form, UserForm, UserProfileForm, FestAccomodationForm
 from django.conf import settings
@@ -539,6 +539,7 @@ def show_pronight(request, pro_night_name_slug):
 
 def hospitality(request):
     context_dict = {}
+    flag = 0
     if request.method == 'POST':
         day1 = False
         if request.POST.get('group1') == "on":
@@ -575,6 +576,8 @@ def hospitality(request):
             p = FestAccomodation(user=request.user, day1=day1, day2=day2, day3=day3, day4=day4,
                                  date=date, time=time)
             p.save()
+            flag == 1
+            return HttpResponseRedirect('/payment/accommodation')
             email = request.user.email
             print(email)
             subject = "Greetings from 67th Milestone'18"
@@ -582,7 +585,7 @@ def hospitality(request):
                     u"Greetings from Team 67th Milestone'18 and welcome to our family. \n\n" + \
                     u"Thank you for applying for accommodation during the fest.\n" + \
                     u"Show this email to get your accommodation verified during fest.\n" + \
-                    u"\n The number of days for which you have applied for accommodation are : \n\n"
+                    u"\n The number of days for which you have applied for accommodation are :  \n\n"
             body2 = ""
             if day1:
                 body2 += u"4th April 12:00 pm to 5th April 12:00 pm\n"
@@ -598,12 +601,14 @@ def hospitality(request):
                     u"Instagram - www.instagram.com/67thmilestone\n" + \
                     u"Twitter - www.twitter.com/67th_milestone\n"
             body = body1 + body2 + body3
+            print(body)
             emailsend = EmailMessage(subject, body, to=[email])
             emailsend.send()
         except:
             context_dict['error'] = "Already registered"
             return render(request, 'website/Hospitality.html', context_dict)
-    return render(request, 'website/Hospitality.html', context_dict)
+    if flag == 0:
+        return render(request, 'website/Hospitality.html', context_dict)
 
 
 @login_required(login_url='/login/')
@@ -797,3 +802,153 @@ def FestAccomodationView(request):
 def mentor(request):
     context_dict = {}
     return render(request, 'website/Mentors.html', context_dict)
+
+
+@login_required(login_url='/login/')
+def payment(request, event_name_slug):
+    count = 0
+    if event_name_slug == "accommodation":
+        ac = list(FestAccomodation.objects.filter(user=request.user))
+        for i in ac:
+            if i.day1 == True:
+                count += 1
+            if i.day2 == True:
+                count += 1
+            if i.day3 == True:
+                count += 1
+            if i.day4 == True:
+                count += 1
+        print(count)
+    else:
+        event = list(Events.objects.filter(slug=event_name_slug))
+        max_participants = event[0].max_participants
+        count = 0
+        if max_participants == 1:
+            count = 1
+        else:
+            b = list(event_register.objects.filter(event_name=event[0].name, username=request.user.username))
+            for j in b:
+                d = list(Team_details.objects.filter(event_name=event[0].name, team_name=j.team_name))
+                for k in d:
+                    count += 1
+    a = list(UserProfile.objects.filter(user=request.user))
+    for i in a:
+        email = request.user.email
+        name = i.name
+        phone = i.contact
+    MERCHANT_KEY = "ZlVehg"  # 4855032
+    key = "ZlVehg"  # ZlVehg
+    SALT = "tBOWOsCn"  # tBOWOsCn
+    PAYU_BASE_URL = "https://sandboxsecure.payu.in/_payment"
+    posted = {}
+    # Merchant Key and Salt provided y the PayU.
+    for i in request.POST:
+        posted[i] = request.POST[i]
+    hash_object = hashlib.sha256(b'randint(0,20)')
+    txnid = hash_object.hexdigest()[0:20]
+    hashh = ''
+    posted['txnid'] = txnid
+    hashSequence = "key|txnid|amount|productinfo|firstname|email|lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2"  # lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2|udf3|udf4|udf5|pg"
+    posted['key'] = key
+    amount = 200.0 * count
+    posted['amount'] = amount
+    posted['productinfo'] = "Testing - Website Team"
+    posted['firstname'] = name
+    posted['email'] = email
+    posted['phone'] = phone
+    hash_string = ''
+    hashVarsSeq = hashSequence.split('|')
+    for i in hashVarsSeq:
+        try:
+            hash_string += str(posted[i])
+        except Exception:
+            hash_string += ''
+        hash_string += '|'
+    hash_string += SALT
+    hashh = hashlib.sha512(hash_string.encode('utf-8')).hexdigest().lower()
+    action = PAYU_BASE_URL
+    if (posted.get("key") != None and posted.get("txnid") != None and posted.get("productinfo") != None and posted.get(
+            "firstname") != None and posted.get("email") != None):
+        return render(request, 'website/current_datetime.html', {"posted": posted, "hashh": hashh,
+                                                                 "MERCHANT_KEY": MERCHANT_KEY,
+                                                                 "txnid": txnid,
+                                                                 "hash_string": hash_string,
+                                                                 "action": "https://secure.payu.in/_payment",
+                                                                 "slug": event_name_slug})
+    else:
+        action = '/payment/' + event_name_slug
+        return render(request, 'website/current_datetime.html', {"posted": posted, "hashh": hashh,
+                                                                 "MERCHANT_KEY": MERCHANT_KEY,
+                                                                 "txnid": txnid,
+                                                                 "hash_string": hash_string,
+                                                                 "action": action})
+
+
+@csrf_protect
+@csrf_exempt
+@login_required(login_url='/login/')
+def payment_success(request, event_name_slug):
+    c = {}
+    c.update(csrf(request))
+    status = request.POST["status"]
+    firstname = request.POST["firstname"]
+    amount = request.POST["amount"]
+    txnid = request.POST["txnid"]
+    posted_hash = request.POST["hash"]
+    key = request.POST["key"]
+    productinfo = request.POST["productinfo"]
+    email = request.POST["email"]
+    salt = "tBOWOsCn"
+    try:
+        additionalCharges = request.POST["additionalCharges"]
+        retHashSeq = additionalCharges + '|' + salt + '|' + status + '|||||||||||' + email + '|' + firstname + '|' + productinfo + '|' + amount + '|' + txnid + '|' + key
+    except Exception:
+        retHashSeq = salt + '|' + status + '|||||||||||' + email + '|' + firstname + '|' + productinfo + '|' + amount + '|' + txnid + '|' + key
+    hashh = hashlib.sha512(retHashSeq).hexdigest().lower()
+    if (hashh != posted_hash):
+        print("Invalid Transaction. Please try again")
+    else:
+        print("Thank You. Your order status is ", status)
+        print("Your Transaction ID for this transaction is ", txnid)
+        print("We have received a payment of Rs. ", amount, ". Your order will soon be shipped.")
+    return render(request, 'website/payment_sucess.html', {"txnid": txnid, "status": status, "amount": amount})
+
+
+@csrf_protect
+@csrf_exempt
+@login_required(login_url='/login/')
+def payment_failure(request, event_name_slug):
+    c = {}
+    c.update(csrf(request))
+    status = request.POST["status"]
+    firstname = request.POST["firstname"]
+    amount = request.POST["amount"]
+    txnid = request.POST["txnid"]
+    posted_hash = request.POST["hash"]
+    key = request.POST["key"]
+    productinfo = request.POST["productinfo"]
+    email = request.POST["email"]
+    salt = "tBOWOsCn"
+    try:
+        if event_name_slug == "accommodation":
+            p = Payment_Status(username=request.user.username, event_name="accomodation", payment="NO")
+            p.save()
+        else:
+            event = list(Events.objects.filter(slug=event_name_slug))
+            p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="NO")
+            p.save()
+    except:
+        pass
+    try:
+        additionalCharges = request.POST["additionalCharges"]
+        retHashSeq = additionalCharges + '|' + salt + '|' + status + '|||||||||||' + email + '|' + firstname + '|' + productinfo + '|' + amount + '|' + txnid + '|' + key
+    except Exception:
+        retHashSeq = salt + '|' + status + '|||||||||||' + email + '|' + firstname + '|' + productinfo + '|' + amount + '|' + txnid + '|' + key
+    hashh = hashlib.sha512(retHashSeq).hexdigest().lower()
+    if (hashh != posted_hash):
+        print("Invalid Transaction. Please try again")
+    else:
+        print("Thank You. Your order status is ", status)
+        print("Your Transaction ID for this transaction is ", txnid)
+        print("We have received a payment of Rs. ", amount, ". Your order will soon be shipped.")
+    return render(request, "website/payment_Failure.html", c)
