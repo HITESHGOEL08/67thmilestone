@@ -951,4 +951,4 @@ def payment_failure(request, event_name_slug):
         print("Thank You. Your order status is ", status)
         print("Your Transaction ID for this transaction is ", txnid)
         print("We have received a payment of Rs. ", amount, ". Your order will soon be shipped.")
-    return render(request, "website/payment_Failure.html", c)
+    return render(request, "website/payment_failure.html", c)
