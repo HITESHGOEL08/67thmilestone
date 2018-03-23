@@ -850,7 +850,7 @@ def payment(request, event_name_slug):
     posted['txnid'] = txnid
     hashSequence = "key|txnid|amount|productinfo|firstname|email|lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2"  # lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2|udf3|udf4|udf5|pg"
     posted['key'] = key
-    amount = 200.0 * count
+    amount = 5.0 * count
     posted['amount'] = amount
     posted['productinfo'] = "Testing - Website Team"
     posted['firstname'] = name
@@ -899,6 +899,13 @@ def payment_success(request, event_name_slug):
     productinfo = request.POST["productinfo"]
     email = request.POST["email"]
     salt = "tBOWOsCn"
+    try:
+        obj = Payment_Status.objects.filter(username=request.user.username)
+        for i in obj:
+            i.payment = "YES"
+            i.save()
+    except:
+        pass
     try:
         additionalCharges = request.POST["additionalCharges"]
         retHashSeq = additionalCharges + '|' + salt + '|' + status + '|||||||||||' + email + '|' + firstname + '|' + productinfo + '|' + amount + '|' + txnid + '|' + key
