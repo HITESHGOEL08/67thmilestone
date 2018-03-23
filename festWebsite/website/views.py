@@ -598,7 +598,6 @@ def hospitality(request):
                     u"Instagram - www.instagram.com/67thmilestone\n" + \
                     u"Twitter - www.twitter.com/67th_milestone\n"
             body = body1 + body2 + body3
-            print(body)
             emailsend = EmailMessage(subject, body, to=[email])
             emailsend.send()
         except:
@@ -760,7 +759,7 @@ def team_register(request, event_name_slug):
                 user_details = list(UserProfile.objects.filter(user=request.user))
                 i = user_details[0]
                 a = (str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(
-                request.user.email) + "\nPhone : " + str(i.contact))
+                    request.user.email) + "\nPhone : " + str(i.contact))
                 print(name_event, i.name, i.contact)
                 print(a)
                 ticket_no = pyqrcode.create(a)

@@ -78,10 +78,10 @@ SUBMIT
         <strong align=center style="text-align:center !important">Events Registered</strong>
         <ul class="row">
             {% for i in registered_events %}
-            <li class="col m6 s12">
+            <li class="col m4 s12">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <a href="/event/{{ i.slug }}"><img class="activator" src="{{ MEDIA_URL }}{{ i.image }}" style="height:40vh;"></a>
+                        <a href="/event/{{ i.slug }}"><img class="activator" src="{{ MEDIA_URL }}{{ i.image }}" style="width: 300px; height: 300px;"></a>
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">{{ i.name }}<i
@@ -100,10 +100,10 @@ SUBMIT
             </li>
             {% endfor %}
             {% for i,j in registered_events1 %}
-            <li class="col l3 m6 s12">
+            <li class="col m4 s12">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <a href="/event/{{ i.slug }}"><img class="activator" src="{{ MEDIA_URL }}{{ i.image }}" style="height:40vh;"></a>
+                        <a href="/event/{{ i.slug }}"><img class="activator" src="{{ MEDIA_URL }}{{ i.image }}" style="width: 300px; height: 300px;"></a>
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">{{ i.name }}<i
