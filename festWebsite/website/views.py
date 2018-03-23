@@ -672,6 +672,10 @@ def single_event_register(request, event_name_slug):
         print(ticket_no)
         print("go")
         emailsend.send()
+        if event[0].fees == "CM":
+            return HttpResponseRedirect('/payment/' + event_name_slug)
+        else:
+            return HttpResponseRedirect('/profile/')
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
     return HttpResponseRedirect('/profile')
@@ -771,6 +775,10 @@ def team_register(request, event_name_slug):
                 ticket_no.svg(path, scale=8)
                 emailsend.attach_file(path)
                 emailsend.send()
+                if event[0].fees == "CM":
+                    return HttpResponseRedirect('/payment/' + event_name_slug)
+                else:
+                    return HttpResponseRedirect('/profile/')
             else:
                 context['error'] = 1
     except:
