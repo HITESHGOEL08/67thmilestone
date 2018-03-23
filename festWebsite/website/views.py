@@ -900,10 +900,13 @@ def payment_success(request, event_name_slug):
     email = request.POST["email"]
     salt = "tBOWOsCn"
     try:
-        obj = Payment_Status.objects.filter(username=request.user.username)
-        for i in obj:
-            i.payment = "YES"
-            i.save()
+        if event_name_slug == "accommodation":
+            p = Payment_Status(username=request.user.username, event_name="accomodation", payment="YES")
+            p.save()
+        else:
+            event = list(Events.objects.filter(slug=event_name_slug))
+            p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="YES")
+            p.save()
     except:
         pass
     try:
