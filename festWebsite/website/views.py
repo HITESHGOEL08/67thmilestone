@@ -911,7 +911,7 @@ def payment_success(request, event_name_slug):
         print("Thank You. Your order status is ", status)
         print("Your Transaction ID for this transaction is ", txnid)
         print("We have received a payment of Rs. ", amount, ". Your order will soon be shipped.")
-    return render(request, 'website/payment_sucess.html', {"txnid": txnid, "status": status, "amount": amount})
+    return render(request, 'website/payment_success.html', {"txnid": txnid, "status": status, "amount": amount})
 
 
 @csrf_protect
