@@ -4,7 +4,7 @@
     {% load staticfiles %}
     <meta charset="utf-8">
     <title>67th Milestone</title>
-       <link rel="icon" href="{% static 'images/black.png' %}" type="image/png">
+    <link rel="icon" href="{% static 'images/black.png' %}" type="image/png">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -106,7 +106,7 @@
     transform: scale(1.3);
 }
 .sanjeev-div{
-  background: url("{% static 'images/bg.png' %}");
+  background: url("{% static 'images/newbg.jpg' %}");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -114,8 +114,10 @@
 
 
 
+
+
 </style>
-<body >
+<body>
 <!-- Pre-Loader -->
 <div class="poverlay" id="preloader">
     <div><img src="{% static 'images/white.png' %}">
@@ -125,7 +127,8 @@
 
 
 <div id="myNav" class="overlay">
-    <a id="close" href="javascript:void(0)" class="close-btn" onclick="closeNav()"><i class="material-icons">sort</i></a>
+    <a id="close" href="javascript:void(0)" class="close-btn" onclick="closeNav()"><i
+            class="material-icons">sort</i></a>
 
     <!-- Overlay content -->
     <div class="overlay-content">
@@ -136,6 +139,11 @@
         <a href="\mentors">Mentors</a>
         <a href="\team">Team</a>
         <a href="\gallery">Gallery</a>
+        {% if user.is_authenticated %}
+        {% else %}
+
+        <a href="\login" >Login</a>
+        {% endif %}
     </div>
 </div>
 
@@ -154,6 +162,8 @@
             document.getElementById("loginpic").style.display = "none!important";
             document.getElementById("login-button").style.display = "block";
         }
+
+
     </script>
     {% else %}
     <script>
@@ -161,6 +171,8 @@
             document.getElementById("loginpic").style.display = "block!important";
             document.getElementById("login-button").style.display = "none";
         }
+
+
     </script>
     {% endif %}
 </div>
@@ -183,24 +195,37 @@
 <section class="hide-on-small-only">
     <div id="particles-js"></div>
     <div class="row nav-got" align="center">
-        <a href="\event"><div class="col m2 boo" style="cursor: pointer;">
-            <img style="max-height: 200px;max-width: 200px;" src="{% static 'images/Events.png' %}">
-    </div></a>
-        <a href="\sponsor"><div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
-                                                              src="{% static 'images/Sponsors.png' %}">
-        </div></a>
-        <a href="\campusambassador"><div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
-                                                              src="{% static 'images/CA.png' %}">
-        </div></a>
-        <a href="\team"><div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
-                                                              src="{% static 'images/Men.png' %}">
-        </div></a>
-        <a href="\hospitality"><div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
-                                                              src="{% static 'images/hosp.png' %}">
-        </div></a>
-       <a href="\login"> <div class="col m2 boo"  id="loginpic" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
-                                                              src="{% static 'images/Log.png' %}">
-        </div></a>
+        <a href="\event">
+            <div class="col m2 boo" style="cursor: pointer;">
+                <img style="max-height: 200px;max-width: 200px;" src="{% static 'images/Events.png' %}">
+            </div>
+        </a>
+        <a href="\sponsor">
+            <div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                                  src="{% static 'images/Sponsors.png' %}">
+            </div>
+        </a>
+        <a href="\campusambassador">
+            <div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                                  src="{% static 'images/CA.png' %}">
+            </div>
+        </a>
+        <a href="\team">
+            <div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                                  src="{% static 'images/Men.png' %}">
+            </div>
+        </a>
+        <a href="\hospitality">
+            <div class="col m2 boo" style="cursor: pointer;"><img style="max-height: 200px;max-width: 200px;"
+                                                                  src="{% static 'images/hosp.png' %}">
+            </div>
+        </a>
+        <a href="\login">
+            <div class="col m2 boo" id="loginpic" style="cursor: pointer;"><img
+                    style="max-height: 200px;max-width: 200px;"
+                    src="{% static 'images/Log.png' %}">
+            </div>
+        </a>
     </div>
     <div class="row dragon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
@@ -251,14 +276,15 @@
 
 
 <!-- 2nd Div  -->
-<section id="banner" style="background: url({% static 'images/2div.jpg' %}); background-position: center; background-size: cover;">
+<section id="banner"
+         style="background: url({% static 'images/2div.jpg' %}); background-position: center; background-size: cover;">
 
     <div class="row">
         <!--<div class="col s12 m6 banner-pic">-->
-            <!--<img src="{% static 'images/poster.jpg' %}" alt="" class="responsive-img">-->
+        <!--<img src="{% static 'images/poster.jpg' %}" alt="" class="responsive-img">-->
         <!--</div>-->
         <div class="col s12 banner-content">
-            <h2 class="highlight1">67<sup>th</sup> Milestone</h2>
+            <h2 class="highlight1">67th Milestone</h2>
             <h3><span class="typed"></span>
                 <h3>
                     <div id="timer">
@@ -299,15 +325,15 @@
     <!-- Large device div ends -->
     <!-- Small device div -->
     <!--<div class="carousel carousel-slider center hide-on-med-and-up">-->
-        <!--<div class="carousel-fixed-item center">-->
-            <!--<a class="btn btn-login-reverse">View All Events</a>-->
-        <!--</div>-->
-        <!--{% for i in home_details %}-->
-        <!--<div class="carousel-item white-text" href="/event/{{ i.slug }}"-->
-             <!--style="background: url({{ MEDIA_URL }}{{ i.image }}); background-size: cover; background-repeat: no-repeat;">-->
-            <!--<h2>{{ i.name }}</h2>-->
-        <!--</div>-->
-        <!--{% endfor %}-->
+    <!--<div class="carousel-fixed-item center">-->
+    <!--<a class="btn btn-login-reverse">View All Events</a>-->
+    <!--</div>-->
+    <!--{% for i in home_details %}-->
+    <!--<div class="carousel-item white-text" href="/event/{{ i.slug }}"-->
+    <!--style="background: url({{ MEDIA_URL }}{{ i.image }}); background-size: cover; background-repeat: no-repeat;">-->
+    <!--<h2>{{ i.name }}</h2>-->
+    <!--</div>-->
+    <!--{% endfor %}-->
     <!--</div>-->
     <!-- Small device div ends-->
 
@@ -469,24 +495,26 @@
 
 
 
+
+
 </script>
 <!--<script type="text/javascript">-->
 <!--$(document).ready(function () {-->
-    <!--//Disable full page-->
-    <!--$("body").on("contextmenu",function(e){-->
-        <!--return false;-->
-    <!--});-->
+<!--//Disable full page-->
+<!--$("body").on("contextmenu",function(e){-->
+<!--return false;-->
+<!--});-->
 
 
 <!--});-->
- <!--$(document).keydown(function(e){-->
-        <!--if(e.which === 123){-->
+<!--$(document).keydown(function(e){-->
+<!--if(e.which === 123){-->
 
-           <!--return false;-->
+<!--return false;-->
 
-        <!--}-->
+<!--}-->
 
-    <!--});-->
+<!--});-->
 <!--</script>-->
 </body>
 </html>

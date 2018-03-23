@@ -74,12 +74,11 @@ SUBMIT
    <!-- Modal ends -->
 
 
-
     <div class="row details-events" style="margin:20px 10vw;" align=center>
         <strong align=center style="text-align:center !important">Events Registered</strong>
         <ul class="row">
             {% for i in registered_events %}
-            <li class="col l3 m6 s12">
+            <li class="col m6 s12">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <a href="/event/{{ i.slug }}"><img class="activator" src="{{ MEDIA_URL }}{{ i.image }}" style="height:40vh;"></a>
@@ -91,8 +90,8 @@ SUBMIT
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">{{ i.name }}<i
                                 class="material-icons right">close</i></span>
-                        <div class="row">
-                            <div class="col s6">
+                        <div class="row" style="text-align: left;">
+                            <div class="col s12">
                                 <p>{{ i.one_liner }}</p>
                             </div>
                         </div>

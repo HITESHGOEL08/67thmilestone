@@ -136,7 +136,7 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
+#
 # """
 # Django settings for festWebsite project.
 #

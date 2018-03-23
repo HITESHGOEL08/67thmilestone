@@ -383,7 +383,9 @@ def register(request):
             subject = "Greetings from 67th Milestone'18"
             body1 = u"Dear participant,\n\n" + \
                     u"Congratulations on successfully registering " + \
-                    u"for 67th Milestone’18. We are delighted to host you at BML Munjal University from April 5-7, 2018. \nPlease keep checking our website for further updates.\n\n" + \
+                    u"for 67th Milestone’18. We are delighted to host you at" +\
+                    u" BML Munjal University from April 5-7, 2018. \nPlease keep" +\
+                    u" checking our website for further updates.\n\n" + \
                     u"Please find below your login details –\n" + \
                     u"Username: "
             body2 = str(user.username)
@@ -396,10 +398,14 @@ def register(request):
                     u"Regards,\n" + \
                     u"Team 67th Milestone"
             body = body1 + body2 + body3
+            print(body)
             emailsend = EmailMessage(subject, body, to=[user.email])
             emailsend.send()
             registered = True
-            return HttpResponseRedirect('/login')
+            context = {}
+            context['error2'] = "registered!"
+            return render(request, 'website/login1.html', context)
+            # return HttpResponseRedirect('/login', context)
         else:
             print(user_form.errors, profile_form.errors)
     else:
@@ -425,7 +431,7 @@ def user_login(request):
         else:
             print("Invalid credentials: {0}, {1}".format(username, password))
             context_dict = {}
-            context_dict['error'] = "Invalid login details"
+            context_dict['error1'] = "Invalid login details"
             return render(request, 'website/login1.html', context_dict)
             # return HttpResponse("Invalid login details")
     else:
@@ -623,11 +629,13 @@ def single_event_register(request, event_name_slug):
                str(time) + \
                u" for the Individual event Scheduled)" + \
                u". Fest Itinerary will be shared soon.\n" + \
-               u"\n\nNote : No participant will be allowed to enter the campus without College ID Card" + \
+               u"\n\nNote : No participant will be allowed to enter the campus without ID Card or any " + \
                u"\nNote – For assistance to all the participants, we will also be providing Shuttle Service from " + \
-               u"\nTransportation from 'Iffco Chowk Metro Station' to 'BML Munjal University' will be provided on the days" + \
+               u"\nTransportation from 'Iffco Chowk Metro Station' " +\
+               u"to 'BML Munjal University' will be provided on the days" + \
                u" of the fest at very reasonable rates.Timings of the available options will be shared later on." + \
-               u"\nA minimal service charge will be fared for the transport services depending upon the frequency of passengers." + \
+               u"\nA minimal service charge will be fared for the " +\
+               u"transport services depending upon the frequency of passengers." + \
                u" Kindly validate your seating. Upon filling the form," + \
                u" confirm your details for availing the transportation service.\n" + \
                u"\nTo apply for the services, please fill the this form – https://goo.gl/forms/jQzmF09qLRnmDITV2\n\n" + \
@@ -638,7 +646,9 @@ def single_event_register(request, event_name_slug):
                u"Youtube Channel Page: https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw\n\n" + \
                u"Regards,\n" + \
                u"Team 67th Milestone"
+        print(body)
         emailsend = EmailMessage(subject, body, to=[request.user.email])
+        print("go")
         gh = event_name_slug + request.user.username
         path1 = os.getcwd()
         path1 += "/qrcode/"
@@ -655,7 +665,8 @@ def single_event_register(request, event_name_slug):
         ticket_no = pyqrcode.create(a)
         ticket_no.svg(path, scale=8)
         emailsend.attach_file(path)
-        print(ticket_no)
+        # print(ticket_no)
+        print("go")
         emailsend.send()
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
@@ -722,13 +733,18 @@ def team_register(request, event_name_slug):
                                str(body4) + \
                                u"\n\nNote : \n" + \
                                u"No participant will be allowed to enter the campus without College ID Card" + \
-                               u"\nFor assistance to all the participants, we will also be providing Shuttle Service from the following locations. " + \
-                               u"\nTransportation from 'Iffco Chowk Metro Station' to 'BML Munjal University' will be provided on the days" + \
-                               u" of the fest at very reasonable rates.Timings of the available options will be shared later on." + \
-                               u"\nA minimal service charge will be fared for the transport services depending upon the frequency of passengers." + \
+                               u"\nFor assistance to all the participants, we will" +\
+                               u" also be providing Shuttle Service from the following locations. " + \
+                               u"\nTransportation from 'Iffco Chowk Metro Station' " +\
+                               u"to 'BML Munjal University' will be provided on the days" + \
+                               u" of the fest at very reasonable rates.Timings of the " +\
+                               u"available options will be shared later on." + \
+                               u"\nA minimal service charge will be fared for the " +\
+                               u"transport services depending upon the frequency of passengers." + \
                                u" Kindly validate your seating. Upon filling the form," + \
                                u" confirm your details for availing the transportation service.\n" + \
-                               u"\nTo apply for the services, please fill the this form – https://goo.gl/forms/jQzmF09qLRnmDITV2\n\n" + \
+                               u"\nTo apply for the services, please fill the this " +\
+                               u"form – https://goo.gl/forms/jQzmF09qLRnmDITV2\n\n" + \
                                u"For further details, refer to\n" + \
                                u"Facebook Page: https://www.facebook.com/67milestone/\n" + \
                                u"Instagram Page: https://www.instagram.com/67thmilestone/\n" + \
@@ -749,7 +765,7 @@ def team_register(request, event_name_slug):
                         print(a)
                         ticket_no = pyqrcode.create(a)
                         ticket_no.svg(path, scale=8)
-                        emailsend.attach_file(path)
+                        # emailsend.attach_file(path)
                         emailsend.send()
             else:
                 context['error'] = 1
