@@ -606,11 +606,14 @@ def hospitality(request):
             context_dict['error'] = "Already registered"
             return render(request, 'website/Hospitality.html', context_dict)
     else:
-        registered_details = list(FestAccomodation.objects.filter(username=request.user.username))
-        print(registered_details)
-        context_dict['registered'] = 1
-        if len(registered_details) > 0:
-            context_dict['registered'] = 0
+        try:
+            registered_details = list(FestAccomodation.objects.filter(username=request.user.username))
+            print(registered_details)
+            context_dict['registered'] = 1
+            if len(registered_details) > 0:
+                context_dict['registered'] = 0
+        except:
+            context_dict['registered'] = 1
     if flag == 0:
         return render(request, 'website/Hospitality.html', context_dict)
 
