@@ -221,6 +221,7 @@ class Payment_Status(models.Model):
     event_name = models.CharField(max_length=30)
     choice_home = (("YES", "YES"), ("NO", "NO"))
     payment = models.CharField(max_length=4, choices=choice_home, default="NO")
+    transanction_id = models.CharField(max_length=50, default="")
 
     class Meta:
         unique_together = ('event_name', 'username')

@@ -673,7 +673,6 @@ def single_event_register(request, event_name_slug):
             return HttpResponseRedirect('/profile/')
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
-    
 
 
 def complete_team(request):
@@ -854,7 +853,7 @@ def payment(request, event_name_slug):
     posted['txnid'] = txnid
     hashSequence = "key|txnid|amount|productinfo|firstname|email|lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2"  # lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2|udf3|udf4|udf5|pg"
     posted['key'] = key
-    amount = 200.0 * count
+    amount = 5.0 * count
     posted['amount'] = amount
     posted['productinfo'] = "Testing - Website Team"
     posted['firstname'] = name
@@ -904,12 +903,15 @@ def payment_success(request, event_name_slug):
     salt = "tBOWOsCn"
     try:
         if event_name_slug == "accommodation":
-            p = Payment_Status(username=request.user.username, event_name="accomodation", payment="YES")
+            p = Payment_Status(username=request.user.username, event_name="accomodation", payment="YES",
+                               transanction_id=txnid)
             p.save()
         else:
             event = list(Events.objects.filter(slug=event_name_slug))
-            p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="YES")
+            p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="YES",
+                               transanction_id=txnid)
             p.save()
+        return HttpResponseRedirect('/payment_success/' + event_name_slug + '/' + txnid)
     except:
         pass
     try:
@@ -970,3 +972,21 @@ def mail_send(subject, body, to, path):
     emailsend = EmailMessage(subject, body, to=to)
     emailsend.attach_file(path)
     emailsend.send()
+
+
+def payment_success1(request, event_name_slug, txnid):
+    if event_name_slug == "accommodation":
+        p = Payment_Status.objects.filter(username=request.user.username, event_name="accomodation")
+        for i in p:
+            i.txnid = txnid
+            i.save()
+    else:
+        event = list(Events.objects.filter(slug=event_name_slug))
+        p = Payment_Status.objects.filter(username=request.user.username, event_name=event[0].name)
+        for i in p:
+            i.txnid = txnid
+            i.save()
+    c = {}
+    c['txnid'] = txnid
+    print(txnid)
+    return render(request, "website/payment_success.html", c)
