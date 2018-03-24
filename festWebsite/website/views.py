@@ -380,6 +380,7 @@ def register(request):
             if 'picture' in request.FILES:
                 profile.picture = request.FILES['picture']
             profile.save()
+
             subject = "Greetings from 67th Milestone'18"
             body1 = u"Dear participant,\n\n" + \
                     u"Congratulations on successfully registering " + \
