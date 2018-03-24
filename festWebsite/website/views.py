@@ -610,13 +610,11 @@ def hospitality(request):
 
 @login_required(login_url='/login/')
 def single_event_register(request, event_name_slug):
+    event = list(Events.objects.filter(slug=event_name_slug))
+    name_event = event[0].name
     try:
         p = single_event(username=request.user.username, event_name=event_name_slug)
         p.save()
-        event = list(Events.objects.filter(slug=event_name_slug))
-        name_event = event[0].name
-        date = event[0].date
-        time = event[0].time
         subject = "Greetings from 67th Milestone'18"
         body = u"Dear participant,\n\n" + \
                u"Greetings from Team 67th Milestone!\n\n" + \
