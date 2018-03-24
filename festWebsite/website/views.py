@@ -710,6 +710,7 @@ def team_register(request, event_name_slug):
                     count += 1
             print(count)
             if count >= min_size:
+                print(count)
                 p = event_register(username=request.user.username, event_name=name_event,
                                    team_name=request.POST.get('team_name'))
                 p.save()
