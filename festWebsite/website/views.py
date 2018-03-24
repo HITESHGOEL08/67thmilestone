@@ -623,12 +623,6 @@ def single_event_register(request, event_name_slug):
                u"We are delighted to confirm your presence for the festival. " + \
                u"You’ve been registered for the " + \
                str(name_event) + \
-               u" scheduled on " + \
-               u"(" + \
-               str(date) + \
-               u" and " + \
-               str(time) + \
-               u" for the Individual event Scheduled)" + \
                u". Fest Itinerary will be shared soon.\n\n" + \
                u"\n\nNote : \n" + \
                u"No participant will be allowed to enter the campus without College ID Card" + \
