@@ -715,6 +715,7 @@ def team_register(request, event_name_slug):
                         body4 += "\n"
                         team.save()
                 flag = 1
+                print(body4)
                 event = list(Events.objects.filter(slug=event_name_slug))
                 name_event = event[0].name
                 date = event[0].date
