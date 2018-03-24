@@ -386,7 +386,7 @@ def register(request):
             subject = "Greetings from 67th Milestone'18"
             body1 = u"Dear participant,\n\n" + \
                     u"Congratulations on successfully registering " + \
-                    u"for 67th Milestone’18. We are delighted to host you at BML Munjal University from April 5-7, 2018." +\
+                    u"for 67th Milestone’18. We are delighted to host you at BML Munjal University from April 5-7, 2018." + \
                     u" \nPlease keep checking our website for further updates.\n\n" + \
                     u"Please find below your login details –\n" + \
                     u"Username: "
@@ -613,6 +613,8 @@ def hospitality(request):
 def single_event_register(request, event_name_slug):
     event = list(Events.objects.filter(slug=event_name_slug))
     name_event = event[0].name
+    date = event[0].date
+    time = event[0].time
     try:
         p = single_event(username=request.user.username, event_name=event_name_slug)
         p.save()
@@ -622,6 +624,12 @@ def single_event_register(request, event_name_slug):
                u"We are delighted to confirm your presence for the festival. " + \
                u"You’ve been registered for the " + \
                smart_str(name_event) + \
+               u" scheduled on " + \
+               u"(" + \
+               smart_str(date) + \
+               u" and " + \
+               smart_str(time) + \
+               u" for the Individual event Scheduled)" + \
                u". Fest Itinerary will be shared soon.\n\n" + \
                u"\n\nNote : \n" + \
                u"No participant will be allowed to enter the campus without ID Card" + \
@@ -644,26 +652,20 @@ def single_event_register(request, event_name_slug):
                u"Youtube Channel Page: https://www.youtube.com/channel/UC-8pUgtFwwfLHHWIDnXLTVw\n\n" + \
                u"Regards,\n" + \
                u"Team 67th Milestone"
-        print(body)
         emailsend = EmailMessage(subject, body, to=[request.user.email])
-        gh = event_name_slug + request.user.username
+        gh = name_event + request.user.username
         path1 = os.getcwd()
         path1 += "/qrcode/"
         path = path1 + (gh + ".svg")
         user_details = list(UserProfile.objects.filter(user=request.user))
         i = user_details[0]
-        a = (
-            str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(
-                request.user.email) + "\nPhone : " + str(
-                i.contact))
+        a = (str(name_event) + "\n" + "Name : " + str(i.name) + "\nE-mail : " + str(
+            request.user.email) + "\nPhone : " + str(i.contact))
         print(name_event, i.name, i.contact)
         print(a)
-        print(path)
         ticket_no = pyqrcode.create(a)
         ticket_no.svg(path, scale=8)
         emailsend.attach_file(path)
-        print(ticket_no)
-        print("go")
         emailsend.send()
         if event[0].fees == "CM":
             return HttpResponseRedirect('/payment/' + event_name_slug)
@@ -671,7 +673,7 @@ def single_event_register(request, event_name_slug):
             return HttpResponseRedirect('/profile/')
     except:
         return HttpResponseRedirect('/event/' + event_name_slug)
-    return HttpResponseRedirect('/profile')
+    
 
 
 def complete_team(request):
@@ -888,7 +890,6 @@ def payment(request, event_name_slug):
 
 @csrf_protect
 @csrf_exempt
-@login_required(login_url='/login/')
 def payment_success(request, event_name_slug):
     c = {}
     c.update(csrf(request))
@@ -928,7 +929,6 @@ def payment_success(request, event_name_slug):
 
 @csrf_protect
 @csrf_exempt
-@login_required(login_url='/login/')
 def payment_failure(request, event_name_slug):
     c = {}
     c.update(csrf(request))
@@ -965,7 +965,8 @@ def payment_failure(request, event_name_slug):
         print("We have received a payment of Rs. ", amount, ". Your order will soon be shipped.")
     return render(request, "website/payment_failure.html", c)
 
-def mail_send(subject,body,to,path):
+
+def mail_send(subject, body, to, path):
     emailsend = EmailMessage(subject, body, to=to)
     emailsend.attach_file(path)
     emailsend.send()
