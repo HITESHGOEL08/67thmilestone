@@ -143,7 +143,7 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-#
+
 # """
 # Django settings for festWebsite project.
 #
@@ -248,12 +248,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # ]
 # EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
 # EMAIL_USE_SSL = True
-# EMAIL_HOST = 'smtp.zoho.com'
-# # EMAIL_HOST_USER = 'campus_ambassador@67thmilestone.com'
-# # EMAIL_HOST_PASSWORD = 'TFYnRgcF9K4x'
-# EMAIL_HOST_USER = 'contact@67thmilestone.com'
-# EMAIL_HOST_PASSWORD = 'KrTzvfqw4XSp'
+# EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 465
+# EMAIL_HOST_USER = '67thmilestone@bmu.edu.in'
+# EMAIL_HOST_PASSWORD = 'kfskpcygexprpolj'
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 #
 # # APPEND_SLASH=False
@@ -271,14 +269,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #
 # USE_TZ = True
 #
-#
 # # Static files (CSS, JavaScript, Images)
 # # https://docs.djangoproject.com/en/1.11/howto/static-files/
 #
 # STATIC_URL = '/static/'
-# STATIC_DIR = os.path.join(BASE_DIR,'static')
-# STATICFILES_DIRS = [STATIC_DIR,]
-# MEDIA_DIR = os.path.join(BASE_DIR,'media')
+# STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = [STATIC_DIR, ]
+# MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 # MEDIA_ROOT = MEDIA_DIR
 # MEDIA_URL = '/media/'
-# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
