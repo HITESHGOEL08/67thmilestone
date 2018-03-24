@@ -929,7 +929,7 @@ def payment_success(request, event_name_slug, username):
 
 @csrf_protect
 @csrf_exempt
-def payment_failure(request, event_name_slug):
+def payment_failure(request, event_name_slug,username):
     c = {}
     c.update(csrf(request))
     status = request.POST["status"]
@@ -943,12 +943,12 @@ def payment_failure(request, event_name_slug):
     salt = "tBOWOsCn"
     try:
         if event_name_slug == "accommodation":
-            p = Payment_Status(username=request.user.username, event_name="accomodation", payment="NO",
+            p = Payment_Status(username=username, event_name="accomodation", payment="NO",
                                transanction_id="")
             p.save()
         else:
             event = list(Events.objects.filter(slug=event_name_slug))
-            p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="NO",
+            p = Payment_Status(username=username, event_name=event[0].name, payment="NO",
                                transanction_id="")
             p.save()
     except:
