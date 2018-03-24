@@ -402,7 +402,6 @@ def register(request):
             emailsend = EmailMessage(subject, body, to=[user.email])
             emailsend.send()
             registered = True
-            context = {}
             return HttpResponseRedirect('/login')
         else:
             print(user_form.errors, profile_form.errors)
