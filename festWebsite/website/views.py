@@ -687,6 +687,7 @@ def team_register(request, event_name_slug):
     name_event = event[0].name
     size = event[0].max_participants
     min_size = event[0].min_participants
+    print(min_size, size)
     t = []
     for i in range(1, size + 1):
         t.append(i)
@@ -698,6 +699,7 @@ def team_register(request, event_name_slug):
                 if request.POST.get('name' + str(i)) != "" and request.POST.get('email' + str(i)) and request.POST.get(
                                 'phone' + str(i)):
                     count += 1
+            print(count)
             if count >= min_size:
                 p = event_register(username=request.user.username, event_name=name_event,
                                    team_name=request.POST.get('team_name'))
@@ -946,11 +948,13 @@ def payment_failure(request, event_name_slug):
     salt = "tBOWOsCn"
     try:
         if event_name_slug == "accommodation":
-            p = Payment_Status(username=request.user.username, event_name="accomodation", payment="NO")
+            p = Payment_Status(username=request.user.username, event_name="accomodation", payment="NO",
+                               transanction_id="")
             p.save()
         else:
             event = list(Events.objects.filter(slug=event_name_slug))
-            p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="NO")
+            p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="NO",
+                               transanction_id="")
             p.save()
     except:
         pass
@@ -976,17 +980,6 @@ def mail_send(subject, body, to, path):
 
 
 def payment_success1(request, event_name_slug, txnid):
-    if event_name_slug == "accommodation":
-        p = Payment_Status.objects.filter(username=request.user.username, event_name="accomodation")
-        for i in p:
-            i.txnid = txnid
-            i.save()
-    else:
-        event = list(Events.objects.filter(slug=event_name_slug))
-        p = Payment_Status.objects.filter(username=request.user.username, event_name=event[0].name)
-        for i in p:
-            i.txnid = txnid
-            i.save()
     c = {}
     c['txnid'] = txnid
     print(txnid)
