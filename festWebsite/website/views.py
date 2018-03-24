@@ -383,9 +383,8 @@ def register(request):
             subject = "Greetings from 67th Milestone'18"
             body1 = u"Dear participant,\n\n" + \
                     u"Congratulations on successfully registering " + \
-                    u"for 67th Milestone’18. We are delighted to host you at" + \
-                    u" BML Munjal University from April 5-7, 2018. \nPlease keep" + \
-                    u" checking our website for further updates.\n\n" + \
+                    u"for 67th Milestone’18. We are delighted to host you at BML Munjal University from April 5-7, 2018." +\
+                    u" \nPlease keep checking our website for further updates.\n\n" + \
                     u"Please find below your login details –\n" + \
                     u"Username: "
             body2 = str(user.username)
@@ -398,7 +397,6 @@ def register(request):
                     u"Regards,\n" + \
                     u"Team 67th Milestone"
             body = body1 + body2 + body3
-            print(body)
             emailsend = EmailMessage(subject, body, to=[user.email])
             emailsend.send()
             registered = True
