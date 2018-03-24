@@ -812,6 +812,7 @@ def mentor(request):
 @login_required(login_url='/login/')
 def payment(request, event_name_slug):
     count = 0
+    n = ""
     if event_name_slug == "accommodation":
         ac = list(FestAccomodation.objects.filter(user=request.user))
         for i in ac:
@@ -823,11 +824,13 @@ def payment(request, event_name_slug):
                 count += 1
             if i.day4 == True:
                 count += 1
+        n = "Accommodation"
         print(count)
     else:
         event = list(Events.objects.filter(slug=event_name_slug))
         max_participants = event[0].max_participants
         count = 0
+        n = event[0].name
         if max_participants == 1:
             count = 1
         else:
@@ -856,9 +859,9 @@ def payment(request, event_name_slug):
     posted['txnid'] = txnid
     hashSequence = "key|txnid|amount|productinfo|firstname|email|lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2"  # lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2|udf3|udf4|udf5|pg"
     posted['key'] = key
-    amount = 5.0 * count
+    amount = 200.0 * count
     posted['amount'] = amount
-    posted['productinfo'] = "Testing - Website Team"
+    posted['productinfo'] = "67th Milestone Fest'18 : " + n
     posted['firstname'] = name
     posted['email'] = email
     posted['phone'] = phone
@@ -880,7 +883,8 @@ def payment(request, event_name_slug):
                                                                  "txnid": txnid,
                                                                  "hash_string": hash_string,
                                                                  "action": "https://secure.payu.in/_payment",
-                                                                 "slug": event_name_slug, "username":request.user.username})
+                                                                 "slug": event_name_slug,
+                                                                 "username": request.user.username})
     else:
         action = '/payment/' + event_name_slug
         return render(request, 'website/current_datetime.html', {"posted": posted, "hashh": hashh,
@@ -904,7 +908,7 @@ def payment_success(request, event_name_slug, username):
     productinfo = request.POST["productinfo"]
     email = request.POST["email"]
     salt = "tBOWOsCn"
-    flag=0
+    flag = 0
     try:
         if event_name_slug == "accommodation":
             p = Payment_Status(username=username, event_name="accomodation", payment="YES",
@@ -918,10 +922,10 @@ def payment_success(request, event_name_slug, username):
         c['txnid'] = txnid
         c["status"] = status
         c["amount"] = amount
-        flag=1
+        flag = 1
     except:
         pass
-    if flag ==1:
+    if flag == 1:
         return render(request, 'website/payment_success.html', c)
     else:
         return render(request, 'website/payment_failure.html', c)
@@ -929,7 +933,7 @@ def payment_success(request, event_name_slug, username):
 
 @csrf_protect
 @csrf_exempt
-def payment_failure(request, event_name_slug,username):
+def payment_failure(request, event_name_slug, username):
     c = {}
     c.update(csrf(request))
     status = request.POST["status"]
@@ -972,5 +976,3 @@ def mail_send(subject, body, to, path):
     emailsend = EmailMessage(subject, body, to=to)
     emailsend.attach_file(path)
     emailsend.send()
-
-
