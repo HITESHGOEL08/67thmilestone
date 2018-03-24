@@ -26,3 +26,30 @@ body{
     box-shadow: 1px 1px 10px 1px dodgerblue;
 
 }
+
+.content{
+	text-align: center;
+}
+
+.content img{
+	max-width: 200px;
+}
+
+h5.designation{
+	text-transform: uppercase;
+}
+
+.social-media a{
+	color: #333;
+	margin-right: 1rem;
+}
+
+.social-media a:hover{
+	color: #039be5;
+}
+
+@media only screen and (max-width: 500px) {
+.content img{
+	max-width: 150px;
+}
+}

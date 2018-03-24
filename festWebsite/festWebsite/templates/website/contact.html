@@ -1,34 +1,39 @@
 {% extends 'website/base1.html' %}
 {% load staticfiles %}
 {% block title %}Contact Us{% endblock %}
-{% block css %}<link type="text/css" rel="stylesheet" href="{% static 'css/contact.css' %}" >{% endblock %}
-{% block heading %}Contact Us{% endblock %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/success.css' %}">
+{% endblock %}
 {% block content %}
-	<div class="row">
-		<h6>"Unity is strength. . . when there is teamwork and collaboration, wonderful things can be achieved."</h6>
-	</div>
-	<div class="row">
-		<h5 class="designation">General Secretary</h5>
-	</div>
-	<div class="row">
-		<img src="{% static 'images/danish.jpg' %}" alt="Gen Sec" class="responsive-img circle">
-	</div>
-	<div class="row">
-		<h5>Danish Jameel</h5>
-	</div>
-	<div class="row">
-		<h6>Hi There!</h6>
-		<p>You can reach out to me on social media.</p>
-	</div>
-	<div class="row">
-		<div class="social-media">
-			<p>
-				<a href="https://www.facebook.com/danish.jameel.180" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
-				<a href="https://www.instagram.com/danish_jameel/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<p>Or shoot me an <a href="mailto:danish@67thmilestone.comcd " target="_blank">email</a>.</p>
-	</div>
+<div class="skew">
+    <div class="box">
+        <h2>Contact Us</h2>
+    </div>
+</div>
+<div class="container">
+    <section class="content">
+
+        <div class="row">
+            <h6>"Unity is strength. . . when there is teamwork and collaboration, wonderful things can be
+                achieved."</h6>
+        </div>
+        <div class="row">
+            <h5 class="designation">General Secretary</h5>
+        </div>
+        <div class="row s3">
+            <img src="{% static 'images/danish.jpg' %}" alt="Gen Sec" class="responsive-img circle">
+        </div>
+        <div class="row">
+            <h5>Danish Jameel</h5>
+        </div>
+        <div class="row">
+            <p>Phone me at <i class="fas fa-phone"></i> +91-70117-48773<br></p>
+            <p>Can mail me an <a href="mailto:danish@67thmilestone.com" target="_blank">email</a>.</p>
+        </div>
+
+    </section>
+</div>
+{% endblock %}
+
+{% block js %}
 {% endblock %}

@@ -3,7 +3,7 @@
 }
 
 .content img{
-	max-width: 400px;
+	max-width: 200px;
 }
 
 h5.designation{
@@ -21,6 +21,6 @@ h5.designation{
 
 @media only screen and (max-width: 500px) {
 .content img{
-	max-width: 250px;
+	max-width: 150px;
 }
 }

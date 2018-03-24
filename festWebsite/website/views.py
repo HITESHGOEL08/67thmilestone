@@ -17,13 +17,14 @@ from django.template.loader import get_template
 from django.template import Context, Template, RequestContext
 import datetime
 import hashlib
+from random import randint
 import pyqrcode
 from django.contrib.auth import authenticate, login, logout
 from random import randint
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
-from django.utils.encoding import smart_str, smart_unicode
+from django.utils.encoding import smart_str
 
 
 # Create your views here.
@@ -623,7 +624,7 @@ def single_event_register(request, event_name_slug):
                smart_str(name_event) + \
                u". Fest Itinerary will be shared soon.\n\n" + \
                u"\n\nNote : \n" + \
-               u"No participant will be allowed to enter the campus without College ID Card" + \
+               u"No participant will be allowed to enter the campus without ID Card" + \
                u"\nFor assistance to all the participants, we will" + \
                u" also be providing Shuttle Service from the following locations. " + \
                u"\nTransportation from 'Iffco Chowk Metro Station' " + \
@@ -844,7 +845,8 @@ def payment(request, event_name_slug):
     # Merchant Key and Salt provided y the PayU.
     for i in request.POST:
         posted[i] = request.POST[i]
-    hash_object = hashlib.sha256(b'randint(0,20)')
+    s = str(randint(0, 20)).encode('utf-8')
+    hash_object = hashlib.sha256(s)
     txnid = hash_object.hexdigest()[0:20]
     hashh = ''
     posted['txnid'] = txnid

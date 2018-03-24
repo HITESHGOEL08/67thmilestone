@@ -1,20 +1,24 @@
-<html>
-<head>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/success.css' %}">
-    {% endblock %}
-</head>
-<body>
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}Woah!{% endblock %}
+{% block css %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/success.css' %}">
+{% endblock %}
+{% block content %}
+<div class="skew">
+    <div class="box">
+        <h2>Success</h2>
+    </div>
+</div>
 <div style="display:none">
     <input type="hidden" name="csrfmiddlewaretoken" value="{% csrf_token %}">
 </div>
 
 <div class="row container text">
     <h4>Thank You.</h4>
-    <h4>Your order status is {{ status }}</h4>
-    <h4>Your Transaction ID for this transaction is {{ txnid }}</h4>
-    <h4>We have received a payment of Rs {{ amount}}</h4>
+    <h5>Your order status : {{ status }}</h5>
+    <h6>Your Transaction ID : {{ txnid }}</h6>
+    <h6>We have received a payment of Rs {{ amount}}</h6>
 </div>
 
-
-</body>
-</html>
+{% endblock %}
