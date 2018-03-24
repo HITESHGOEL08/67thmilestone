@@ -23,6 +23,7 @@ from random import randint
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
+from django.utils.encoding import smart_str, smart_unicode
 
 
 # Create your views here.
@@ -388,7 +389,7 @@ def register(request):
                     u" \nPlease keep checking our website for further updates.\n\n" + \
                     u"Please find below your login details –\n" + \
                     u"Username: "
-            body2 = str(user.username)
+            body2 = smart_str(user.username)
             body3 = u"\n\nNote : No participant will be allowed to enter without College ID Card" + \
                     u"\n\nFor further details, refer to\n" + \
                     u"Facebook Page: https://www.facebook.com/67milestone/\n" + \
@@ -619,7 +620,7 @@ def single_event_register(request, event_name_slug):
                u"Greetings from Team 67th Milestone!\n\n" + \
                u"We are delighted to confirm your presence for the festival. " + \
                u"You’ve been registered for the " + \
-               str(name_event) + \
+               smart_str(name_event) + \
                u". Fest Itinerary will be shared soon.\n\n" + \
                u"\n\nNote : \n" + \
                u"No participant will be allowed to enter the campus without College ID Card" + \
@@ -721,15 +722,15 @@ def team_register(request, event_name_slug):
                        u"Greetings from Team 67th Milestone!\n\n" + \
                        u"We are delighted to confirm your presence for the festival. " + \
                        u"You’ve been registered for the " + \
-                       str(name_event) + \
+                       smart_str(name_event) + \
                        u" scheduled on " + \
                        u"(" + \
-                       str(date) + \
+                       smart_str(date) + \
                        u" and " + \
-                       str(time) + \
+                       smart_str(time) + \
                        u" for the Team event Scheduled)" + \
                        u". Fest Itinerary will be shared soon.\n\n" + \
-                       str(body4) + \
+                       smart_str(body4) + \
                        u"\n\nNote : \n" + \
                        u"No participant will be allowed to enter the campus without College ID Card" + \
                        u"\nFor assistance to all the participants, we will" + \
