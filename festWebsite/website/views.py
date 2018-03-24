@@ -403,9 +403,7 @@ def register(request):
             emailsend.send()
             registered = True
             context = {}
-            context['error2'] = "registered!"
-            return render(request, 'website/login1.html', context)
-            # return HttpResponseRedirect('/login', context)
+            return HttpResponseRedirect('/login')
         else:
             print(user_form.errors, profile_form.errors)
     else:
