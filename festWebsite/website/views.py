@@ -914,7 +914,10 @@ def payment_success(request, event_name_slug):
             p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="YES",
                                transanction_id=txnid)
             p.save()
-        return HttpResponseRedirect('/payment_success/' + event_name_slug + '/' + txnid)
+        c['txnid'] = txnid
+        c["status"] = status
+        c["amount"] = amount
+        return render(request, 'website/payment_success.html', c)
     except:
         pass
     try:
@@ -980,7 +983,7 @@ def mail_send(subject, body, to, path):
 
 
 def payment_success1(request, event_name_slug, txnid):
-    c = {}
-    c['txnid'] = txnid
+    cd = {}
+    cd['txnid'] = txnid
     print(txnid)
-    return render(request, "website/payment_success.html", c)
+    return render(request, "website/payment_success.html", cd)
