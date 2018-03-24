@@ -880,7 +880,7 @@ def payment(request, event_name_slug):
                                                                  "txnid": txnid,
                                                                  "hash_string": hash_string,
                                                                  "action": "https://secure.payu.in/_payment",
-                                                                 "slug": event_name_slug})
+                                                                 "slug": event_name_slug, "username":request.user.username})
     else:
         action = '/payment/' + event_name_slug
         return render(request, 'website/current_datetime.html', {"posted": posted, "hashh": hashh,
@@ -892,7 +892,7 @@ def payment(request, event_name_slug):
 
 @csrf_protect
 @csrf_exempt
-def payment_success(request, event_name_slug):
+def payment_success(request, event_name_slug, username):
     c = {}
     c.update(csrf(request))
     status = request.POST["status"]
@@ -904,35 +904,27 @@ def payment_success(request, event_name_slug):
     productinfo = request.POST["productinfo"]
     email = request.POST["email"]
     salt = "tBOWOsCn"
+    flag=0
     try:
         if event_name_slug == "accommodation":
-            p = Payment_Status(username=request.user.username, event_name="accomodation", payment="YES",
+            p = Payment_Status(username=username, event_name="accomodation", payment="YES",
                                transanction_id=txnid)
             p.save()
         else:
             event = list(Events.objects.filter(slug=event_name_slug))
-            p = Payment_Status(username=request.user.username, event_name=event[0].name, payment="YES",
+            p = Payment_Status(username=username, event_name=event[0].name, payment="YES",
                                transanction_id=txnid)
             p.save()
         c['txnid'] = txnid
         c["status"] = status
         c["amount"] = amount
-        return render(request, 'website/payment_success.html', c)
+        flag=1
     except:
         pass
-    try:
-        additionalCharges = request.POST["additionalCharges"]
-        retHashSeq = additionalCharges + '|' + salt + '|' + status + '|||||||||||' + email + '|' + firstname + '|' + productinfo + '|' + amount + '|' + txnid + '|' + key
-    except Exception:
-        retHashSeq = salt + '|' + status + '|||||||||||' + email + '|' + firstname + '|' + productinfo + '|' + amount + '|' + txnid + '|' + key
-    hashh = hashlib.sha512(retHashSeq).hexdigest().lower()
-    if (hashh != posted_hash):
-        print("Invalid Transaction. Please try again")
+    if flag ==1:
+        return render(request, 'website/payment_success.html', c)
     else:
-        print("Thank You. Your order status is ", status)
-        print("Your Transaction ID for this transaction is ", txnid)
-        print("We have received a payment of Rs. ", amount, ". Your order will soon be shipped.")
-    return render(request, 'website/payment_success.html', {"txnid": txnid, "status": status, "amount": amount})
+        return render(request, 'website/payment_failure.html', c)
 
 
 @csrf_protect
@@ -982,8 +974,3 @@ def mail_send(subject, body, to, path):
     emailsend.send()
 
 
-def payment_success1(request, event_name_slug, txnid):
-    cd = {}
-    cd['txnid'] = txnid
-    print(txnid)
-    return render(request, "website/payment_success.html", cd)
