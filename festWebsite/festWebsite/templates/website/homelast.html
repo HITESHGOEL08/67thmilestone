@@ -116,6 +116,7 @@
 
 
 
+
 </style>
 <body>
 <!-- Pre-Loader -->
@@ -134,15 +135,15 @@
     <div class="overlay-content">
         <a href="\event">Events</a>
         <a href="\campusambassador">Campus Ambassador</a>
-        <a href="\hospitality">Hospitality</a>
         <a href="\sponsor">Sponsors</a>
+        <a href="\hospitality">Hospitality</a>
         <a href="\mentors">Mentors</a>
         <a href="\team">Team</a>
         <a href="\gallery">Gallery</a>
         <a href="\contact">Contact Us</a>
         {% if user.is_authenticated %}
         {% else %}
-        <a href="\login" >Login</a>
+        <a href="\login">Login</a>
         {% endif %}
     </div>
 </div>
@@ -162,6 +163,7 @@
             document.getElementById("login-button").style.display = "block";
         }
 
+
     </script>
     {% else %}
     <script>
@@ -169,6 +171,7 @@
             document.getElementById("loginpic").style.display = "block!important";
             document.getElementById("login-button").style.display = "none";
         }
+
 
 
     </script>
@@ -490,6 +493,7 @@
           }
         }
       })
+
 
 
 

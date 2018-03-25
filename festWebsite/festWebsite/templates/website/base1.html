@@ -40,12 +40,13 @@
             <!--<li><a href="#">Pronites</a></li>-->
             <li><a href="\event">Events</a></li>
             <li><a href="\campusambassador">Campus Ambassador</a></li>
-            <li><a href="\hospitality">Hospitality</a></li>
+
             <!--<li><a href="\current_sponsor">Sponsors</a></li>-->
             <li><a href="\sponsor">Sponsors</a></li>
-           <li> <a href="\contact">Contact</a></li>
+            <li><a href="\hospitality">Hospitality</a></li>
             <li><a href="\mentors">Mentors</a></li>
             <li><a href="\team">Team</a></li>
+            <li><a href="\contact">Contact Us</a></li>
             {% if user.is_authenticated %}
             <li><a class="dropdown-button" data-activates="dropdown"> {{ user.username }} <i
                     class="material-icons right">arrow_drop_down</i></a></li>
@@ -62,12 +63,13 @@
             <!--<li><a href="#">Pronites</a></li>-->
             <li><a href="\event">Events</a></li>
             <li><a href="\campusambassador">Campus Ambassador</a></li>
-            <li><a href="\hospitality">Hospitality</a></li>
+
             <!--<li><a href="\current_sponsor">Sponsors</a></li>-->
             <li><a href="\sponsor">Sponsors</a></li>
+            <li><a href="\hospitality">Hospitality</a></li>
             <li><a href="\mentors">Mentors</a></li>
             <li><a href="\team">Team</a></li>
-            <li> <a href="\contact">Contact Us</a></li>
+            <li><a href="\contact">Contact Us</a></li>
             <li><a href="\profile">Profile</a></li>
             {% if user.is_authenticated %}
             <li><a href="\logout"> {{ user.username }} </a></li>
@@ -142,6 +144,8 @@
     //   swipeable : true,
     //   responsiveThreshold : 1920
     });
+
+
 
 
 
