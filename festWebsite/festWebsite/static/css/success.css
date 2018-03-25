@@ -47,9 +47,17 @@ h5.designation{
 .social-media a:hover{
 	color: #039be5;
 }
+.danish-img img{
+    max-width: 400px!important;
+    height: auto!important;
+}
 
 @media only screen and (max-width: 500px) {
 .content img{
 	max-width: 150px;
+}
+.danish-img img{
+    max-width: 250px!important;
+    height: auto!important;
 }
 }
