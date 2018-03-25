@@ -458,8 +458,8 @@
           $('#pronites .carousel').carousel('next');
         } , 3000);
         var timer;
-        var compareDate = new Date();
-        compareDate.setDate(36); //just for this demo today + 7 days
+        var compareDate = new Date("April 5, 2018 00:00:00");
+        compareDate.setDate(5); //just for this demo today + 7 days
 
         timer = setInterval(function() {
           timeBetweenDates(compareDate);
