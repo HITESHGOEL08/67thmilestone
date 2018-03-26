@@ -160,7 +160,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #
 # # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(__file__)
-# TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
+# TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 #
 # # Quick-start development settings - unsuitable for production
 # # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -172,7 +172,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # DEBUG = True
 #
 # ALLOWED_HOSTS = ['*']
-#
 #
 # # Application definition
 #
@@ -217,7 +216,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #
 # WSGI_APPLICATION = 'festWebsite.wsgi.application'
 #
-#
 # # Database
 # # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 #
@@ -227,7 +225,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-#
 #
 # # Password validation
 # # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -246,7 +243,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
 #     },
 # ]
-# EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # EMAIL_USE_SSL = True
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 465
