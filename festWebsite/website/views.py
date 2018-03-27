@@ -874,7 +874,7 @@ def payment(request, event_name_slug):
     posted['key'] = key
     amount = 5.0 * count
     posted['amount'] = amount
-    posted['productinfo'] = "67th Milestone Fest'18 : " + n
+    posted['productinfo'] = "testing website team"
     posted['firstname'] = name
     posted['email'] = email
     posted['phone'] = phone
