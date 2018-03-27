@@ -872,7 +872,7 @@ def payment(request, event_name_slug):
     posted['txnid'] = txnid
     hashSequence = "key|txnid|amount|productinfo|firstname|email|lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2"  # lastname|curl|address1|address2|city|state|country|zipcode|udf1|udf2|udf3|udf4|udf5|pg"
     posted['key'] = key
-    amount = 5.0 * count
+    amount = 200.0 * count
     posted['amount'] = amount
     posted['productinfo'] = "67th Milestone Fest'18 : " + n
     posted['firstname'] = name
