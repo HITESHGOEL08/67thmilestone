@@ -862,10 +862,7 @@ def payment(request, event_name_slug):
     # Merchant Key and Salt provided y the PayU.
     for i in request.POST:
         posted[i] = request.POST[i]
-    s = ''
-    for i in range(0, 4):
-        s += str(randint(0, 99))
-    s = s.encode('utf-8')
+    s = str(randint(0, 20)).encode('utf-8')
     hash_object = hashlib.sha256(s)
     txnid = hash_object.hexdigest()[0:20]
     hashh = ''
@@ -874,7 +871,7 @@ def payment(request, event_name_slug):
     posted['key'] = key
     amount = 5.0 * count
     posted['amount'] = amount
-    posted['productinfo'] = "testing website team"
+    posted['productinfo'] = "67th Milestone Fest'18 : " + n
     posted['firstname'] = name
     posted['email'] = email
     posted['phone'] = phone
