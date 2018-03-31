@@ -31,12 +31,12 @@
 </div>
 {% endfor %}
 
-{% if ms %}
-<h5>online media partners</h5>
-{% for i in ms %}
+{% if es %}
+<h5>event partners</h5>
+{% for i in es %}
 <div class="row sponsor-row">
     {% for j in i %}
-    <div class="col s4">
+    <div class="col s3">
         <a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
     </div>
     {% endfor %}
@@ -44,9 +44,9 @@
 {% endfor %}
 {% endif %}
 
-{% if es %}
-<h5>event partners</h5>
-{% for i in es %}
+{% if ms %}
+<h5>media partners</h5>
+{% for i in ms %}
 <div class="row sponsor-row">
     {% for j in i %}
     <div class="col m2 s4">
@@ -57,7 +57,6 @@
 {% endfor %}
 {% endif %}
 {% endblock %}
-
 
 
 
