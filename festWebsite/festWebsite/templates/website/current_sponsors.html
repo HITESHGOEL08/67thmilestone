@@ -14,7 +14,7 @@
 
 {% for i in ts %}
 <div class="row title-sponsor">
-    <h5>Title Sponsor</h5>
+    <h4>Title Sponsor</h4>
     <a href="{{ i.url }}">
         <img src="{{ MEDIA_URL }}{{i.image}}" alt="{{ j.name }}" class="responsive-img">
     </a>
@@ -24,7 +24,7 @@
 <div class="row sponsor-row">
     {% for j in i %}
     <div class="col s4">
-        <h6>{{ j.name_shown }}</h6>
+        <h5>{{ j.name_shown }}</h5>
         <a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
     </div>
     {% endfor %}
@@ -32,7 +32,9 @@
 {% endfor %}
 
 {% if es %}
-<h5>event partners</h5>
+<div class="same" style="text-align: center;">
+    <h4>Event Partners</h4>
+</div>
 {% for i in es %}
 <div class="row sponsor-row">
     {% for j in i %}
@@ -45,7 +47,9 @@
 {% endif %}
 
 {% if ms %}
-<h5>media partners</h5>
+<div class="same">
+<h4>media partners</h4>
+    </div>
 {% for i in ms %}
 <div class="row sponsor-row">
     {% for j in i %}

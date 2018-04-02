@@ -14,7 +14,7 @@ background: #00F260;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ;
-	transform: skew(0deg,-8deg)translateY(-155px);
+	transform: skew(0deg,-8deg)translateY(-165px);
 }
 
 .heading{
@@ -27,7 +27,7 @@ background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ 
 .clear{
 	clear: both;
 }
-h5{
+.title-sponsor h4{
 	font-weight: 600;
 	background-image: -webkit-linear-gradient(to bottom right, #0575E6, #00F260); /* For Chrome and Safari */
     background-image:    -moz-linear-gradient(to bottom right, #0575E6, #00F260); /* For old Fx (3.6 to 15) */
@@ -37,6 +37,23 @@ h5{
     color:transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    text-transform: uppercase;
+}
+.same h4{
+    font-weight: 600;
+	background-image: -webkit-linear-gradient(to bottom right, #0575E6, #00F260); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to bottom right, #0575E6, #00F260); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to bottom right, #0575E6, #00F260); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to bottom right, #0575E6, #00F260); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom right, #0575E6, #00F260); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}
+.sponsor-row h5{
+    font-weight: 600;
+    text-transform: uppercase;
 }
 @media only screen and (max-width: 600px) {
 	h1{
