@@ -4,6 +4,18 @@ body{
 	background: #fff!important;
 
 }
+.sponsor-row img{
+    max-width: 350px!important;
+    height: auto;
+}
+.event-partners img{
+    max-width: 300px!important;
+    height: auto;
+}
+.media-partners img{
+    max-width: 250px!important;
+    height: auto;
+}
 .sponsor-row, .title-sponsor{
 	text-align: center;
 

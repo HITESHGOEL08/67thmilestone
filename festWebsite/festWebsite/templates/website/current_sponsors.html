@@ -36,7 +36,7 @@
     <h4>Event Partners</h4>
 </div>
 {% for i in es %}
-<div class="row sponsor-row">
+<div class="row sponsor-row event-partners">
     {% for j in i %}
     <div class="col s3">
         <a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
@@ -47,11 +47,11 @@
 {% endif %}
 
 {% if ms %}
-<div class="same">
+<div class="same" style="text-align: center;">
 <h4>media partners</h4>
     </div>
 {% for i in ms %}
-<div class="row sponsor-row">
+<div class="row sponsor-row media-partners">
     {% for j in i %}
     <div class="col m2 s4">
         <a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
