@@ -51,6 +51,13 @@
     width: 100%;
     z-index: 999;
 }
+.fancy{
+    text-align: left;
+    margin-left: 10px;
+}
+.fancy li{
+    list-style-type: disc!important;
+}
 
 @media only screen and (max-width: 840px) {
     .tablinks{

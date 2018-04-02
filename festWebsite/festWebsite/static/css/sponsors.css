@@ -86,19 +86,22 @@ background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ 
 	.heading h1{
 	    font-size: 3rem!important;
 	}
-	h4, h5{
+	h4{
 	    font-size: 1.5rem!important;
+	}
+	h5{
+	    font-size: 1rem!important;
 	}
 	.yuhi img{
 	    max-width: 150px !important;
         height: auto;
 	}
 	.event-partners img{
-        max-width: 120px !important;
+        max-width: 100px !important;
         height: auto;
     }
     .media-partners img{
-        max-width: 80px !important;
+        max-width: 70px !important;
         height: auto;
     }
 }
