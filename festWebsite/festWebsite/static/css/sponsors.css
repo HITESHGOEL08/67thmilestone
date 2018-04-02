@@ -78,18 +78,6 @@ background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ 
 .yuhi, .same{
     margin-top: 50px;
 }
-.btn-gallery{
-  background: linear-gradient(to bottom right, #0575E6, #00F260)!important;
-  border: 1px solid #fff;
-}
-
-.btn-gallery:hover{
-  background: dodgerblue!important;
-}
-
-.material-tooltip > .backdrop {
-    background-color: dodgerblue;
-}
 @media only screen and (max-width: 600px) {
 	h1{
 		font-size: 30px;
