@@ -120,6 +120,7 @@ class Events(models.Model):
     sponsor2 = models.ImageField(upload_to='events_sponsors', blank=True)
     sponsor3 = models.ImageField(upload_to='events_sponsors', blank=True)
     sponsor4 = models.ImageField(upload_to='events_sponsors', blank=True)
+    sponsor5 = models.ImageField(upload_to='events_sponsors', blank=True)
     one_liner = models.CharField(max_length=200, default="")
     slug = models.SlugField(unique=True)
 

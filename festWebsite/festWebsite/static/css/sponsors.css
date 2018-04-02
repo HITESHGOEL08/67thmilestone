@@ -4,14 +4,7 @@ body{
 	background: #fff!important;
 
 }
-.sponsor-row img{
-    max-width: 350px!important;
-    height: auto;
-}
-.event-partners img{
-    max-width: 300px!important;
-    height: auto;
-}
+
 .sponsor-row, .title-sponsor{
 	text-align: center;
 
@@ -67,5 +60,11 @@ background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ 
 	h1{
 		font-size: 30px;
 		text-align: center;
+	}
+	.heading h1{
+	    font-size: 3rem!important;
+	}
+	h4, h5{
+	    font-size: 1.5rem!important;
 	}
 }
