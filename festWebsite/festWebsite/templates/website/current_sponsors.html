@@ -3,8 +3,7 @@
 {% block title %}SPONSOR{% endblock %}
 {% block css %}
 <link type="text/css" rel="stylesheet" href="{% static 'css/sponsors.css' %}">{% endblock %}
-<!--{% block image %}{% static  'images/sponsors.jpg' %}{% endblock %}-->
-<!--{% block heading %}Current Sponsors{% endblock %}-->
+
 {% block content %}
 <section class="tilt">
     <div class="heading">
@@ -15,17 +14,17 @@
 {% for i in ts %}
 <div class="row title-sponsor">
     <h4>Title Sponsor</h4>
-    <a href="{{ i.url }}">
-        <img src="{{ MEDIA_URL }}{{i.image}}" alt="{{ j.name }}" class="responsive-img">
+    <a href="{{ i.url }}" target="_blank">
+        <img src="{{ MEDIA_URL }}{{i.image}}" alt="{{ j.name }}" class="responsive-img" >
     </a>
 </div>
 {% endfor %}
 {% for i in ns %}
 <div class="row sponsor-row yuhi">
     {% for j in i %}
-    <div class="col s4">
+    <div class="col m4 s6">
         <h5>{{ j.name_shown }}</h5>
-        <a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
+        <a href="{{ j.url }}" target="_blank"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
     </div>
     {% endfor %}
 </div>
@@ -38,8 +37,8 @@
 {% for i in es %}
 <div class="row sponsor-row event-partners">
     {% for j in i %}
-    <div class="col s3">
-        <a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
+    <div class="col m3 s4">
+        <a href="{{ j.url }}" target="_blank"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
     </div>
     {% endfor %}
 </div>
@@ -53,13 +52,16 @@
 {% for i in ms %}
 <div class="row sponsor-row media-partners">
     {% for j in i %}
-    <div class="col m2 s4">
-        <a href="{{ j.url }}"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
+    <div class="col m2 s3">
+        <a href="{{ j.url }}" target="_blank"><img src="{{ MEDIA_URL }}{{j.image}}" alt="{{ j.name }}" class="responsive-img"></a>
     </div>
     {% endfor %}
 </div>
 {% endfor %}
 {% endif %}
+<div class="past-sponsors">
+    <a href="\sponsor" class="btn btn-sponsors">Past Sponsors</a>
+</div>
 {% endblock %}
 
 

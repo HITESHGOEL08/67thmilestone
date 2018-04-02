@@ -28,6 +28,14 @@ background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ 
 .clear{
 	clear: both;
 }
+.yuhi img{
+    max-width: 270px !important;
+    height: auto;
+}
+.event-partners img{
+    max-width: 240px !important;
+    height: auto;
+}
 .title-sponsor h4{
 	font-weight: 600;
 	background-image: -webkit-linear-gradient(to bottom right, #0575E6, #00F260); /* For Chrome and Safari */
@@ -56,6 +64,20 @@ background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ 
     font-weight: 600;
     text-transform: uppercase;
 }
+.past-sponsors{
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px 0!important;
+}
+.btn-sponsors{
+    background: linear-gradient(to bottom right, #0575E6, #00F260);
+}
+.btn-sponsors:hover{
+    border: 1px solid #fff;
+}
+.yuhi, .same{
+    margin-top: 50px;
+}
 @media only screen and (max-width: 600px) {
 	h1{
 		font-size: 30px;
@@ -67,4 +89,16 @@ background: linear-gradient(to bottom right, #0575E6, #00F260); /* W3C, IE 10+/ 
 	h4, h5{
 	    font-size: 1.5rem!important;
 	}
+	.yuhi img{
+	    max-width: 150px !important;
+        height: auto;
+	}
+	.event-partners img{
+        max-width: 120px !important;
+        height: auto;
+    }
+    .media-partners img{
+        max-width: 80px !important;
+        height: auto;
+    }
 }
