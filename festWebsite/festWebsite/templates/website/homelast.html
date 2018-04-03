@@ -122,6 +122,7 @@
 
 
 
+
 </style>
 <body>
 <!-- Pre-Loader -->
@@ -139,15 +140,16 @@
     <!-- Overlay content -->
     <div class="overlay-content">
         <a href="\event">Events</a>
-        <a href="\campusambassador">Campus Ambassador</a>
         <a href="\current_sponsor">Sponsors</a>
         <a href="\hospitality">Hospitality</a>
-        <a href="\event/brainweave-iot-workshop/" target="_blank">Brainweave IOT Workshop</a>
-        <a href="\event/brainweave-robotics-workshop/">Brainweave Robotics Workshop</a>
+        <a href="\team">Team</a>
         <a href="\mentors">Mentors</a>
         <a href="https://67thmilestoneclub.wordpress.com/">Blog</a>
-        <a href="\team">Team</a>
+
+        <a href="\campusambassador">Campus Ambassador</a>
         <a href="\gallery">Gallery</a>
+        <a href="\event/brainweave-iot-workshop/" target="_blank">Brainweave IOT Workshop</a>
+        <a href="\event/brainweave-robotics-workshop/">Brainweave Robotics Workshop</a>
         <a href="\contact">Contact Us</a>
         {% if user.is_authenticated %}
         {% else %}
@@ -177,6 +179,7 @@
 
 
 
+
     </script>
     {% else %}
     <script>
@@ -184,6 +187,7 @@
             document.getElementById("loginpic").style.display = "block!important";
             document.getElementById("login-button").style.display = "none";
         }
+
 
 
 
@@ -624,6 +628,7 @@
           }
         }
       })
+
 
 
 

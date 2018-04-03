@@ -181,15 +181,9 @@ def team(request):
         sp.append(i)
     sp_main.append(sp)
     data.append(sp_main)
-    sp = []
-    sp_main = []
-    for i in operation:
-        sp.append(i)
-    sp_main.append(sp)
-    data.append(sp_main)
-    types = [[1, 4, 2, 1], [3], [2], [2], [2], [2], [2], [3], [3], [2]]
+    types = [[1, 4, 2, 1], [3], [2], [2], [2], [2], [2], [3], [3]]
     headings = ["Core Team", "Sponsorship", "Design", "Public Relations", "Talent Management", "Technical",
-                "Decoration", "Social Media Marketing", "Content Writing", "Operations"]
+                "Decoration", "Social Media Marketing", "Content Writing"]
     zipped = zip(data, types, headings)
     context_dict['zipped'] = zipped
     return render(request, 'website/team.html', context_dict)
@@ -235,6 +229,8 @@ def show_event(request, event_name_slug):
         spon.append(i.sponsor3)
     if i.sponsor4 != "":
         spon.append(i.sponsor4)
+    if i.sponsor5 != "":
+        spon.append(i.sponsor5)
     if i.max_participants == 1:
         context_dict['single'] = 1
     else:
