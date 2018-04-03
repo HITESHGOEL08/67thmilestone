@@ -40,7 +40,7 @@ def create():
             ps = list(Payment_Status.objects.all())
             flag = 0
             for ps1 in ps:
-                if ps1.username == j.username:
+                if ps1.username == i.username:
                     d.append(ps1.payment)
                     flag = 1
             if flag == 0:
