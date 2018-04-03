@@ -34,12 +34,21 @@ def create():
                     c.append("")
                     c.append("")
                     c.append("")
+                ps = list(Payment_Status.objects.all())
+                flag = 0
+                for ps1 in ps:
+                    if ps1.username == j.username:
+                        c.append(ps1.payment)
+                        flag = 1
+                if flag == 0:
+                    c.append("NO")
                 e.append(c)
             labels = ["Team Name"]
             for k in range(0, i.max_participants):
                 labels.append("Member" + str(k + 1) + "Name")
                 labels.append("Member" + str(k + 1) + "Email")
                 labels.append("Member" + str(k + 1) + "Phone")
+            labels.append("Payment_Status")
             df = pa.DataFrame(e, columns=labels)
             df.to_csv(i.name + ".csv")
             subject = "Registration File"
