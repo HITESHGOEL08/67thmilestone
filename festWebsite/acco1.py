@@ -31,20 +31,20 @@ def create():
                 d.append("Male")
             elif j.gender == '2':
                 d.append("Other")
-        d.append(i.day1)
-        d.append(i.day2)
-        d.append(i.day3)
-        d.append(i.day4)
-        d.append(i.date)
-        d.append(i.time)
-        ps = list(Payment_Status.objects.all())
-        flag = 0
-        for ps1 in ps:
-            if ps1.username == i.username:
-                d.append(ps1.payment)
-                flag = 1
-        if flag == 0:
-            d.append("NO")
+            d.append(i.day1)
+            d.append(i.day2)
+            d.append(i.day3)
+            d.append(i.day4)
+            d.append(i.date)
+            d.append(i.time)
+            ps = list(Payment_Status.objects.all())
+            flag = 0
+            for ps1 in ps:
+                if ps1.username == j.username:
+                    d.append(ps1.payment)
+                    flag = 1
+            if flag == 0:
+                d.append("NO")
         c.append(d)
     print(c)
     d = []
