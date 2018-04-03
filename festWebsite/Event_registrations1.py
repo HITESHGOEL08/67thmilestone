@@ -128,12 +128,11 @@ def create():
     df.to_csv("Single_Events.csv")
     subject = "Single Events Registration File"
     body = u"Find the attached CSV File for registered participants for single event"
-    '''to = ['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
+    to = ['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
           'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
           'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
           'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
-          'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']'''
-    to = ['pprashant2398@gmail.com']
+          'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']
     emailsend = EmailMessage(subject, body, to=to)
     path = os.getcwd()
     path += "/Single_Events.csv"
@@ -141,12 +140,11 @@ def create():
     emailsend.send()
     subject = "Team Events Registration File"
     body = u"Find the attached CSV File for registered participants for team event"
-    '''to = ['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
-      'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
-      'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
-      'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
-      'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']'''
-    to = ['pprashant2398@gmail.com']
+    to = ['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
+          'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
+          'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
+          'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
+          'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']
     emailsend = EmailMessage(subject, body, to=to)
     for fil in multiple_events:
         emailsend.attach_file(fil)

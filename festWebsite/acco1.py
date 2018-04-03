@@ -53,17 +53,16 @@ def create():
             d.append(i)
     print(d)
     df = pa.DataFrame(d, columns=labels)
-    df.to_csv("Accommodations1.csv")
+    df.to_csv("Accommodations.csv")
     subject = "Accommodation File"
     body = u"Find the attached CSV File for accommodations."
-    '''emailsend = EmailMessage(subject, body, to=['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
+    emailsend = EmailMessage(subject, body, to=['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
           'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
           'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
           'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
-          'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in'])'''
-    emailsend = EmailMessage(subject, body, to=['pprashant2398@gmail.com'])
+          'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in'])
     path = os.getcwd()
-    path += "/Accommodations1.csv"
+    path += "/Accommodations.csv"
     print(path)
     emailsend.attach_file(path)
     emailsend.send()
