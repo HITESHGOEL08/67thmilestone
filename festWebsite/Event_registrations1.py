@@ -7,7 +7,7 @@ import django
 django.setup()
 import pandas as pa
 import csv
-from website.models import Events, single_event, event_register, Team_details, User, UserProfile
+from website.models import Events, single_event, event_register, Team_details, User, UserProfile, Payment_Status
 from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 
@@ -45,9 +45,9 @@ def create():
             subject = "Registration File"
             body = u"Find the attached CSV File for registered participants for your event " + i.name
             to = ['pprashant2398@gmail.com']
-			#to = []
-            #to.append(i.contact_email1)
-            #to.append(i.contact_email2)
+            # to = []
+            # to.append(i.contact_email1)
+            # to.append(i.contact_email2)
             emailsend = EmailMessage(subject, body, to=to)
             path = os.getcwd()
             path += "/" + i.name + ".csv"
@@ -56,7 +56,8 @@ def create():
             emailsend.send()
         else:
             labels = ['Name', 'Email', 'Username', 'College Name', 'Contact Number', 'Gender', 'Payment Status']
-            labels1 = ['Event Name', 'Name', 'Email', 'Username', 'College Name', 'Contact Number', 'Gender', 'Payment Status']
+            labels1 = ['Event Name', 'Name', 'Email', 'Username', 'College Name', 'Contact Number', 'Gender',
+                       'Payment Status']
             b = list(single_event.objects.filter(event_name=i.slug))
             e = []
             h = []
@@ -83,14 +84,14 @@ def create():
                     elif l.gender == '2':
                         f.append("Other")
                 h += f
-				ps = list(Payment_Status.objects.filter(username==j.username))
-				if len(ps)>0:
+                ps = list(Payment_Status.objects.filter(Payment_Status.username == j.username))
+                if len(ps) > 0:
                     for ps1 in ps:
                         f.append(ps1.payment)
-						h.append(ps1.payment)
-				else:
-				    f.append("NO")
-					h.append("NO")    
+                        h.append(ps1.payment)
+                else:
+                    f.append("NO")
+                    h.append("NO")
                 o.append(h)
                 e.append(f)
             g = []
@@ -105,8 +106,8 @@ def create():
             subject = "Registration File"
             body = u"Find the attached CSV File for registered participants for single events "
             to = ["pprashant2398@gmail.com"]
-            #to.append(i.contact_email1)
-            #to.append(i.contact_email2)
+            # to.append(i.contact_email1)
+            # to.append(i.contact_email2)
             emailsend = EmailMessage(subject, body, to=to)
             path = os.getcwd()
             path += ("/" + i.name + ".csv")
@@ -122,7 +123,7 @@ def create():
           'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
           'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']'''
     to = ['pprashant2398@gmail.com']
-	emailsend = EmailMessage(subject, body, to=to)
+    emailsend = EmailMessage(subject, body, to=to)
     path = os.getcwd()
     path += "/Single_Events.csv"
     emailsend.attach_file(path)
@@ -130,12 +131,12 @@ def create():
     subject = "Team Events Registration File"
     body = u"Find the attached CSV File for registered participants for team event"
     '''to = ['tushar.bhatia.15csc@bml.edu.in', 'sankalp.pasricha.15csc@bml.edu.in',
-          'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
-          'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
-          'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
-          'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']'''
+      'danish.jameel.15csc@bml.edu.in', 'dadu.reddy.15ece@bml.edu.in',
+      'manav.gupta.15cse@bml.edu.in', 'astha.sharma.16mec@bml.edu.in',
+      'mahima.chopra.15csc@bml.edu.in', 'nishit.garg.15csc@bml.edu.in',
+      'k.natasha.15bck@bml.edu.in', 'shreya.mathur.15bk@bml.edu.in']'''
     to = ['pprashant2398@gmail.com']
-	emailsend = EmailMessage(subject, body, to=to)
+    emailsend = EmailMessage(subject, body, to=to)
     for fil in multiple_events:
         emailsend.attach_file(fil)
     emailsend.send()
