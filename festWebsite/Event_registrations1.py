@@ -84,12 +84,14 @@ def create():
                     elif l.gender == '2':
                         f.append("Other")
                 h += f
-                ps = list(Payment_Status.objects.filter(Payment_Status.username == j.username))
-                if len(ps) > 0:
-                    for ps1 in ps:
+                ps = list(Payment_Status.objects.all())
+                flag = 0
+                for ps1 in ps:
+                    if ps1.username == j.username:
                         f.append(ps1.payment)
                         h.append(ps1.payment)
-                else:
+                        flag = 1
+                if flag == 0:
                     f.append("NO")
                     h.append("NO")
                 o.append(h)
