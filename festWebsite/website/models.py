@@ -137,7 +137,7 @@ class Events(models.Model):
 
 class Pro_Night(models.Model):
     name = models.CharField(max_length=30)
-    description = models.CharField(max_length=2500)
+    description = models.CharField(max_length=3500)
     main_image = models.ImageField(upload_to='pro_nights', blank=True)
     small_image_1 = models.ImageField(upload_to='pro_nights', blank=True)
     small_image_2 = models.ImageField(upload_to='pro_nights', blank=True)
