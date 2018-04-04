@@ -132,6 +132,7 @@
 
 
 
+
 </style>
 <body>
 <!-- Pre-Loader -->
@@ -185,6 +186,7 @@
 
 
 
+
     </script>
     {% else %}
     <script>
@@ -192,6 +194,7 @@
             document.getElementById("loginpic").style.display = "block!important";
             document.getElementById("login-button").style.display = "none";
         }
+
 
 
 
@@ -300,12 +303,9 @@
 
 <!-- 2nd Div  -->
 <section id="banner"
-         style="background: url({% static 'images/2div.jpg' %}); background-position: center; background-size: cover;">
+         style="background: url({% static 'images/2div.jpg' %}); background-position: center; background-repeat: no-repeat; background-size: cover;">
 
     <div class="row">
-        <!--<div class="col s12 m6 banner-pic">-->
-        <!--<img src="{% static 'images/poster.jpg' %}" alt="" class="responsive-img">-->
-        <!--</div>-->
         <div class="col s12 banner-content">
             <h2 class="highlight1">67th Milestone</h2>
             <h3><span class="typed"></span>
@@ -322,14 +322,25 @@
 
     </div>
 </section>
-<section id="pronites">
+<section id="pronites" style="background:url({% static  'images/maxresdefault.jpg' %});background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;">
     <div class="section-heading">
         <h2 class="highlight4">Pronites</h2>
     </div>
-    <div class="carousel carousel-slider">
-        <div class="carousel-item" href="" target="_blank"><img src="{% static  'images/par1.jpg' %}"></div>
+    <div class="carousel carousel-slider hide-on-small-only">
+        <div class="carousel-item" href=""><img src="{% static  'images/par1.jpg' %}"></div>
         <div class="carousel-item" href="!"><img src="{% static  'images/babbal.jpg' %}"></div>
         <div class="carousel-item" href=""><img src="{% static  'images/sunburn.png' %}"></div>
+
+        <!--<div class="carousel-item" href="!"><img src="{% static  'images/babbal.jpg' %}"></div>-->
+        <!--<div class="carousel-item" href="!"><img src="{% static  'images/babbal.jpg' %}"></div>-->
+    </div>
+    <!--phone images-->
+    <div class="carousel carousel-slider hide-on-med-and-up">
+        <div class="carousel-item" href=""><img src="{% static  'images/sunburnmedia.jpg' %}"></div>
+        <div class="carousel-item" href=""><img src="{% static  'images/sunburnmedia.jpg' %}"></div>
+        <div class="carousel-item" href=""><img src="{% static  'images/sunburnmedia.jpg' %}"></div>
 
         <!--<div class="carousel-item" href="!"><img src="{% static  'images/babbal.jpg' %}"></div>-->
         <!--<div class="carousel-item" href="!"><img src="{% static  'images/babbal.jpg' %}"></div>-->
@@ -339,7 +350,9 @@
       </div> -->
 </section>
 
-<section id="events">
+<section id="events" style="background:url({% static  'images/chootbomb.jpg' %});background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;">
     <div class="section-heading">
         <h2 class="highlight2">Events</h2>
     </div>
@@ -636,6 +649,7 @@
           }
         }
       })
+
 
 
 
