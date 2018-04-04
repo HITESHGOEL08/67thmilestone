@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from website.models import Campus_Ambassdors, Sponsors, Team, Events, UserProfile, single_event, Team_details, \
-    event_register, FestAccomodation, Payment_Status
+    event_register, FestAccomodation, Payment_Status, Pro_Night
 
 
 class CampusAmbassdorAdmin(admin.ModelAdmin):
@@ -45,6 +45,10 @@ class Payment_StatusAdmin(admin.ModelAdmin):
     pass
 
 
+class Pro_Nightadmin(admin.ModelAdmin):
+    pass
+
+
 admin.site.register(Campus_Ambassdors, CampusAmbassdorAdmin)
 admin.site.register(Sponsors, SponsorsAdmin)
 admin.site.register(Team, TeamAdmin)
@@ -55,3 +59,4 @@ admin.site.register(Team_details, TeamEventAdmin)
 admin.site.register(event_register, TeamEventRegister)
 admin.site.register(FestAccomodation, FestAccomodationAdmin)
 admin.site.register(Payment_Status, Payment_StatusAdmin)
+admin.site.register(Pro_Night, Pro_Nightadmin)
