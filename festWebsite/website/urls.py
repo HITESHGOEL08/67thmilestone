@@ -46,4 +46,5 @@ urlpatterns = [
     url(r'^payment/(?P<event_name_slug>[\w\-]+)', views.payment, name='payment'),
     url(r'^payment_success/(?P<event_name_slug>[\w\-]+)/(?P<username>[\w\-]+)', views.payment_success, name='payment_success'),
     url(r'^payment_failure/(?P<event_name_slug>[\w\-]+)/(?P<username>[\w\-]+)', views.payment_failure, name='payment_failure'),
+    url(r'^devs', views.devs, name='devs'),
 ]

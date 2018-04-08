@@ -1,0 +1,219 @@
+{% extends 'website/base1.html' %}
+{% load staticfiles %}
+{% block title %}Developers{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Playfair+Display" rel="stylesheet">
+<style media="screen">
+		body{
+			background-color: #000;
+		}
+		h1{
+			font-size:160px;
+			font-weight: bold;
+			color: #ffff;
+		}
+		.parttwo{
+			margin-left: 250px;
+		}
+		.container {
+			height: 100%;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+
+		}
+		.text {
+			font-weight: 100;
+			font-size: 48px;
+			color: #fafafa;
+		}
+		.dud {
+			color: #757575;
+		}
+		.photogrid{
+			color: #fff;
+
+
+		}
+		.images{
+			float: left;
+			margin-top:-4px;
+		}
+		.images img{
+			width: 337px;
+			height: 349px;
+		}
+		.desc{
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity .5s, visibility .5s;
+			-webkit-transition: opacity .5s, visibility .5s;
+			position: absolute;
+			transform: translate(6em,-4.4em);
+			font-family: 'Playfair Display', serif;
+			font-size: 20px;
+
+		}
+		.images:hover .desc{
+			visibility: visible;
+
+
+			opacity: 1;
+		}
+		@media only screen and (max-width: 768px) {
+			h1{
+				font-size: 50px;
+			}
+			.parttwo{
+				margin-left: 30px;
+			}
+			.text{
+				font-size: 30px;
+			}
+			.images img{
+				width: 360px;
+				height: 360px;
+			}
+
+		}
+
+
+
+
+</style>
+{% endblock %}
+{% block silho %}{% static  'images/campusambss.png' %}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col s12">
+        <h1>WE THE</h1><br>
+        <h1 class="parttwo">DEVELOPERS</h1>
+        <div class="row">
+            <div class="col s12">
+                <div class="container">
+                    <div class="text"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="photogrid">
+    <div class="images"><img src="{% static  'images/1vi.jpg' %}">
+        <p class="desc">Vidhu Bamra<br><font font-size=15px>Front End Developer</font></p></div>
+    <div class="images"><img src="{% static  'images/2san.jpg' %}">
+        <p class="desc">Sanjeev Sharma<br>Front End Developer</p></div>
+    <div class="images"><img src="{% static  'images/3nam.jpg' %}">
+        <p class="desc">Naman Khetawat<br>Front End Developer</p></div>
+    <div class="images"><img src="{% static  'images/4.jpg' %}">
+        <p class="desc">Jatin Aggarwal<br>Front End Developer</p></div>
+    <div class="images"><img src="{% static  'images/10.jpg' %}">
+        <p class="desc">Shrey Dixit<br>Front End Developer</p></div>
+    <div class="images"><img src="{% static  'images/6.jpg' %}">
+        <p class="desc">Mayank Jindal<br>Back End Developer</p></div>
+    <div class="images"><img src="{% static  'images/7.jpg' %}">
+        <p class="desc">Prashant Pandey<br>Back End Developer</p></div>
+    <div class="images"><img src="{% static  'images/8.jpg' %}">
+        <p class="desc">Nishit Garg<br>Back End Developer</p></div>
+    <div class="images"><img src="{% static  'images/9.jpg' %}">
+        <p class="desc">Divyanshu<br>Back End Developer</p></div>
+    <div class="images"><img src="{% static  'images/11.jpg' %}">
+        <p class="desc">Hitesh Goel<br>Back End Developer</p></div>
+
+    <div class="images"><img src="{% static  'images/10.jpg' %}">
+        <p class="desc">Mann Khatri<br>Back End Developer</p></div>
+
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript">
+
+
+	class TextScramble {
+		constructor(el) {
+			this.el = el
+			this.chars = '!<>-_\\/[]{}—=+*^?#________'
+			this.update = this.update.bind(this)
+		}
+		setText(newText) {
+			const oldText = this.el.innerText
+			const length = Math.max(oldText.length, newText.length)
+			const promise = new Promise((resolve) => this.resolve = resolve)
+			this.queue = []
+			for (let i = 0; i < length; i++) {
+				const from = oldText[i] || ''
+				const to = newText[i] || ''
+				const start = Math.floor(Math.random() * 40)
+				const end = start + Math.floor(Math.random() * 40)
+				this.queue.push({ from, to, start, end })
+			}
+			cancelAnimationFrame(this.frameRequest)
+			this.frame = 0
+			this.update()
+			return promise
+		}
+		update() {
+			let output = ''
+			let complete = 0
+			for (let i = 0, n = this.queue.length; i < n; i++) {
+				let { from, to, start, end, char } = this.queue[i]
+				if (this.frame >= end) {
+					complete++
+					output += to
+				} else if (this.frame >= start) {
+					if (!char || Math.random() < 0.28) {
+						char = this.randomChar()
+						this.queue[i].char = char
+					}
+					output += `<span class="dud">${char}</span>`
+				} else {
+					output += from
+				}
+			}
+			this.el.innerHTML = output
+			if (complete === this.queue.length) {
+				this.resolve()
+			} else {
+				this.frameRequest = requestAnimationFrame(this.update)
+				this.frame++
+			}
+		}
+		randomChar() {
+			return this.chars[Math.floor(Math.random() * this.chars.length)]
+		}
+	}
+
+
+	const phrases = [
+	'Diligent',
+	'Compassionate',
+	'Prolific',
+	'Creative',
+	'Gregarious',
+	'Ingenious',
+	'Quirky'
+	]
+
+	const el = document.querySelector('.text')
+	const fx = new TextScramble(el)
+
+	let counter = 0
+	const next = () => {
+		fx.setText(phrases[counter]).then(() => {
+			setTimeout(next, 800)
+		})
+		counter = (counter + 1) % phrases.length
+	}
+
+	next()
+
+
+</script>
+{% endblock %}

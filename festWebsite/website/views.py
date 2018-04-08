@@ -32,6 +32,10 @@ def index(request):
     context_dict = {}
     return render(request, 'website/index.html', context_dict)
 
+def devs(request):
+    context_dict = {}
+    return render(request, 'website/developers.html', context_dict)
+
 
 def home(request):
     context_dict = {}
